@@ -10,9 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Pirate Game Jam"
+config/name="Illegal Potion Shop"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/unsafe_property_access=2
+gdscript/warnings/unsafe_method_access=2
+gdscript/warnings/unsafe_cast=1
+gdscript/warnings/unsafe_call_argument=2
 
 [rendering]
 
