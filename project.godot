@@ -22,6 +22,11 @@ gdscript/warnings/unsafe_method_access=2
 gdscript/warnings/unsafe_cast=1
 gdscript/warnings/unsafe_call_argument=2
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="StaticObject"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

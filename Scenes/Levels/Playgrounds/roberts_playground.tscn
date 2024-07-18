@@ -1,3 +1,45 @@
-[gd_scene format=3 uid="uid://cl8ci2gqvsxgy"]
+[gd_scene load_steps=4 format=3 uid="uid://cl8ci2gqvsxgy"]
+
+[ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player.tscn" id="1_p1yvi"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ut1c4"]
 
 [node name="RobertsPlayground" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_jmj5o")
+
+[node name="Player" parent="NavigationRegion2D" instance=ExtResource("1_p1yvi")]
+
+[node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(-550, 1)
+scale = Vector2(1, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallWest"]
+shape = SubResource("RectangleShape2D_ut1c4")
+
+[node name="WallEast" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(550, 1)
+scale = Vector2(1, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallEast"]
+shape = SubResource("RectangleShape2D_ut1c4")
+
+[node name="WallSouth" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(2.08165e-12, 300)
+scale = Vector2(56, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallSouth"]
+shape = SubResource("RectangleShape2D_ut1c4")
+
+[node name="WallNorth" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(2.08165e-12, -300)
+scale = Vector2(56, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallNorth"]
+shape = SubResource("RectangleShape2D_ut1c4")
