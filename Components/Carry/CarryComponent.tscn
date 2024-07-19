@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://8l2i7tg7bfud"]
+
+[ext_resource type="Script" path="res://Components/Carry/CarryComponent.gd" id="1_xewpf"]
+
+[node name="CarryComponent" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+script = ExtResource("1_xewpf")

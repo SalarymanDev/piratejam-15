@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Levels/Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+MouseManager="*res://Scripts/MouseManager.gd"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=2
@@ -28,10 +32,20 @@ gdscript/warnings/unsafe_call_argument=2
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 
+[input]
+
+Click={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+
 [layer_names]
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="StaticObject"
+2d_physics/layer_3="Item"
+2d_physics/layer_4="Interactable"
 
 [rendering]
 
