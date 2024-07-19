@@ -1,45 +1,48 @@
 [gd_scene load_steps=4 format=3 uid="uid://cl8ci2gqvsxgy"]
 
-[ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player.tscn" id="1_p1yvi"]
+[ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_p1yvi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
+vertices = PackedVector2Array(531, 281, -529, 277, -531, -281, 531, -281)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 541, 292, 541, -291)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ut1c4"]
 
 [node name="RobertsPlayground" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(575, 323)
 navigation_polygon = SubResource("NavigationPolygon_jmj5o")
 
-[node name="Player" parent="NavigationRegion2D" instance=ExtResource("1_p1yvi")]
+[node name="Player" parent="." instance=ExtResource("1_p1yvi")]
+position = Vector2(575, 323)
 
-[node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
-position = Vector2(-550, 1)
+[node name="WallWest" type="StaticBody2D" parent="."]
+position = Vector2(25, 324)
 scale = Vector2(1, 30)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallWest"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallWest"]
 shape = SubResource("RectangleShape2D_ut1c4")
 
-[node name="WallEast" type="StaticBody2D" parent="NavigationRegion2D"]
-position = Vector2(550, 1)
+[node name="WallEast" type="StaticBody2D" parent="."]
+position = Vector2(1125, 324)
 scale = Vector2(1, 30)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallEast"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallEast"]
 shape = SubResource("RectangleShape2D_ut1c4")
 
-[node name="WallSouth" type="StaticBody2D" parent="NavigationRegion2D"]
-position = Vector2(2.08165e-12, 300)
+[node name="WallSouth" type="StaticBody2D" parent="."]
+position = Vector2(575, 623)
 scale = Vector2(56, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallSouth"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallSouth"]
 shape = SubResource("RectangleShape2D_ut1c4")
 
-[node name="WallNorth" type="StaticBody2D" parent="NavigationRegion2D"]
-position = Vector2(2.08165e-12, -300)
+[node name="WallNorth" type="StaticBody2D" parent="."]
+position = Vector2(575, 23)
 scale = Vector2(56, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallNorth"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallNorth"]
 shape = SubResource("RectangleShape2D_ut1c4")
