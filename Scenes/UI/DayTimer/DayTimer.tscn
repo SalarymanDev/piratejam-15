@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://6e7eph3nehb5"]
 
-[ext_resource type="Script" path="res://Scenes/UI/Level/DayTimer.gd" id="1_345qh"]
+[ext_resource type="Script" path="res://Scenes/UI/DayTimer/DayTimer.gd" id="1_345qh"]
 
 [node name="DayTimer" type="Control"]
 layout_mode = 3
