@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://vax5lodmmg32"]
+[gd_scene load_steps=8 format=3 uid="uid://vax5lodmmg32"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Player/Player.gd" id="1_s103t"]
 [ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_xqthd"]
 [ext_resource type="PackedScene" uid="uid://c755fytkpll47" path="res://Components/Navigation/NavigationComponent.tscn" id="2_h3dnl"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_dhsgm"]
+[ext_resource type="PackedScene" uid="uid://dfw07hfl3c3p0" path="res://Components/Interact/InteractComponent.tscn" id="5_n7gw1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2cp0n"]
 radius = 35.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sf4cs"]
+radius = 34.2345
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
@@ -27,3 +31,10 @@ speed = 500.0
 [node name="ZIndexComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_dhsgm")]
 sprite = NodePath("../Sprite2D")
 is_static = false
+
+[node name="InteractComponent" parent="." instance=ExtResource("5_n7gw1")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComponent"]
+shape = SubResource("CircleShape2D_sf4cs")
+
+[connection signal="navigation_finished" from="NavigationComponent" to="." method="_on_navigation_finished"]

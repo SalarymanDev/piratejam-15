@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dywwm3yrwrq8o" path="res://Scenes/Equipment/InteractableTest.tscn" id="2_i6qtn"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
-vertices = PackedVector2Array(-509, 256, -257, -113, 301, -117, 426, -117, 505, 256, 510, -194, 426, -190, -382, -113, -382, -186, -510, -143, -510, -260, -257, -186, 510, -260, 301, -190)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(7, 1, 0), PackedInt32Array(8, 7, 0, 9, 10), PackedInt32Array(11, 8, 10, 12, 5, 13), PackedInt32Array(2, 1, 11, 13), PackedInt32Array(13, 5, 6)])
+vertices = PackedVector2Array(-257, 149, 505, 256, -509, 256, -382, 149, -510, -143, -382, 76, 510, -194, -257, 76, -257, -113, -257, -186, 510, -260, -382, -113, -382, -186, -510, -260)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(6, 1, 0, 7), PackedInt32Array(8, 6, 7), PackedInt32Array(6, 8, 9, 10), PackedInt32Array(11, 8, 7, 5), PackedInt32Array(11, 5, 4), PackedInt32Array(12, 11, 4, 13), PackedInt32Array(12, 13, 10, 9)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 535, 286, 541, -291)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 30.0
@@ -54,7 +54,8 @@ shape = SubResource("RectangleShape2D_ut1c4")
 position = Vector2(-319, -150)
 
 [node name="InteractableTest2" parent="NavigationRegion2D" instance=ExtResource("2_i6qtn")]
-position = Vector2(363, -154)
+position = Vector2(-319, 113)
+rotation = 3.14159
 
 [node name="Player" parent="." instance=ExtResource("1_p1yvi")]
 position = Vector2(575, 323)
