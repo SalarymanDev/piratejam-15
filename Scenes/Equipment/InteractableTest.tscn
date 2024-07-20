@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dywwm3yrwrq8o"]
+[gd_scene load_steps=8 format=3 uid="uid://dywwm3yrwrq8o"]
 
 [ext_resource type="PackedScene" uid="uid://c7mq33jnyrhfh" path="res://Components/Interactable/InteractableComponent.tscn" id="1_fsdej"]
 [ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_kimyu"]
+[ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_ritdb"]
 [ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="4_wwnky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2puff"]
@@ -34,3 +35,6 @@ shape = SubResource("CircleShape2D_175vk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
 shape = SubResource("RectangleShape2D_usnpa")
+
+[node name="ZIndexComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_ritdb")]
+sprite = NodePath("../Sprite2D")

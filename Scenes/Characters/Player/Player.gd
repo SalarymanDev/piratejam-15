@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @onready var navigation_component: NavigationComponent = $NavigationComponent
 
-
 func _input(event: InputEvent) -> void:
 	if not event is InputEventMouseButton:
 		return
@@ -22,3 +21,4 @@ func _handle_movement_input(event: InputEventMouseButton) -> void:
 			return
 	
 	navigation_component.target_position = event.global_position
+

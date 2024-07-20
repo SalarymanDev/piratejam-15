@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8u7rgo3wcuap"]
+
+[ext_resource type="Script" path="res://Components/ZIndex/ZIndexComponent.gd" id="1_kavrm"]
+
+[node name="ZIndexComponent" type="Node"]
+script = ExtResource("1_kavrm")

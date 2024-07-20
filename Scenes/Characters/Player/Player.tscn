@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://vax5lodmmg32"]
+[gd_scene load_steps=6 format=3 uid="uid://vax5lodmmg32"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Player/Player.gd" id="1_s103t"]
 [ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_xqthd"]
 [ext_resource type="PackedScene" uid="uid://c755fytkpll47" path="res://Components/Navigation/NavigationComponent.tscn" id="2_h3dnl"]
+[ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_dhsgm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2cp0n"]
 radius = 35.0
@@ -22,3 +23,7 @@ shape = SubResource("CircleShape2D_2cp0n")
 path_desired_distance = 5.0
 character = NodePath("..")
 speed = 500.0
+
+[node name="ZIndexComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_dhsgm")]
+sprite = NodePath("../Sprite2D")
+is_static = false
