@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=2 format=3 uid="uid://drq72ptn3p5qi"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_jscjs"]
+
+[resource]
+script = ExtResource("1_jscjs")
+ingredient_value = 0
+name = "Salt"
+description = "Grains of salt used for purification and preservation."
