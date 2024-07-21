@@ -8,4 +8,4 @@ script = ExtResource("1_o0c2e")
 ingredient = 0
 name = "Mandrake Root"
 description = ""
-image = ExtResource("1_xg1u2")
+texture = ExtResource("1_xg1u2")

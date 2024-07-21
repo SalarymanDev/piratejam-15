@@ -8,4 +8,4 @@ script = ExtResource("1_jscjs")
 ingredient = 4
 name = "Salt"
 description = "Something salty"
-image = ExtResource("1_gbive")
+texture = ExtResource("1_gbive")

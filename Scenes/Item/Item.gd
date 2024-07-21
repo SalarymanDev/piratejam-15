@@ -7,13 +7,13 @@ extends Node2D
 
 func _ready() -> void:
 	item_component.item = item
-	if item.image:
-		sprite.texture = item.image
+	if item.texture:
+		sprite.texture = item.texture
 
 func update_item(new_item: ItemResource) -> void:
 	item_component.item = new_item
-	if item.image:
-		sprite.texture = item.image
+	if item.texture:
+		sprite.texture = item.texture
 
 
 func _on_picked_up_event() -> void:

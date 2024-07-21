@@ -49,8 +49,10 @@ shape = SubResource("CircleShape2D_sf4cs")
 character = NodePath("..")
 
 [node name="CarryComponent" parent="." instance=ExtResource("7_81dmu")]
+position = Vector2(0, 36)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CarryComponent"]
+position = Vector2(0, -36)
 shape = SubResource("CircleShape2D_lm263")
 
 [connection signal="navigation_finished" from="NavigationComponent" to="." method="_on_navigation_finished"]
