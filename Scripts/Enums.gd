@@ -1,8 +1,10 @@
 class_name Enums
 
 enum Ingredients {
-	MandrakeRoot = 1,
-	Wolfsbane = 2,
-	Salt = 4
+	Water = 1,
+	Wood = 2,
+	MandrakeRoot = 4,
+	Wolfsbane = 8,
+	Salt = 16,
 }
 

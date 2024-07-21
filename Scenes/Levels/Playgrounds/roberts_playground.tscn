@@ -1,13 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://cl8ci2gqvsxgy"]
+[gd_scene load_steps=18 format=3 uid="uid://cl8ci2gqvsxgy"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_6rkv5"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_p1yvi"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Water.tres" id="2_byf1s"]
 [ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="3_b03pp"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Salt.tres" id="4_nfqsn"]
+[ext_resource type="AudioStream" uid="uid://6new5iw0ls2p" path="res://Assets/Audio/Water/Potion - Use 4.mp3" id="4_335nv"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Wood.tres" id="4_wf4qe"]
+[ext_resource type="AudioStream" uid="uid://dnqiei5ha5vtv" path="res://Assets/Audio/Water/Potion - Use 5.mp3" id="5_l64tn"]
+[ext_resource type="AudioStream" uid="uid://c5kvoixcipgrx" path="res://Assets/Audio/Water/Potion - Use 7.mp3" id="6_i3r5l"]
+[ext_resource type="AudioStream" uid="uid://brad86wgmqlrn" path="res://Assets/Audio/Water/Potion - Use 8.mp3" id="7_mlio6"]
+[ext_resource type="AudioStream" uid="uid://ckowa560vqcxd" path="res://Assets/Audio/Water/Potion - Use 9.mp3" id="8_4j7jg"]
+[ext_resource type="AudioStream" uid="uid://c477w32xyxrp3" path="res://Assets/Audio/Pickup/Voice Approve 1.mp3" id="10_6wjal"]
+[ext_resource type="AudioStream" uid="uid://c18ej5t3j318i" path="res://Assets/Audio/Pickup/Voice Approve 2.mp3" id="11_4y58v"]
+[ext_resource type="AudioStream" uid="uid://csjpnggyaespi" path="res://Assets/Audio/Pickup/Voice Approve 4.mp3" id="12_qpgew"]
+[ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="13_0wbd7"]
+[ext_resource type="PackedScene" uid="uid://dcdulbgx7vrmp" path="res://Scenes/Equipment/WasteBin/WasteBin.tscn" id="14_5f5si"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
-vertices = PackedVector2Array(510, -194, 505, 256, -509, 256, -510, -2, -510, -260, 510, -260)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+vertices = PackedVector2Array(510, -194, 505, 256, 425, -143, 425, -216, 510, -260, -510, -260, 300, -216, -183, -219, -509, 256, 300, -143, -183, -146, -510, -2, -308, -146, -350, -146, -475, -146, -475, -219, -308, -219, -350, -219)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6, 7), PackedInt32Array(2, 1, 8, 9), PackedInt32Array(10, 6, 9, 8, 11), PackedInt32Array(12, 10, 11), PackedInt32Array(13, 12, 11), PackedInt32Array(14, 13, 11), PackedInt32Array(14, 11, 5, 15), PackedInt32Array(6, 10, 7), PackedInt32Array(5, 7, 16), PackedInt32Array(16, 12, 13, 17), PackedInt32Array(5, 16, 17), PackedInt32Array(5, 17, 15)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 535, 286, 541, -291)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 30.0
@@ -20,10 +31,17 @@ agent_radius = 30.0
 position = Vector2(575, 323)
 navigation_polygon = SubResource("NavigationPolygon_jmj5o")
 
-[node name="IngredientSpawner" parent="NavigationRegion2D" instance=ExtResource("1_6rkv5")]
+[node name="Well" parent="NavigationRegion2D" instance=ExtResource("1_6rkv5")]
 position = Vector2(-412, -183)
-ingredient = ExtResource("4_nfqsn")
+ingredient = ExtResource("2_byf1s")
 texture = ExtResource("3_b03pp")
+audio_clips = Array[AudioStream]([ExtResource("4_335nv"), ExtResource("5_l64tn"), ExtResource("6_i3r5l"), ExtResource("7_mlio6"), ExtResource("8_4j7jg")])
+
+[node name="FirewoodPile" parent="NavigationRegion2D" instance=ExtResource("1_6rkv5")]
+position = Vector2(-245, -183)
+ingredient = ExtResource("4_wf4qe")
+texture = ExtResource("3_b03pp")
+audio_clips = Array[AudioStream]([ExtResource("10_6wjal"), ExtResource("11_4y58v"), ExtResource("12_qpgew"), ExtResource("13_0wbd7")])
 
 [node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(-550, 1)
@@ -56,6 +74,9 @@ collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallNorth"]
 shape = SubResource("RectangleShape2D_ut1c4")
+
+[node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("14_5f5si")]
+position = Vector2(362, -180)
 
 [node name="Player" parent="." instance=ExtResource("1_p1yvi")]
 position = Vector2(575, 323)

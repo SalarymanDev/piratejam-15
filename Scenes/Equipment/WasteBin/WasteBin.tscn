@@ -1,0 +1,43 @@
+[gd_scene load_steps=10 format=3 uid="uid://dcdulbgx7vrmp"]
+
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_08phf"]
+[ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="2_fsn1q"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Water.tres" id="3_askji"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Wood.tres" id="4_vg5xj"]
+[ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="5_ghsf5"]
+[ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="6_0j8fe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsmjj"]
+size = Vector2(65, 13)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1wxfm"]
+radius = 20.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ix467"]
+size = Vector2(60, 60)
+
+[node name="WasteBin" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_08phf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rsmjj")
+
+[node name="TakesIngredientsComponent" parent="." instance=ExtResource("2_fsn1q")]
+destroy = true
+takes_ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("3_askji"), ExtResource("4_vg5xj")])
+
+[node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component") instance=ExtResource("5_ghsf5")]
+position = Vector2(2.08165e-12, 45)
+takes_ingredients_component = NodePath("../TakesIngredientsComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
+shape = SubResource("CircleShape2D_1wxfm")
+
+[node name="ClickableComponent" parent="." instance=ExtResource("6_0j8fe")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
+shape = SubResource("RectangleShape2D_ix467")

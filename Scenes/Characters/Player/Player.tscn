@@ -1,18 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://vax5lodmmg32"]
+[gd_scene load_steps=9 format=3 uid="uid://vax5lodmmg32"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Player/Player.gd" id="1_s103t"]
 [ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_xqthd"]
 [ext_resource type="PackedScene" uid="uid://c755fytkpll47" path="res://Components/Navigation/NavigationComponent.tscn" id="2_h3dnl"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_dhsgm"]
-[ext_resource type="PackedScene" uid="uid://dfw07hfl3c3p0" path="res://Components/Interact/InteractComponent.tscn" id="5_n7gw1"]
-[ext_resource type="PackedScene" uid="uid://bke6kyhmr22p2" path="res://Components/FootstepsComponent/FootstepsComponent.tscn" id="6_bip3d"]
+[ext_resource type="PackedScene" uid="uid://bke6kyhmr22p2" path="res://Components/Footsteps/FootstepsComponent.tscn" id="5_osyoa"]
 [ext_resource type="PackedScene" uid="uid://8l2i7tg7bfud" path="res://Components/Carry/CarryComponent.tscn" id="7_81dmu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2cp0n"]
 radius = 35.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_sf4cs"]
-radius = 34.2345
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lm263"]
 radius = 54.0093
@@ -39,12 +35,7 @@ speed = 500.0
 [node name="ZIndexComponent" parent="." instance=ExtResource("4_dhsgm")]
 is_static = false
 
-[node name="InteractComponent" parent="." instance=ExtResource("5_n7gw1")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComponent"]
-shape = SubResource("CircleShape2D_sf4cs")
-
-[node name="FootstepsComponent" parent="." node_paths=PackedStringArray("character") instance=ExtResource("6_bip3d")]
+[node name="FootstepsComponent" parent="." node_paths=PackedStringArray("character") instance=ExtResource("5_osyoa")]
 character = NodePath("..")
 
 [node name="CarryComponent" parent="." instance=ExtResource("7_81dmu")]

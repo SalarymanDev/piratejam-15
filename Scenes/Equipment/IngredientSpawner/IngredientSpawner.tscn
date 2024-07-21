@@ -1,10 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://i8qelg4ew3me"]
+[gd_scene load_steps=14 format=3 uid="uid://i8qelg4ew3me"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.gd" id="1_kx42m"]
 [ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="3_yv8nr"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_f0v16"]
+[ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="6_6w6ge"]
 [ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/PickUpComponent/PickUpComponent.tscn" id="6_bk5or"]
 [ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="6_pf1xn"]
+[ext_resource type="AudioStream" uid="uid://c477w32xyxrp3" path="res://Assets/Audio/Pickup/Voice Approve 1.mp3" id="7_e6anw"]
+[ext_resource type="AudioStream" uid="uid://c18ej5t3j318i" path="res://Assets/Audio/Pickup/Voice Approve 2.mp3" id="8_3qu16"]
+[ext_resource type="AudioStream" uid="uid://csjpnggyaespi" path="res://Assets/Audio/Pickup/Voice Approve 4.mp3" id="9_luoah"]
+[ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="10_ds5oq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flrha"]
 size = Vector2(65, 13)
@@ -35,9 +40,15 @@ shape = SubResource("RectangleShape2D_63h6p")
 [node name="ItemComponent" parent="." instance=ExtResource("6_pf1xn")]
 
 [node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("6_bk5or")]
-position = Vector2(0, 43)
+position = Vector2(2.08165e-12, 45)
 item_component = NodePath("../ItemComponent")
+is_swappable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
 position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CircleShape2D_0mwnx")
+
+[node name="AudioComponent" parent="." instance=ExtResource("6_6w6ge")]
+audio_clips = Array[AudioStream]([ExtResource("7_e6anw"), ExtResource("8_3qu16"), ExtResource("9_luoah"), ExtResource("10_ds5oq")])
+
+[connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_picked_up_event"]

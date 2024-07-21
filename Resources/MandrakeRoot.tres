@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_o0c2e")
-ingredient = 0
+ingredient = 4
 name = "Mandrake Root"
 description = ""
 texture = ExtResource("1_xg1u2")

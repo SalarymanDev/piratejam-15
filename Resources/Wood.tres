@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://jxfx54rchjc2"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_r6o5a"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_xktdy"]
+
+[resource]
+script = ExtResource("1_r6o5a")
+ingredient = 2
+name = "Wood"
+description = "Burns pretty well."
+texture = ExtResource("2_xktdy")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckowa560vqcxd"
+path="res://.godot/imported/Potion - Use 9.mp3-588a0c317ed3d4a25c207741919cd2f3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Water/Potion - Use 9.mp3"
+dest_files=["res://.godot/imported/Potion - Use 9.mp3-588a0c317ed3d4a25c207741919cd2f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

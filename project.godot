@@ -45,8 +45,8 @@ Click={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="StaticObject"
-2d_physics/layer_3="Item"
-2d_physics/layer_4="Interactable"
+2d_physics/layer_3="PickUp"
+2d_physics/layer_4="DropOff"
 
 [rendering]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bke6kyhmr22p2"]
 
-[ext_resource type="Script" path="res://Components/FootstepsComponent/FootstepsComponent.gd" id="1_54uyx"]
+[ext_resource type="Script" path="res://Components/Footsteps/FootstepsComponent.gd" id="1_54uyx"]
 [ext_resource type="AudioStream" uid="uid://cm0dp2tj8mh0r" path="res://Assets/Audio/Footsteps/footstep_concrete_land_01.wav" id="2_5lk2f"]
 [ext_resource type="AudioStream" uid="uid://4uf5golkhpi6" path="res://Assets/Audio/Footsteps/footstep_concrete_land_02.wav" id="3_6objq"]
 [ext_resource type="AudioStream" uid="uid://qseyl3qw2ad6" path="res://Assets/Audio/Footsteps/footstep_concrete_land_03.wav" id="4_bx7ay"]
@@ -14,7 +14,7 @@
 
 [node name="FootstepsComponent" type="Node2D"]
 script = ExtResource("1_54uyx")
-sound_clips = Array[AudioStream]([ExtResource("2_5lk2f"), ExtResource("3_6objq"), ExtResource("4_bx7ay"), ExtResource("5_rtcwh"), ExtResource("6_43syy"), ExtResource("7_qgxrj"), ExtResource("8_f0m3b"), ExtResource("9_4uoq8"), ExtResource("10_fq04k"), ExtResource("11_ooe15")])
+audio_clips = Array[AudioStream]([ExtResource("2_5lk2f"), ExtResource("3_6objq"), ExtResource("4_bx7ay"), ExtResource("5_rtcwh"), ExtResource("6_43syy"), ExtResource("7_qgxrj"), ExtResource("8_f0m3b"), ExtResource("9_4uoq8"), ExtResource("10_fq04k"), ExtResource("11_ooe15")])
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 

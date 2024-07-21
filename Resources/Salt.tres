@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_jscjs")
-ingredient = 4
+ingredient = 16
 name = "Salt"
 description = "Something salty"
 texture = ExtResource("1_gbive")

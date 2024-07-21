@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7mq33jnyrhfh"]
-
-[ext_resource type="Script" path="res://Components/Interactable/InteractableComponent.gd" id="1_ckaym"]
-
-[node name="InteractableComponent" type="Area2D"]
-collision_layer = 8
-collision_mask = 0
-monitoring = false
-script = ExtResource("1_ckaym")
