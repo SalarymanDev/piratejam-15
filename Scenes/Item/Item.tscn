@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://c55k1q8wxfslj"]
+
+[ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="1_jocrc"]
+[ext_resource type="Script" path="res://Scenes/Item/Item.gd" id="1_uqbho"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_1b06b"]
+[ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="3_quvhu"]
+[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/PickUpComponent/PickUpComponent.tscn" id="4_2eqf4"]
+[ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="6_n0bdu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b0grt"]
+radius = 25.0
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_uqbho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1b06b")
+
+[node name="ItemComponent" parent="." instance=ExtResource("1_jocrc")]
+
+[node name="ClickableComponent" parent="." instance=ExtResource("3_quvhu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
+shape = SubResource("CircleShape2D_b0grt")
+
+[node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("4_2eqf4")]
+item_component = NodePath("../ItemComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
+shape = SubResource("CircleShape2D_b0grt")
+
+[node name="ZIndexComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("6_n0bdu")]
+sprite = NodePath("../Sprite2D")
+is_static = false
+
+[connection signal="item_swapped_event" from="PickUpComponent" to="." method="_on_item_swapped_event"]
+[connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_picked_up_event"]

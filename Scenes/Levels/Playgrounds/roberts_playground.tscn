@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl8ci2gqvsxgy"]
+[gd_scene load_steps=8 format=3 uid="uid://cl8ci2gqvsxgy"]
 
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_p1yvi"]
 [ext_resource type="PackedScene" uid="uid://dywwm3yrwrq8o" path="res://Scenes/Equipment/InteractableTest.tscn" id="2_i6qtn"]
+[ext_resource type="PackedScene" uid="uid://c55k1q8wxfslj" path="res://Scenes/Item/Item.tscn" id="3_tk6it"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Salt.tres" id="4_nfqsn"]
+[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/MandrakeRoot.tres" id="5_w51a0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
 vertices = PackedVector2Array(-257, 149, 505, 256, -509, 256, -382, 149, -510, -143, -382, 76, 510, -194, -257, 76, -257, -113, -257, -186, 510, -260, -382, -113, -382, -186, -510, -260)
@@ -59,3 +62,11 @@ rotation = 3.14159
 
 [node name="Player" parent="." instance=ExtResource("1_p1yvi")]
 position = Vector2(575, 323)
+
+[node name="Item" parent="." instance=ExtResource("3_tk6it")]
+position = Vector2(868, 170)
+item = ExtResource("4_nfqsn")
+
+[node name="Item2" parent="." instance=ExtResource("3_tk6it")]
+position = Vector2(865, 402)
+item = ExtResource("5_w51a0")

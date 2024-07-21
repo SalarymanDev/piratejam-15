@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://vax5lodmmg32"]
+[gd_scene load_steps=11 format=3 uid="uid://vax5lodmmg32"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Player/Player.gd" id="1_s103t"]
 [ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_xqthd"]
@@ -6,12 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_dhsgm"]
 [ext_resource type="PackedScene" uid="uid://dfw07hfl3c3p0" path="res://Components/Interact/InteractComponent.tscn" id="5_n7gw1"]
 [ext_resource type="PackedScene" uid="uid://bke6kyhmr22p2" path="res://Components/FootstepsComponent/FootstepsComponent.tscn" id="6_bip3d"]
+[ext_resource type="PackedScene" uid="uid://8l2i7tg7bfud" path="res://Components/Carry/CarryComponent.tscn" id="7_81dmu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2cp0n"]
 radius = 35.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sf4cs"]
 radius = 34.2345
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lm263"]
+radius = 54.0093
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
@@ -43,5 +47,10 @@ shape = SubResource("CircleShape2D_sf4cs")
 
 [node name="FootstepsComponent" parent="." node_paths=PackedStringArray("character") instance=ExtResource("6_bip3d")]
 character = NodePath("..")
+
+[node name="CarryComponent" parent="." instance=ExtResource("7_81dmu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarryComponent"]
+shape = SubResource("CircleShape2D_lm263")
 
 [connection signal="navigation_finished" from="NavigationComponent" to="." method="_on_navigation_finished"]

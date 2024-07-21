@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=2 format=3 uid="uid://drq72ptn3p5qi"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://drq72ptn3p5qi"]
 
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_gbive"]
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_jscjs"]
 
 [resource]
 script = ExtResource("1_jscjs")
-ingredient_value = 0
+ingredient = 4
 name = "Salt"
-description = "Grains of salt used for purification and preservation."
+description = "Something salty"
+image = ExtResource("1_gbive")
