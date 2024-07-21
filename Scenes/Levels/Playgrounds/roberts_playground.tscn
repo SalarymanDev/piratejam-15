@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cl8ci2gqvsxgy"]
+[gd_scene load_steps=19 format=3 uid="uid://cl8ci2gqvsxgy"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_6rkv5"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_p1yvi"]
@@ -23,6 +23,9 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcerf"]
+size = Vector2(20, 612)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ut1c4"]
 
 [node name="RobertsPlayground" type="Node2D"]
@@ -36,20 +39,21 @@ position = Vector2(-412, -183)
 ingredient = ExtResource("2_byf1s")
 texture = ExtResource("3_b03pp")
 audio_clips = Array[AudioStream]([ExtResource("4_335nv"), ExtResource("5_l64tn"), ExtResource("6_i3r5l"), ExtResource("7_mlio6"), ExtResource("8_4j7jg")])
+tooltip = "Well"
 
 [node name="FirewoodPile" parent="NavigationRegion2D" instance=ExtResource("1_6rkv5")]
 position = Vector2(-245, -183)
 ingredient = ExtResource("4_wf4qe")
 texture = ExtResource("3_b03pp")
 audio_clips = Array[AudioStream]([ExtResource("10_6wjal"), ExtResource("11_4y58v"), ExtResource("12_qpgew"), ExtResource("13_0wbd7")])
+tooltip = "Firewood"
 
 [node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(-550, 1)
-scale = Vector2(1, 30)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallWest"]
-shape = SubResource("RectangleShape2D_ut1c4")
+shape = SubResource("RectangleShape2D_wcerf")
 
 [node name="WallEast" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(550, 1)

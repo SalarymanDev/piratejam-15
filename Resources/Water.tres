@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://c7eflg5t1nlmg"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_quf8l"]
-[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_mwnt4"]
+[ext_resource type="Texture2D" uid="uid://dmrmp015rmyon" path="res://Assets/Sprites/barrel.png" id="2_q1v5u"]
 
 [resource]
 script = ExtResource("1_quf8l")
 ingredient = 0
 name = "Water"
 description = "Makes things wet."
-texture = ExtResource("2_mwnt4")
+texture = ExtResource("2_q1v5u")
