@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://i8qelg4ew3me"]
+
+[ext_resource type="Script" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.gd" id="1_kx42m"]
+[ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="3_yv8nr"]
+[ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_f0v16"]
+[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/PickUpComponent/PickUpComponent.tscn" id="6_bk5or"]
+[ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="6_pf1xn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flrha"]
+size = Vector2(65, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63h6p"]
+size = Vector2(60, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mwnx"]
+radius = 20.0
+
+[node name="IngredientSpawner" type="StaticBody2D"]
+script = ExtResource("1_kx42m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_flrha")
+
+[node name="ClickableComponent" parent="." instance=ExtResource("3_yv8nr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
+shape = SubResource("RectangleShape2D_63h6p")
+
+[node name="ZIndexComponent" parent="." instance=ExtResource("4_f0v16")]
+
+[node name="ItemComponent" parent="." instance=ExtResource("6_pf1xn")]
+
+[node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("6_bk5or")]
+position = Vector2(0, 43)
+item_component = NodePath("../ItemComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_0mwnx")

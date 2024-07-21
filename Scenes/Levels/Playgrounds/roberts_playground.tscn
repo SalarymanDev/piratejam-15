@@ -1,14 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl8ci2gqvsxgy"]
+[gd_scene load_steps=7 format=3 uid="uid://cl8ci2gqvsxgy"]
 
+[ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_6rkv5"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_p1yvi"]
-[ext_resource type="PackedScene" uid="uid://dywwm3yrwrq8o" path="res://Scenes/Equipment/InteractableTest.tscn" id="2_i6qtn"]
-[ext_resource type="PackedScene" uid="uid://c55k1q8wxfslj" path="res://Scenes/Item/Item.tscn" id="3_tk6it"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="3_b03pp"]
 [ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Salt.tres" id="4_nfqsn"]
-[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/MandrakeRoot.tres" id="5_w51a0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
-vertices = PackedVector2Array(-257, 149, 505, 256, -509, 256, -382, 149, -510, -143, -382, 76, 510, -194, -257, 76, -257, -113, -257, -186, 510, -260, -382, -113, -382, -186, -510, -260)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(6, 1, 0, 7), PackedInt32Array(8, 6, 7), PackedInt32Array(6, 8, 9, 10), PackedInt32Array(11, 8, 7, 5), PackedInt32Array(11, 5, 4), PackedInt32Array(12, 11, 4, 13), PackedInt32Array(12, 13, 10, 9)])
+vertices = PackedVector2Array(510, -194, 505, 256, -509, 256, -510, -2, -510, -260, 510, -260)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 535, 286, 541, -291)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 30.0
@@ -20,6 +19,11 @@ agent_radius = 30.0
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." groups=["Navigation"]]
 position = Vector2(575, 323)
 navigation_polygon = SubResource("NavigationPolygon_jmj5o")
+
+[node name="IngredientSpawner" parent="NavigationRegion2D" instance=ExtResource("1_6rkv5")]
+position = Vector2(-412, -183)
+ingredient = ExtResource("4_nfqsn")
+texture = ExtResource("3_b03pp")
 
 [node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(-550, 1)
@@ -53,20 +57,5 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallNorth"]
 shape = SubResource("RectangleShape2D_ut1c4")
 
-[node name="InteractableTest" parent="NavigationRegion2D" instance=ExtResource("2_i6qtn")]
-position = Vector2(-319, -150)
-
-[node name="InteractableTest2" parent="NavigationRegion2D" instance=ExtResource("2_i6qtn")]
-position = Vector2(-319, 113)
-rotation = 3.14159
-
 [node name="Player" parent="." instance=ExtResource("1_p1yvi")]
 position = Vector2(575, 323)
-
-[node name="Item" parent="." instance=ExtResource("3_tk6it")]
-position = Vector2(868, 170)
-item = ExtResource("4_nfqsn")
-
-[node name="Item2" parent="." instance=ExtResource("3_tk6it")]
-position = Vector2(865, 402)
-item = ExtResource("5_w51a0")

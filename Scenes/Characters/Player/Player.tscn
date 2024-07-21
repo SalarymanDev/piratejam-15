@@ -36,8 +36,7 @@ path_desired_distance = 5.0
 character = NodePath("..")
 speed = 500.0
 
-[node name="ZIndexComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_dhsgm")]
-sprite = NodePath("../Sprite2D")
+[node name="ZIndexComponent" parent="." instance=ExtResource("4_dhsgm")]
 is_static = false
 
 [node name="InteractComponent" parent="." instance=ExtResource("5_n7gw1")]
@@ -49,10 +48,10 @@ shape = SubResource("CircleShape2D_sf4cs")
 character = NodePath("..")
 
 [node name="CarryComponent" parent="." instance=ExtResource("7_81dmu")]
-position = Vector2(0, 36)
+position = Vector2(0, 17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CarryComponent"]
-position = Vector2(0, -36)
+position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CircleShape2D_lm263")
 
 [connection signal="navigation_finished" from="NavigationComponent" to="." method="_on_navigation_finished"]

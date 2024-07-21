@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Components/Clickable/ClickableComponent.gd" id="1_odpxt"]
 
 [node name="ClickableComponent" type="Area2D"]
+monitorable = false
 script = ExtResource("1_odpxt")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
