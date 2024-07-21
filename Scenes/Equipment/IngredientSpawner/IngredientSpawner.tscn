@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://i8qelg4ew3me"]
+[gd_scene load_steps=15 format=3 uid="uid://i8qelg4ew3me"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.gd" id="1_kx42m"]
+[ext_resource type="Texture2D" uid="uid://ba3bdh5d11etd" path="res://Assets/Sprites/chest.png" id="2_d8iu8"]
 [ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="3_yv8nr"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_f0v16"]
 [ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="6_6w6ge"]
-[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/PickUpComponent/PickUpComponent.tscn" id="6_bk5or"]
+[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/Pickup/PickUpComponent.tscn" id="6_bk5or"]
 [ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="6_pf1xn"]
 [ext_resource type="AudioStream" uid="uid://c477w32xyxrp3" path="res://Assets/Audio/Pickup/Voice Approve 1.mp3" id="7_e6anw"]
 [ext_resource type="AudioStream" uid="uid://c18ej5t3j318i" path="res://Assets/Audio/Pickup/Voice Approve 2.mp3" id="8_3qu16"]
@@ -22,9 +23,11 @@ radius = 20.0
 
 [node name="IngredientSpawner" type="StaticBody2D"]
 script = ExtResource("1_kx42m")
+texture = ExtResource("2_d8iu8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_d8iu8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)

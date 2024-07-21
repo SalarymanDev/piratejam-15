@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yi360nbmchle"
-path="res://.godot/imported/wood.png-f5d661f985184a5f0dbe305ab66a2158.ctex"
+uid="uid://bwna07m5rj061"
+path="res://.godot/imported/crate.png-8f22edd272158b5e7d45be8d075d9ac0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/wood.png"
-dest_files=["res://.godot/imported/wood.png-f5d661f985184a5f0dbe305ab66a2158.ctex"]
+source_file="res://Assets/Sprites/crate.png"
+dest_files=["res://.godot/imported/crate.png-8f22edd272158b5e7d45be8d075d9ac0.ctex"]
 
 [params]
 

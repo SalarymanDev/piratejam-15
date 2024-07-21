@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://drq72ptn3p5qi"]
 
-[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_gbive"]
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_jscjs"]
+[ext_resource type="Texture2D" uid="uid://xou3v8qjd2an" path="res://Assets/Sprites/bag.png" id="2_33fqn"]
 
 [resource]
 script = ExtResource("1_jscjs")
 ingredient = 16
 name = "Salt"
 description = ""
-texture = ExtResource("1_gbive")
+texture = ExtResource("2_33fqn")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcdulbgx7vrmp"]
+[gd_scene load_steps=14 format=3 uid="uid://dcdulbgx7vrmp"]
 
-[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_08phf"]
 [ext_resource type="Script" path="res://Scenes/Equipment/WasteBin/WasteBin.gd" id="1_o1vnm"]
 [ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="2_fsn1q"]
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Water.tres" id="3_askji"]
-[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Wood.tres" id="4_vg5xj"]
+[ext_resource type="Texture2D" uid="uid://br07foe4n1vao" path="res://Assets/Sprites/wastebin.png" id="2_vdgjf"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="3_askji"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="4_vg5xj"]
 [ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="5_ghsf5"]
 [ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="6_0j8fe"]
+[ext_resource type="PackedScene" uid="uid://0q4lt3ou3oig" path="res://Components/TakesPotion/TakesPotionComponent.tscn" id="6_pbfgs"]
 [ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="7_xqjw5"]
 [ext_resource type="AudioStream" uid="uid://clavn8rkgug12" path="res://Assets/Audio/Waste/drop_trashbag_with_bottles_002.wav" id="8_rxyar"]
 
@@ -23,8 +24,8 @@ size = Vector2(60, 60)
 script = ExtResource("1_o1vnm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_08phf")
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_vdgjf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
@@ -34,9 +35,13 @@ shape = SubResource("RectangleShape2D_rsmjj")
 destroy = true
 takes_ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("3_askji"), ExtResource("4_vg5xj")])
 
-[node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component") instance=ExtResource("5_ghsf5")]
+[node name="TakesPotionComponent" parent="." instance=ExtResource("6_pbfgs")]
+destroy = true
+
+[node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component", "takes_potion_component") instance=ExtResource("5_ghsf5")]
 position = Vector2(2.08165e-12, 45)
 takes_ingredients_component = NodePath("../TakesIngredientsComponent")
+takes_potion_component = NodePath("../TakesPotionComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
 shape = SubResource("CircleShape2D_1wxfm")
@@ -50,4 +55,5 @@ shape = SubResource("RectangleShape2D_ix467")
 [node name="AudioComponent" parent="." instance=ExtResource("7_xqjw5")]
 audio_clips = Array[AudioStream]([ExtResource("8_rxyar")])
 
-[connection signal="drop_off_event" from="DropOffComponent" to="." method="_on_drop_off_event"]
+[connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_ingredient_event"]
+[connection signal="drop_off_potion_event" from="DropOffComponent" to="." method="_on_drop_off_potion_event"]

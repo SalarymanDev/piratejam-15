@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmqjfcq75klgl"]
 
-[ext_resource type="Script" path="res://Components/PickUpComponent/PickUpComponent.gd" id="1_tff0c"]
+[ext_resource type="Script" path="res://Components/Pickup/PickUpComponent.gd" id="1_tff0c"]
 
 [node name="PickUpComponent" type="Area2D"]
 collision_layer = 4

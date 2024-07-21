@@ -1,8 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://w2jway24bhsk"]
+[gd_scene load_steps=31 format=3 uid="uid://w2jway24bhsk"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/Cauldron/Cauldron.gd" id="1_r1vq5"]
 [ext_resource type="Texture2D" uid="uid://b7k5co3xe0bmj" path="res://Assets/Sprites/cauldron.png" id="2_8v285"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Salt.tres" id="2_yffud"]
 [ext_resource type="Texture2D" uid="uid://cof8mvwti5vx6" path="res://Assets/Sprites/fire.png" id="3_jyuae"]
 [ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="3_nulrp"]
 [ext_resource type="Texture2D" uid="uid://bvj14cvrnb6qx" path="res://Assets/Sprites/smoke.png" id="4_d7uq5"]
@@ -20,8 +19,13 @@
 [ext_resource type="AudioStream" uid="uid://c6qiid4u07igi" path="res://Assets/Audio/Cauldron/Pouring Short E.wav" id="17_tqbif"]
 [ext_resource type="AudioStream" uid="uid://ckbhkk38sqqcr" path="res://Assets/Audio/Cauldron/Fire 5 (DPS).mp3" id="18_sb8y5"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="19_g1ghw"]
+[ext_resource type="AudioStream" uid="uid://c477w32xyxrp3" path="res://Assets/Audio/Pickup/Voice Approve 1.mp3" id="19_ki7md"]
+[ext_resource type="AudioStream" uid="uid://c18ej5t3j318i" path="res://Assets/Audio/Pickup/Voice Approve 2.mp3" id="20_plqb2"]
 [ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="21_4vdmb"]
-[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/PickUpComponent/PickUpComponent.tscn" id="21_awl56"]
+[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/Pickup/PickUpComponent.tscn" id="21_awl56"]
+[ext_resource type="AudioStream" uid="uid://csjpnggyaespi" path="res://Assets/Audio/Pickup/Voice Approve 4.mp3" id="21_gxm03"]
+[ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="22_6jmco"]
+[ext_resource type="PackedScene" uid="uid://ch3j40q4jd81k" path="res://Components/PotionRecipes/PotionRecipesComponent.tscn" id="23_2yatd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0js4n"]
 size = Vector2(65, 13)
@@ -38,7 +42,6 @@ radius = 20.0
 [node name="Cauldron" type="StaticBody2D"]
 script = ExtResource("1_r1vq5")
 cook_seconds = 10
-test_item = ExtResource("2_yffud")
 
 [node name="CauldronSprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, -3)
@@ -97,6 +100,9 @@ audio_clips = Array[AudioStream]([ExtResource("16_wmdxq"), ExtResource("17_tqbif
 [node name="FireAudioComponent" parent="." instance=ExtResource("8_sqoqy")]
 audio_clips = Array[AudioStream]([ExtResource("18_sb8y5")])
 
+[node name="PickupAudioComponent" parent="." instance=ExtResource("8_sqoqy")]
+audio_clips = Array[AudioStream]([ExtResource("19_ki7md"), ExtResource("20_plqb2"), ExtResource("21_gxm03"), ExtResource("22_6jmco")])
+
 [node name="ZIndexComponent" parent="." instance=ExtResource("19_g1ghw")]
 
 [node name="ItemComponent" parent="." instance=ExtResource("21_4vdmb")]
@@ -111,6 +117,8 @@ disabled = true
 position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CircleShape2D_n4kpg")
 
+[node name="PotionRecipesComponent" parent="." instance=ExtResource("23_2yatd")]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="drop_off_event" from="DropOffComponent" to="." method="_on_drop_off_event"]
+[connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_ingredient_event"]
 [connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_picked_up_event"]

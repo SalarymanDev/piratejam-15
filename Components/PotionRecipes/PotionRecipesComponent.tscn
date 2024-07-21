@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch3j40q4jd81k"]
+
+[ext_resource type="Script" path="res://Components/PotionRecipes/PotionRecipesComponent.gd" id="1_62m47"]
+[ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="2_3h5h1"]
+[ext_resource type="Resource" uid="uid://cxsh56hnd636k" path="res://Resources/Potions/TrashPotion.tres" id="3_kwn1b"]
+
+[node name="PotionRecipesComponent" type="Node"]
+script = ExtResource("1_62m47")
+trash_potion = ExtResource("3_kwn1b")
+potions = Array[Resource("res://Scripts/PotionResource.gd")]([ExtResource("2_3h5h1")])

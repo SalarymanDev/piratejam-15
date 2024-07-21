@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var navigation_component: NavigationComponent = $NavigationComponent
 @onready var carry_component: CarryComponent = $CarryComponent
+@onready var sprite: Sprite2D = $Sprite2D
 
 enum Actions {
 	Move,
@@ -40,7 +41,6 @@ func _handle_action(event: InputEventMouseButton) -> void:
 	current_action = Actions.Move
 	navigation_component.target_position = event.global_position
 
-
 func _on_navigation_finished() -> void:
 	match current_action:
 		Actions.Move:
@@ -51,3 +51,16 @@ func _on_navigation_finished() -> void:
 		Actions.Pickup:
 			carry_component.pickup()
 			return
+
+@onready var _original_carry_x := carry_component.position.x
+
+func _physics_process(_delta: float) -> void:
+	if velocity.x == 0:
+		return
+	if velocity.x > 0:
+		sprite.flip_h = true
+		carry_component.position.x = -_original_carry_x
+	else:
+		sprite.flip_h = false
+		carry_component.position.x = _original_carry_x
+		

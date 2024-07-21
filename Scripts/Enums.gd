@@ -8,3 +8,7 @@ enum Ingredients {
 	Salt = 16,
 }
 
+enum Potions {
+	Trash,
+	DrinkingWater,
+}

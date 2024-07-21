@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://0q4lt3ou3oig"]
+
+[ext_resource type="Script" path="res://Components/TakesPotion/TakesPotionComponent.gd" id="1_8ac47"]
+
+[node name="TakesPotionComponent" type="Node2D"]
+script = ExtResource("1_8ac47")
