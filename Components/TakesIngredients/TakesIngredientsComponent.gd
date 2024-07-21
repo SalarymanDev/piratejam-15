@@ -12,7 +12,9 @@ func can_take(ingredient: IngredientResource) -> bool:
 func take(ingredient: IngredientResource) -> bool:
 	if destroy:
 		return true
+	
 	if !can_take(ingredient):
 		return false
+	
 	_ingredients.append(ingredient)
 	return true
