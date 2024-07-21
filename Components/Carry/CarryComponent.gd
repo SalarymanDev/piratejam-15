@@ -14,6 +14,7 @@ func pickup() -> void:
 		_current_item = _pickup_in_range.swap(_current_item)
 		_update_sprite()
 		return
+		
 	_current_item = _pickup_in_range.pickup()
 	_update_sprite()
 

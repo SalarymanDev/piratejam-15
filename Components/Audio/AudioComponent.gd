@@ -13,3 +13,6 @@ func _ready() -> void:
 func play() -> void:
 	audio_player.stream = audio_clips[_rng.randi_range(0, audio_clips.size() - 1)]
 	audio_player.play()
+
+func stop() -> void:
+	audio_player.stop()

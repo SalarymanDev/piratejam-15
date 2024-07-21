@@ -2,6 +2,7 @@ extends Area2D
 class_name DropOffComponent
 
 @export var takes_ingredients_component: TakesIngredientComponent
+@export var disabled: bool = false
 
 signal drop_off_event(item: ItemResource)
 

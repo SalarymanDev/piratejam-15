@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckbhkk38sqqcr"
+path="res://.godot/imported/Fire 5 (DPS).mp3-9a18c46a081cc330299dd0893886af45.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Cauldron/Fire 5 (DPS).mp3"
+dest_files=["res://.godot/imported/Fire 5 (DPS).mp3-9a18c46a081cc330299dd0893886af45.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

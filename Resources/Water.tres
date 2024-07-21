@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_quf8l")
-ingredient = 0
+ingredient = 1
 name = "Water"
-description = "Makes things wet."
+description = ""
 texture = ExtResource("2_q1v5u")

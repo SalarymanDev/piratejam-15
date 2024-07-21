@@ -26,13 +26,13 @@ func _handle_action(event: InputEventMouseButton) -> void:
 		var target: Node2D = MouseManager.get_target()
 		
 		var dropoff_component: DropOffComponent = target.find_child("DropOffComponent")
-		if dropoff_component:
+		if dropoff_component and !dropoff_component.disabled:
 			current_action = Actions.DropOff
 			navigation_component.target_position = dropoff_component.global_position
 			return
 		
 		var pickup_component: PickUpComponent = target.find_child("PickUpComponent")
-		if pickup_component:
+		if pickup_component and !pickup_component.disabled:
 			current_action = Actions.Pickup
 			navigation_component.target_position = pickup_component.global_position
 			return
