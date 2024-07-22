@@ -32,5 +32,3 @@ text = "Timer: "
 [node name="TimeRemainingLabel" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "5:00"
-
-[node name="Timer" type="Timer" parent="."]

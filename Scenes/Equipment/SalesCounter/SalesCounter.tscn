@@ -1,0 +1,58 @@
+[gd_scene load_steps=16 format=3 uid="uid://b3oiwani0erfq"]
+
+[ext_resource type="Script" path="res://Scenes/Equipment/SalesCounter/SalesCounter.gd" id="1_tm6de"]
+[ext_resource type="Texture2D" uid="uid://cae2tiggj44r7" path="res://Assets/Sprites/shopSign.png" id="2_x2x7j"]
+[ext_resource type="PackedScene" uid="uid://0q4lt3ou3oig" path="res://Components/TakesPotion/TakesPotionComponent.tscn" id="3_qhhpc"]
+[ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="4_xexaw"]
+[ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="5_4n7bo"]
+[ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="6_f56nq"]
+[ext_resource type="AudioStream" uid="uid://clavn8rkgug12" path="res://Assets/Audio/Waste/drop_trashbag_with_bottles_002.wav" id="7_6vt16"]
+[ext_resource type="AudioStream" uid="uid://vwnm3bf8xk5w" path="res://Assets/Audio/Sell/Coins Bag 1.mp3" id="8_p533m"]
+[ext_resource type="AudioStream" uid="uid://dwae0yaqaer6k" path="res://Assets/Audio/Sell/Coins Bag 2.mp3" id="9_ah7lv"]
+[ext_resource type="AudioStream" uid="uid://bxmpp70smxlqm" path="res://Assets/Audio/Sell/Coins Bag 3.mp3" id="10_8qb1u"]
+[ext_resource type="AudioStream" uid="uid://fhw0l4ibhtcf" path="res://Assets/Audio/Sell/Coins Bag 4.mp3" id="11_vme3c"]
+[ext_resource type="PackedScene" uid="uid://7ndrlvq36m5f" path="res://Scenes/UI/PotionSold/PotionSold.tscn" id="12_7m0of"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_843fc"]
+size = Vector2(65, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w707a"]
+size = Vector2(60, 60)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ofpx5"]
+radius = 20.0
+
+[node name="SalesCounter" type="StaticBody2D"]
+script = ExtResource("1_tm6de")
+potion_sold_scene = ExtResource("12_7m0of")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_843fc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_x2x7j")
+
+[node name="TakesPotionComponent" parent="." instance=ExtResource("3_qhhpc")]
+
+[node name="ClickableComponent" parent="." instance=ExtResource("4_xexaw")]
+tooltip_text = "Sales Counter"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
+shape = SubResource("RectangleShape2D_w707a")
+
+[node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_potion_component") instance=ExtResource("5_4n7bo")]
+position = Vector2(2.08165e-12, 45)
+takes_potion_component = NodePath("../TakesPotionComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
+shape = SubResource("CircleShape2D_ofpx5")
+
+[node name="AudioComponent" parent="." instance=ExtResource("6_f56nq")]
+audio_clips = Array[AudioStream]([ExtResource("7_6vt16"), ExtResource("8_p533m"), ExtResource("9_ah7lv"), ExtResource("10_8qb1u"), ExtResource("11_vme3c")])
+
+[node name="PotionSoldSpawnPoint" type="Node2D" parent="."]
+position = Vector2(0, -26)
+
+[connection signal="drop_off_potion_event" from="DropOffComponent" to="." method="_on_drop_off_potion_event"]

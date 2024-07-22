@@ -8,9 +8,6 @@ class_name DropOffComponent
 signal drop_off_ingredient_event(ingredient: IngredientResource)
 signal drop_off_potion_event(potion: PotionResource)
 
-func _ready() -> void:
-	assert(takes_ingredients_component)
-
 func dropoff(item: ItemResource) -> bool:
 	if item is IngredientResource:
 		if takes_ingredients_component and takes_ingredients_component.can_take(item as IngredientResource):

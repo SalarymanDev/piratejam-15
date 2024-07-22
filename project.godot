@@ -17,7 +17,8 @@ config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-MouseManager="*res://Scripts/MouseManager.gd"
+MouseManager="*res://Scripts/Managers/MouseManager.gd"
+GameStateManager="*res://Scripts/Managers/GameStateManager.gd"
 
 [debug]
 

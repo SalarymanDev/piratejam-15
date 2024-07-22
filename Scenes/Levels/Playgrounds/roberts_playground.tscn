@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cl8ci2gqvsxgy"]
+[gd_scene load_steps=23 format=3 uid="uid://cl8ci2gqvsxgy"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_6rkv5"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_p1yvi"]
@@ -18,10 +18,11 @@
 [ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Salt.tres" id="14_3iehp"]
 [ext_resource type="PackedScene" uid="uid://dcdulbgx7vrmp" path="res://Scenes/Equipment/WasteBin/WasteBin.tscn" id="14_5f5si"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="15_veeo4"]
+[ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="18_6seak"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
-vertices = PackedVector2Array(-348, 178, 27, -141, 300, -143, 425, -143, 505, 256, -509, 256, -473, 178, -510, -2, -473, 105, 510, -194, 425, -216, 510, -260, -98, -141, -348, 105, -183, -146, -98, -214, -308, -146, -510, -260, 300, -216, -350, -146, -308, -219, -183, -219, -475, -146, -475, -219, 27, -214, -350, -219)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(0, 4, 5, 6), PackedInt32Array(6, 5, 7, 8), PackedInt32Array(9, 4, 3, 10, 11), PackedInt32Array(12, 1, 0, 13), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 14, 13), PackedInt32Array(17, 11, 10, 18), PackedInt32Array(19, 20, 16, 13, 8), PackedInt32Array(15, 14, 21), PackedInt32Array(19, 8, 7, 22), PackedInt32Array(22, 7, 17, 23), PackedInt32Array(2, 1, 24, 18), PackedInt32Array(17, 18, 24, 15, 21), PackedInt32Array(17, 21, 20), PackedInt32Array(20, 19, 25), PackedInt32Array(17, 20, 25), PackedInt32Array(17, 25, 23)])
+vertices = PackedVector2Array(406, -9, 27, -141, 300, -143, 425, -143, 508, -9, 507, 64, 505, 256, -509, 256, -348, 179, 406, 64, -473, 179, -510, -2, -473, 106, 510, -194, 425, -216, 510, -260, -510, -260, 300, -216, -348, 106, -98, -141, -183, -146, -98, -214, -183, -219, 27, -214, -308, -219, -308, -146, -350, -146, -350, -219, -475, -219, -475, -146)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(10, 8, 7), PackedInt32Array(10, 7, 11, 12), PackedInt32Array(13, 4, 3, 14, 15), PackedInt32Array(16, 15, 14, 17), PackedInt32Array(1, 0, 9, 8, 18, 19), PackedInt32Array(20, 21, 19, 18), PackedInt32Array(21, 20, 22), PackedInt32Array(2, 1, 23, 17), PackedInt32Array(16, 17, 23, 21, 22), PackedInt32Array(16, 22, 24), PackedInt32Array(24, 25, 18, 26, 27), PackedInt32Array(16, 24, 27), PackedInt32Array(16, 27, 28), PackedInt32Array(11, 16, 28, 29), PackedInt32Array(25, 20, 18), PackedInt32Array(26, 18, 12, 11, 29)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 535, 286, 541, -291)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 30.0
@@ -93,6 +94,9 @@ position = Vector2(362, -180)
 
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("15_veeo4")]
 position = Vector2(-35, -178)
+
+[node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("18_6seak")]
+position = Vector2(468, 27)
 
 [node name="Player" parent="." instance=ExtResource("1_p1yvi")]
 position = Vector2(575, 323)

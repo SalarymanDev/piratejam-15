@@ -34,7 +34,6 @@ speed = 500.0
 
 [node name="CarryComponent" parent="." instance=ExtResource("7_81dmu")]
 position = Vector2(-27, 0)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CarryComponent"]
 position = Vector2(28, 0)
