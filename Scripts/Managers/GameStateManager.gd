@@ -13,6 +13,7 @@ var _timer: Timer = Timer.new()
 var _level_seconds: int = 300
 
 func _ready() -> void:
+	_timer.one_shot = true
 	get_tree().root.add_child.call_deferred(_timer)
 	_timer.timeout.connect(end_day)
 	emit_signal(money_changed_event.get_name(), _current_money)

@@ -71,6 +71,7 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_0js4n")
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="TakesIngredientsComponent" parent="." instance=ExtResource("5_1n2u4")]
 cauldron = true
