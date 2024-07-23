@@ -5,8 +5,10 @@ extends Control
 @onready var time_indicator: TextureRect = $TimeIndicator
 @onready var money_label: Label = $MoneyPaper/HBoxContainer/MoneyLabel
 @onready var day_label: Label = $DayPaper/DayLabel
+@onready var invisbility_potion_texture: TextureRect = $InvisibilityButton/InvisibilityPotionTexture
 
 var _current_time_index: int = 0
+var _has_invisiblity_potion: bool = false
 
 func _ready() -> void:
 	GameStateManager.time_changed_event.connect(_update_time)
@@ -14,6 +16,7 @@ func _ready() -> void:
 	GameStateManager.day_started_event.connect(_update_day)
 	_update_day(GameStateManager.get_day())
 	_update_money(GameStateManager.get_money())
+	_update_potion()
 
 func _update_time(remaining_seconds: float) -> void:
 	var level_seconds := GameStateManager.get_level_seconds()
@@ -28,3 +31,12 @@ func _update_money(amount: int) -> void:
 
 func _update_day(current_day: int) -> void:
 	day_label.text = "Day %d" % current_day
+
+func _update_potion() -> void:
+	invisbility_potion_texture.visible = _has_invisiblity_potion
+
+func _on_invisibility_button_pressed() -> void:
+	if !_has_invisiblity_potion:
+		return
+	_has_invisiblity_potion = false
+	_update_potion()

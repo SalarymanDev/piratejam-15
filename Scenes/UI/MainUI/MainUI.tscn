@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0a1s4bo3krrq"]
+[gd_scene load_steps=10 format=3 uid="uid://b0a1s4bo3krrq"]
 
 [ext_resource type="Script" path="res://Scenes/UI/MainUI/MainUI.gd" id="1_ceh7a"]
 [ext_resource type="Texture2D" uid="uid://d044xdjie3itn" path="res://Assets/Sprites/UI/Time/0_dawn.png" id="1_wvaqh"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://2k6nqpcq07p7" path="res://Assets/Sprites/UI/Time/1_day.png" id="3_wulcp"]
 [ext_resource type="Texture2D" uid="uid://c3at7breygjan" path="res://Assets/Sprites/UI/Time/2_afternoon.png" id="4_ge8ua"]
 [ext_resource type="Texture2D" uid="uid://c8uqnubygnygv" path="res://Assets/Sprites/UI/Time/3_night.png" id="5_eg4pa"]
+[ext_resource type="Texture2D" uid="uid://c3mqscmef7fmm" path="res://Assets/Sprites/UI/invisibility_potion_holder.png" id="8_3ndqy"]
+[ext_resource type="Texture2D" uid="uid://d30867e25nuk4" path="res://Assets/Sprites/potion.png" id="9_58uwv"]
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -96,3 +98,34 @@ offset_bottom = 38.0
 grow_vertical = 0
 texture = ExtResource("1_wvaqh")
 stretch_mode = 4
+
+[node name="InvisibilityButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+tooltip_text = "Use Invisibility"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_3ndqy")
+stretch_mode = 0
+
+[node name="InvisibilityPotionTexture" type="TextureRect" parent="InvisibilityButton"]
+modulate = Color(0.258824, 0.258824, 0.258824, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_58uwv")
+expand_mode = 2
+
+[connection signal="pressed" from="InvisibilityButton" to="." method="_on_invisibility_button_pressed"]

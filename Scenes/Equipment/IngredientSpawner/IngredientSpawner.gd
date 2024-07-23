@@ -18,7 +18,8 @@ func _ready() -> void:
 		sprite.texture = texture
 	if audio_clips:
 		audio_component.audio_clips = audio_clips
-	clickable_component.update_tooltip(tooltip)
+	if clickable_component:
+		clickable_component.update_tooltip(tooltip)
 
 func _process(_delta: float) -> void:
 	if not Engine.is_editor_hint():
