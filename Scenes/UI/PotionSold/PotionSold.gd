@@ -4,7 +4,7 @@ class_name PotionSold
 @export var speed: float = 10
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var sold_amount_label: Label = $Node2D/Control/HBoxContainer/Label
+@onready var sold_amount_label: Label = $Node2D/Control/TextureRect/HBoxContainer/Label
 
 
 func play(amount: int) -> void:

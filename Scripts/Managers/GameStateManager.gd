@@ -13,13 +13,16 @@ var _timer: Timer = Timer.new()
 var _level_seconds: int = 300
 
 func _ready() -> void:
+	get_tree().root.add_child.call_deferred(_timer)
 	_timer.timeout.connect(end_day)
+	emit_signal(money_changed_event.get_name(), _current_money)
 
 func start_day() -> void:
 	_timer.start(_level_seconds)
 	emit_signal(day_started_event.get_name(), _current_day)
 
 func end_day() -> void:
+	_timer.stop()
 	emit_signal(day_completed_event.get_name())
 	_potions_sold_per_day[_current_day] = _potions_sold_today
 	_potions_sold_today = []
@@ -36,6 +39,15 @@ func add_money(amount: int) -> void:
 func subtract_money(amount: int) -> void:
 	_current_money -= amount
 	emit_signal(money_changed_event.get_name(), _current_money)
+
+func get_level_seconds() -> int:
+	return _level_seconds
+
+func get_money() -> int:
+	return _current_money
+
+func get_day() -> int:
+	return _current_day
 
 func _physics_process(_delta: float) -> void:
 	if !_timer.is_stopped():
