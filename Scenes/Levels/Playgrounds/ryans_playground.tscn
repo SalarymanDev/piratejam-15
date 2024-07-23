@@ -1,3 +1,49 @@
-[gd_scene format=3 uid="uid://wemfyrhm5f7f"]
+[gd_scene load_steps=12 format=3 uid="uid://wemfyrhm5f7f"]
+
+[ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_cijhs"]
+[ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="2_b3thu"]
+[ext_resource type="PackedScene" uid="uid://dcdulbgx7vrmp" path="res://Scenes/Equipment/WasteBin/WasteBin.tscn" id="3_rxvju"]
+[ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="4_hbuti"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Salt.tres" id="5_4kfl7"]
+[ext_resource type="Texture2D" uid="uid://bgnte4vncyqav" path="res://Assets/Sprites/salt-lick.png" id="6_56mnd"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="7_ax3ak"]
+[ext_resource type="Texture2D" uid="uid://bqt68tspugd2i" path="res://Assets/Sprites/firewood.png" id="8_le5ea"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="9_yscs3"]
+[ext_resource type="Texture2D" uid="uid://d1p0nxkbd7qhi" path="res://Assets/Sprites/well.png" id="10_mc7wo"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ww3gs"]
+vertices = PackedVector2Array(1137, 645, 10, 635, 11, 17, 1137, 13)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(2, 8, 0, 645, 1147, 656, 1147, 3)])
+source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="RyansPlayground" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-5, -6)
+navigation_polygon = SubResource("NavigationPolygon_ww3gs")
+
+[node name="Player" parent="." instance=ExtResource("1_cijhs")]
+position = Vector2(459, 267)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cauldron" parent="." instance=ExtResource("2_b3thu")]
+position = Vector2(604, 317)
+
+[node name="WasteBin" parent="." instance=ExtResource("3_rxvju")]
+position = Vector2(1078, 60)
+
+[node name="IngredientSpawner" parent="." instance=ExtResource("4_hbuti")]
+position = Vector2(74, 90)
+ingredient = ExtResource("5_4kfl7")
+texture = ExtResource("6_56mnd")
+
+[node name="IngredientSpawner2" parent="." instance=ExtResource("4_hbuti")]
+position = Vector2(1073, 573)
+ingredient = ExtResource("7_ax3ak")
+texture = ExtResource("8_le5ea")
+
+[node name="IngredientSpawner3" parent="." instance=ExtResource("4_hbuti")]
+position = Vector2(71, 538)
+ingredient = ExtResource("9_yscs3")
+texture = ExtResource("10_mc7wo")

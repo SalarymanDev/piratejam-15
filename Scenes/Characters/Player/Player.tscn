@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://vax5lodmmg32"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Player/Player.gd" id="1_s103t"]
+[ext_resource type="Texture2D" uid="uid://cd1s2woeqcfv7" path="res://Assets/Sprites/alchemist.png" id="2_d6ybw"]
 [ext_resource type="PackedScene" uid="uid://c755fytkpll47" path="res://Components/Navigation/NavigationComponent.tscn" id="2_h3dnl"]
-[ext_resource type="Texture2D" uid="uid://cs0eken8oyy40" path="res://Assets/Sprites/player.png" id="2_u1bqs"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_dhsgm"]
 [ext_resource type="PackedScene" uid="uid://bke6kyhmr22p2" path="res://Components/Footsteps/FootstepsComponent.tscn" id="5_osyoa"]
 [ext_resource type="PackedScene" uid="uid://8l2i7tg7bfud" path="res://Components/Carry/CarryComponent.tscn" id="7_81dmu"]
@@ -19,7 +19,7 @@ script = ExtResource("1_s103t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.12, 0.12)
-texture = ExtResource("2_u1bqs")
+texture = ExtResource("2_d6ybw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2cp0n")

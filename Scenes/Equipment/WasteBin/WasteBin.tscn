@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://dcdulbgx7vrmp"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/WasteBin/WasteBin.gd" id="1_o1vnm"]
+[ext_resource type="Texture2D" uid="uid://dg0akoy6k12cu" path="res://Assets/Sprites/trashbin.png" id="2_c8v1u"]
 [ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="2_fsn1q"]
-[ext_resource type="Texture2D" uid="uid://br07foe4n1vao" path="res://Assets/Sprites/wastebin.png" id="2_vdgjf"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="3_askji"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="4_vg5xj"]
 [ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="5_ghsf5"]
@@ -25,7 +25,7 @@ script = ExtResource("1_o1vnm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_vdgjf")
+texture = ExtResource("2_c8v1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
