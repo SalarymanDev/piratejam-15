@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://weq3a2i0088l"]
+
+[ext_resource type="FontFile" uid="uid://b3do6a8t8go7k" path="res://Assets/MedievalSharp-Regular.ttf" id="1_7glco"]
+
+[resource]
+Label/fonts/font = ExtResource("1_7glco")

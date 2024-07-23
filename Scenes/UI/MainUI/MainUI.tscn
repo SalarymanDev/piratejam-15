@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0a1s4bo3krrq"]
+[gd_scene load_steps=11 format=3 uid="uid://b0a1s4bo3krrq"]
 
 [ext_resource type="Script" path="res://Scenes/UI/MainUI/MainUI.gd" id="1_ceh7a"]
+[ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_jpkjh"]
 [ext_resource type="Texture2D" uid="uid://d044xdjie3itn" path="res://Assets/Sprites/UI/Time/0_dawn.png" id="1_wvaqh"]
 [ext_resource type="Texture2D" uid="uid://1lmhmvymosvg" path="res://Assets/Sprites/UI/notification_side.png" id="2_nsvoo"]
 [ext_resource type="Texture2D" uid="uid://ph6daoxf2yxl" path="res://Assets/Sprites/coin.png" id="3_46gjx"]
@@ -18,6 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_jpkjh")
 script = ExtResource("1_ceh7a")
 time_textures = Array[Texture2D]([ExtResource("1_wvaqh"), ExtResource("3_wulcp"), ExtResource("4_ge8ua"), ExtResource("5_eg4pa")])
 
@@ -41,7 +43,7 @@ anchor_bottom = 0.5
 offset_left = 20.0
 offset_top = -39.0
 offset_right = 171.0
-offset_bottom = 21.0
+offset_bottom = 21.0001
 grow_vertical = 2
 alignment = 1
 
@@ -56,8 +58,10 @@ expand_mode = 3
 [node name="MoneyLabel" type="Label" parent="MoneyPaper/HBoxContainer"]
 modulate = Color(0.259294, 0.259294, 0.259294, 1)
 layout_mode = 2
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 30
 text = "100"
+vertical_alignment = 1
 
 [node name="DayPaper" type="TextureRect" parent="."]
 layout_mode = 1
@@ -85,6 +89,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 28
 text = "Day 1
 "
+vertical_alignment = 1
 
 [node name="TimeIndicator" type="TextureRect" parent="."]
 layout_mode = 1
