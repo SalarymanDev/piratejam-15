@@ -1,0 +1,90 @@
+[gd_scene load_steps=20 format=3 uid="uid://k3ekgyuiqs1s"]
+
+[ext_resource type="Script" path="res://Scenes/Equipment/Table/Table.gd" id="1_o65w1"]
+[ext_resource type="Texture2D" uid="uid://chcbfxtaklqgi" path="res://Assets/Sprites/table.png" id="2_dw6bl"]
+[ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="3_5ctba"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="4_2t5u1"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="5_swy7r"]
+[ext_resource type="PackedScene" uid="uid://0q4lt3ou3oig" path="res://Components/TakesPotion/TakesPotionComponent.tscn" id="6_q2c3h"]
+[ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="7_47uer"]
+[ext_resource type="PackedScene" uid="uid://cp7mesfqoflnd" path="res://Components/StoreItem/StoreItemComponent.tscn" id="7_vjd07"]
+[ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="8_6btm0"]
+[ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="9_15a6u"]
+[ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="10_iblqe"]
+[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/Pickup/PickUpComponent.tscn" id="12_cd7qq"]
+[ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="13_01rb5"]
+[ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="14_7q8rv"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Salt.tres" id="15_11nnh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbyxd"]
+size = Vector2(139, 38)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehc68"]
+radius = 20.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jjul"]
+size = Vector2(171.75, 121)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jmebo"]
+radius = 20.0
+
+[node name="Table" type="StaticBody2D"]
+script = ExtResource("1_o65w1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_dw6bl")
+
+[node name="StoredItemSprite" type="Sprite2D" parent="."]
+position = Vector2(-42, -37)
+scale = Vector2(0.07, 0.07)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_bbyxd")
+
+[node name="TakesIngredientsComponent" parent="." instance=ExtResource("3_5ctba")]
+destroy = true
+takes_ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("4_2t5u1"), ExtResource("5_swy7r")])
+
+[node name="TakesPotionComponent" parent="." instance=ExtResource("6_q2c3h")]
+destroy = true
+
+[node name="StoreItemComponent" parent="." instance=ExtResource("7_vjd07")]
+
+[node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component", "takes_potion_component") instance=ExtResource("7_47uer")]
+position = Vector2(-111, -23)
+takes_ingredients_component = NodePath("../TakesIngredientsComponent")
+takes_potion_component = NodePath("../TakesPotionComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
+shape = SubResource("CircleShape2D_ehc68")
+
+[node name="ClickableComponent" parent="." instance=ExtResource("8_6btm0")]
+tooltip_text = "Table"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
+position = Vector2(4.125, -3)
+shape = SubResource("RectangleShape2D_5jjul")
+
+[node name="AudioComponent" parent="." instance=ExtResource("9_15a6u")]
+audio_clips = Array[AudioStream]([ExtResource("10_iblqe")])
+
+[node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("12_cd7qq")]
+position = Vector2(-111, -23)
+item_component = NodePath("../ItemComponent")
+is_swappable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CircleShape2D_jmebo")
+
+[node name="ZIndexComponent" parent="." instance=ExtResource("13_01rb5")]
+
+[node name="ItemComponent" parent="." instance=ExtResource("14_7q8rv")]
+item = ExtResource("15_11nnh")
+
+[connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_ingredient_event"]
+[connection signal="drop_off_potion_event" from="DropOffComponent" to="." method="_on_drop_off_potion_event"]
+[connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_picked_up_event"]
