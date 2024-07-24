@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://bc2kd7qk6e57v"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_o0c2e"]
-[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="1_xg1u2"]
+[ext_resource type="Texture2D" uid="uid://bvj14cvrnb6qx" path="res://Assets/Sprites/smoke.png" id="2_pqcnl"]
 
 [resource]
 script = ExtResource("1_o0c2e")
 ingredient = 4
 name = "Mandrake Root"
 description = ""
-texture = ExtResource("1_xg1u2")
+texture = ExtResource("2_pqcnl")

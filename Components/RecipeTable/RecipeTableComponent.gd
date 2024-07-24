@@ -1,11 +1,16 @@
 extends Node
 class_name RecipeTableComponent
 
-@export var default: ItemResource = load("res://Resources/Potions/TrashPotion.tres")
-@export var recipes: Dictionary
+@export var default: ItemResource
+@export var recipe_table: RecipeTableResource
 
 func process_inputs(inputs: Array[ItemResource]) -> ItemResource:
-	if recipes.has(inputs):
-		return recipes.get(inputs)
+	print(inputs)
+	var recipe_map := recipe_table.getRecipes()
+	inputs.sort()
+	print(inputs)
+	print(recipe_map)
+	if recipe_map.has(inputs):
+		return recipe_map.get(inputs)
 	else:
 		return default

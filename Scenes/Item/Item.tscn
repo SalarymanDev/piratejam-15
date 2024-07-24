@@ -30,8 +30,7 @@ item_component = NodePath("../ItemComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
 shape = SubResource("CircleShape2D_b0grt")
 
-[node name="ZIndexComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("6_n0bdu")]
-sprite = NodePath("../Sprite2D")
+[node name="ZIndexComponent" parent="." instance=ExtResource("6_n0bdu")]
 is_static = false
 
 [connection signal="item_swapped_event" from="PickUpComponent" to="." method="_on_item_swapped_event"]

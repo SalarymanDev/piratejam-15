@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://wemfyrhm5f7f"]
+[gd_scene load_steps=20 format=3 uid="uid://wemfyrhm5f7f"]
 
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_cijhs"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="2_b3thu"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://d1p0nxkbd7qhi" path="res://Assets/Sprites/well.png" id="10_mc7wo"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="11_38d5h"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="11_gwuuu"]
+[ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="12_b6a0f"]
+[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/MandrakeRoot.tres" id="12_k4jdq"]
 
 [sub_resource type="Curve" id="Curve_swyk5"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.503876, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -31,18 +33,12 @@ curve_y = SubResource("Curve_8p78b")
 curve_z = SubResource("Curve_3iuhg")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ww3gs"]
-vertices = PackedVector2Array(249, 131, 427, 125, 491, 124, 491, 152, 16, 1078, 342, 125, 1888, 122, 1803, 122, 1716, 114, 1716, 81, 1911, 11, 1888, 155, 1911, 1077, 1083, 611, 998, 611, 1803, 155, 1083, 578, 1631, 114, 998, 578, 569, 152, 569, 124, 249, 98, 342, 92, 427, 92, 1631, 81, 12, 17, 164, 131, 164, 98)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 1, 0), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 6, 10, 12), PackedInt32Array(13, 12, 4, 14), PackedInt32Array(15, 11, 12, 13, 16), PackedInt32Array(17, 8, 7, 15, 16, 18, 19, 20), PackedInt32Array(5, 0, 21, 22), PackedInt32Array(2, 1, 23), PackedInt32Array(23, 24, 17, 20, 2), PackedInt32Array(25, 10, 9, 24), PackedInt32Array(19, 18, 14, 4, 3), PackedInt32Array(26, 0, 4), PackedInt32Array(26, 4, 25, 27), PackedInt32Array(21, 27, 25, 22), PackedInt32Array(22, 25, 24, 23)])
+vertices = PackedVector2Array(569, 163, 758, 158, 1803, 155, 1888, 155, 1083, 578, 998, 578, 427, 125, 569, 133, 491, 133, 249, 131, 342, 125, 608, 158, 1888, 122, 1803, 122, 1716, 114, 1716, 81, 1911, 11, 1911, 1077, 1083, 611, 16, 1078, 998, 611, 608, 112, 249, 98, 342, 92, 758, 112, 1631, 114, 491, 163, 164, 131, 12, 17, 1631, 81, 427, 92, 164, 98)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 1, 0), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(3, 12, 16, 17), PackedInt32Array(18, 17, 19, 20), PackedInt32Array(3, 17, 18, 4), PackedInt32Array(11, 0, 7, 21), PackedInt32Array(10, 9, 22, 23), PackedInt32Array(13, 2, 1, 24, 25), PackedInt32Array(9, 8, 26, 19, 27), PackedInt32Array(28, 16, 15, 29), PackedInt32Array(30, 28, 29, 25, 24), PackedInt32Array(7, 6, 30, 21), PackedInt32Array(0, 5, 20, 19, 26), PackedInt32Array(27, 19, 28, 31), PackedInt32Array(22, 31, 28, 23), PackedInt32Array(30, 23, 28), PackedInt32Array(24, 21, 30), PackedInt32Array(13, 25, 14)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(2, 8, 7, 1089, 1921, 1087, 1922, 1)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="RyansPlayground" type="Node2D"]
-
-[node name="MainUi" parent="." instance=ExtResource("11_gwuuu")]
-offset_left = -9.0
-offset_top = 4.0
-offset_right = 1914.0
-offset_bottom = 1078.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(963, 534)
@@ -58,6 +54,7 @@ navigation_polygon = SubResource("NavigationPolygon_ww3gs")
 
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("2_b3thu")]
 position = Vector2(1040, 594)
+cook_seconds = 3
 
 [node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("3_rxvju")]
 position = Vector2(1845, 138)
@@ -77,9 +74,26 @@ position = Vector2(384, 108)
 ingredient = ExtResource("9_yscs3")
 texture = ExtResource("10_mc7wo")
 
+[node name="IngredientSpawner4" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
+position = Vector2(683, 134)
+scale = Vector2(2, 2)
+ingredient = ExtResource("12_k4jdq")
+
 [node name="Alembic" parent="NavigationRegion2D" instance=ExtResource("11_38d5h")]
 position = Vector2(531, 140)
+
+[node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
+position = Vector2(1768, 554)
 
 [node name="Player" parent="." instance=ExtResource("1_cijhs")]
 position = Vector2(459, 267)
 scale = Vector2(0.5, 0.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="MainUi" parent="CanvasLayer" instance=ExtResource("11_gwuuu")]
+offset_left = -9.0
+offset_top = 4.0
+offset_right = 1914.0
+offset_bottom = 1078.0

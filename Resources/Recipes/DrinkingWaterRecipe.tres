@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=5 format=3 uid="uid://clu826sm1dsuv"]
+
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="1_ajyhx"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="1_pdnjm"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="2_47v3k"]
+[ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="3_d2ekg"]
+
+[resource]
+script = ExtResource("1_ajyhx")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_pdnjm"), ExtResource("2_47v3k")])
+output = ExtResource("3_d2ekg")
