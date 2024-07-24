@@ -58,8 +58,6 @@ func _on_timer_timeout() -> void:
 	dropoff_component.disabled = true
 	# item_component.item = potion_recipes_component.create_potion(takes_ingredients_component.get_ingredients())
 	var inputs := Array(takes_ingredients_component.get_ingredients(), TYPE_OBJECT, &"Resource", ItemResource)
-	print(recipe_table_component)
-	print(recipe_table_component.recipe_table)
 	item_component.item = recipe_table_component.process_inputs(inputs)
 	clickable_component.update_tooltip(item_component.item.name)
 	takes_ingredients_component.clear()
