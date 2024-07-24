@@ -75,7 +75,7 @@ alignment = 1
 [node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Rent:       "
+text = "Rent: "
 horizontal_alignment = 1
 
 [node name="RentLabel" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer2"]
@@ -91,7 +91,7 @@ alignment = 1
 [node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Profit:     "
+text = "Profit: "
 horizontal_alignment = 1
 
 [node name="ProfitLabel" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer3"]
@@ -107,7 +107,7 @@ alignment = 1
 [node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Money:    "
+text = "Money: "
 horizontal_alignment = 1
 
 [node name="MoneyLabel" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer4"]

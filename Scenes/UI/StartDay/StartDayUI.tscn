@@ -75,7 +75,7 @@ alignment = 1
 [node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Todays Rent:     "
+text = "Todays Rent: "
 horizontal_alignment = 1
 
 [node name="RentLabel" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer2"]
