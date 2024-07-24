@@ -1,8 +1,6 @@
 extends StaticBody2D
 
 @export var cook_seconds: int
-@export var drinking_water_potion: PotionResource
-@export var trash_potion: PotionResource
 
 @onready var fire_sprite: Sprite2D = $FireSprite2D
 @onready var steam_sprite: Sprite2D = $SteamSprite2D
