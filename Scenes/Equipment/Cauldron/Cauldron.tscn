@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://w2jway24bhsk"]
+[gd_scene load_steps=33 format=3 uid="uid://w2jway24bhsk"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/Cauldron/Cauldron.gd" id="1_r1vq5"]
 [ext_resource type="Texture2D" uid="uid://b7k5co3xe0bmj" path="res://Assets/Sprites/cauldron.png" id="2_8v285"]
@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/Pickup/PickUpComponent.tscn" id="21_awl56"]
 [ext_resource type="AudioStream" uid="uid://csjpnggyaespi" path="res://Assets/Audio/Pickup/Voice Approve 4.mp3" id="21_gxm03"]
 [ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="22_6jmco"]
-[ext_resource type="PackedScene" uid="uid://ch3j40q4jd81k" path="res://Components/PotionRecipes/PotionRecipesComponent.tscn" id="23_2yatd"]
 [ext_resource type="PackedScene" uid="uid://t70hmk4ewtkh" path="res://Components/RecipeTable/RecipeTableComponent.tscn" id="27_gum5e"]
 [ext_resource type="Resource" uid="uid://cxsh56hnd636k" path="res://Resources/Potions/TrashPotion.tres" id="28_1mufk"]
 [ext_resource type="Resource" uid="uid://61gd8mka2i7m" path="res://Resources/RecipeTables/CaulrdonRecipeTable.tres" id="29_42hxf"]
@@ -120,8 +119,6 @@ disabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
 position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CircleShape2D_n4kpg")
-
-[node name="PotionRecipesComponent" parent="." instance=ExtResource("23_2yatd")]
 
 [node name="RecipeTableComponent" parent="." instance=ExtResource("27_gum5e")]
 default = ExtResource("28_1mufk")
