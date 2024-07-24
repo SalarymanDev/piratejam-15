@@ -1,3 +1,114 @@
-[gd_scene format=3 uid="uid://cflebqfxo6rat"]
+[gd_scene load_steps=26 format=3 uid="uid://cflebqfxo6rat"]
+
+[ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_wj5po"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="2_rl7cs"]
+[ext_resource type="AudioStream" uid="uid://6new5iw0ls2p" path="res://Assets/Audio/Water/Potion - Use 4.mp3" id="4_iv5fs"]
+[ext_resource type="Texture2D" uid="uid://d1p0nxkbd7qhi" path="res://Assets/Sprites/well.png" id="4_uk2cr"]
+[ext_resource type="AudioStream" uid="uid://dnqiei5ha5vtv" path="res://Assets/Audio/Water/Potion - Use 5.mp3" id="5_g0wxf"]
+[ext_resource type="AudioStream" uid="uid://c5kvoixcipgrx" path="res://Assets/Audio/Water/Potion - Use 7.mp3" id="6_5pq6q"]
+[ext_resource type="AudioStream" uid="uid://brad86wgmqlrn" path="res://Assets/Audio/Water/Potion - Use 8.mp3" id="7_mg12o"]
+[ext_resource type="AudioStream" uid="uid://ckowa560vqcxd" path="res://Assets/Audio/Water/Potion - Use 9.mp3" id="8_xuhcm"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="9_uyw8o"]
+[ext_resource type="Texture2D" uid="uid://bqt68tspugd2i" path="res://Assets/Sprites/firewood.png" id="10_fcjnb"]
+[ext_resource type="AudioStream" uid="uid://c477w32xyxrp3" path="res://Assets/Audio/Pickup/Voice Approve 1.mp3" id="11_k4wl2"]
+[ext_resource type="AudioStream" uid="uid://c18ej5t3j318i" path="res://Assets/Audio/Pickup/Voice Approve 2.mp3" id="12_4aet2"]
+[ext_resource type="AudioStream" uid="uid://csjpnggyaespi" path="res://Assets/Audio/Pickup/Voice Approve 4.mp3" id="13_2m6ki"]
+[ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="14_ixspn"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Salt.tres" id="15_2to6p"]
+[ext_resource type="PackedScene" uid="uid://dcdulbgx7vrmp" path="res://Scenes/Equipment/WasteBin/WasteBin.tscn" id="16_dpns2"]
+[ext_resource type="Texture2D" uid="uid://bgnte4vncyqav" path="res://Assets/Sprites/salt-lick.png" id="17_8i1e8"]
+[ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="17_n7eky"]
+[ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="18_u0cb1"]
+[ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="19_pqwcn"]
+[ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="21_p262u"]
+[ext_resource type="PackedScene" uid="uid://k3ekgyuiqs1s" path="res://Scenes/Equipment/Table/Table.tscn" id="21_u4urn"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_tlxl7"]
+vertices = PackedVector2Array(406, -9, 27, -141, 300, -143, 425, -143, 508, -9, 205, 202, 505, 256, -509, 256, 6, 202, -348, 179, 6, 104, -473, 179, -510, -2, -473, 106, 510, -194, 425, -216, 510, -260, -510, -260, 300, -216, 406, 64, 507, 64, 205, 104, -183, -146, -98, -141, -348, 106, -308, -146, -98, -214, -183, -219, 27, -214, -308, -219, -350, -146, -350, -219, -475, -219, -475, -146)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(8, 7, 9, 10), PackedInt32Array(11, 9, 7), PackedInt32Array(11, 7, 12, 13), PackedInt32Array(14, 4, 3, 15, 16), PackedInt32Array(17, 16, 15, 18), PackedInt32Array(19, 20, 6, 5, 21), PackedInt32Array(22, 23, 10, 9, 24, 25), PackedInt32Array(26, 23, 22, 27), PackedInt32Array(2, 1, 28, 18), PackedInt32Array(17, 18, 28, 26, 27), PackedInt32Array(17, 27, 29), PackedInt32Array(29, 25, 24, 30, 31), PackedInt32Array(17, 29, 31), PackedInt32Array(17, 31, 32), PackedInt32Array(12, 17, 32, 33), PackedInt32Array(1, 0, 19, 21, 10, 23), PackedInt32Array(30, 24, 13, 12, 33)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 535, 286, 541, -291)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+agent_radius = 30.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jy0ga"]
+size = Vector2(20, 612)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ruv3"]
 
 [node name="HenrysPlayground" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("19_pqwcn")]
+position = Vector2(575, 323)
+scale = Vector2(0.5, 0.5)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." groups=["Navigation"]]
+position = Vector2(575, 323)
+navigation_polygon = SubResource("NavigationPolygon_tlxl7")
+
+[node name="Well" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-412, -183)
+ingredient = ExtResource("2_rl7cs")
+texture = ExtResource("4_uk2cr")
+audio_clips = Array[AudioStream]([ExtResource("4_iv5fs"), ExtResource("5_g0wxf"), ExtResource("6_5pq6q"), ExtResource("7_mg12o"), ExtResource("8_xuhcm")])
+tooltip = "Well"
+
+[node name="WoodSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-245, -183)
+ingredient = ExtResource("9_uyw8o")
+texture = ExtResource("10_fcjnb")
+audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
+tooltip = "Firewood"
+
+[node name="SaltSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-410, 142)
+ingredient = ExtResource("15_2to6p")
+texture = ExtResource("17_8i1e8")
+audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
+tooltip = "Salt"
+
+[node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(-550, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallWest"]
+shape = SubResource("RectangleShape2D_jy0ga")
+
+[node name="WallEast" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(550, 1)
+scale = Vector2(1, 30)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallEast"]
+shape = SubResource("RectangleShape2D_1ruv3")
+
+[node name="WallSouth" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(0, 300)
+scale = Vector2(56, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallSouth"]
+shape = SubResource("RectangleShape2D_1ruv3")
+
+[node name="WallNorth" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(0, -300)
+scale = Vector2(56, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallNorth"]
+shape = SubResource("RectangleShape2D_1ruv3")
+
+[node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("16_dpns2")]
+position = Vector2(362, -180)
+
+[node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("17_n7eky")]
+position = Vector2(-35, -178)
+
+[node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("18_u0cb1")]
+position = Vector2(468, 27)
+
+[node name="Table" parent="NavigationRegion2D" instance=ExtResource("21_u4urn")]
+position = Vector2(105, 157)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainUi" parent="CanvasLayer" instance=ExtResource("21_p262u")]
