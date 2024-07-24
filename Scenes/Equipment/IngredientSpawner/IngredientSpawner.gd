@@ -12,10 +12,13 @@ extends StaticBody2D
 @onready var sprite: Sprite2D = $Sprite2D
 
 func _ready() -> void:
+	assert(texture)
+	if Engine.is_editor_hint():
+		sprite.texture = texture
+		return
 	assert(ingredient)
 	item_component.item = ingredient
-	if texture:
-		sprite.texture = texture
+	sprite.texture = texture
 	if audio_clips:
 		audio_component.audio_clips = audio_clips
 	if clickable_component:

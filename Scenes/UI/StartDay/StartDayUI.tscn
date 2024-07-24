@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmw8pi86flogu"]
+
+[ext_resource type="Script" path="res://Scenes/UI/StartDay/StartDayUI.gd" id="1_04wkk"]
+[ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_g1txj"]
+[ext_resource type="Texture2D" uid="uid://b3aaqqb0efncq" path="res://Assets/Sprites/UI/upgrades.png" id="2_mx83h"]
+[ext_resource type="Texture2D" uid="uid://hha2k0im5e7g" path="res://Assets/Sprites/UI/Button/button.png" id="3_o2w6a"]
+[ext_resource type="Texture2D" uid="uid://daeylj4cuw133" path="res://Assets/Sprites/UI/Button/button_pressed.png" id="4_iidsr"]
+
+[node name="StartDayUi" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_g1txj")
+script = ExtResource("1_04wkk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.5
+offset_top = -338.5
+offset_right = 314.5
+offset_bottom = 338.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mx83h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+modulate = Color(0.258824, 0.258824, 0.258824, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = 129.0
+offset_right = -95.0
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Day 1"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Current Money: "
+horizontal_alignment = 1
+
+[node name="MoneyLabel" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "100"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Todays Rent:     "
+horizontal_alignment = 1
+
+[node name="RentLabel" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "100"
+horizontal_alignment = 1
+
+[node name="StartButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -152.34
+offset_right = 118.0
+offset_bottom = -73.34
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_o2w6a")
+texture_pressed = ExtResource("4_iidsr")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="TextureRect/StartButton"]
+modulate = Color(0.258824, 0.258824, 0.258824, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -18.5
+offset_right = 47.5
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Start Day"
+
+[connection signal="pressed" from="TextureRect/StartButton" to="." method="_on_start_button_pressed"]

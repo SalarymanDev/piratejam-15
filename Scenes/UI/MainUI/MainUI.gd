@@ -7,8 +7,9 @@ extends Control
 @onready var day_label: Label = $DayPaper/DayLabel
 @onready var invisbility_potion_texture: TextureRect = $InvisibilityButton/InvisibilityPotionTexture
 @onready var invsibility_potion_button: TextureButton = $InvisibilityButton
+@onready var start_day_ui: Control = $StartDayUi
+@onready var end_day_ui: Control = $EndDayUi
 
-var _current_time_index: int = 0
 var _has_invisiblity_potion: bool = false
 
 func _ready() -> void:
@@ -21,11 +22,9 @@ func _ready() -> void:
 
 func _update_time(remaining_seconds: float) -> void:
 	var level_seconds := GameStateManager.get_level_seconds()
-	var slot_boundry := level_seconds / time_textures.size()
-	var time_in_slot := level_seconds - remaining_seconds - (_current_time_index * slot_boundry)
-	if time_in_slot >= slot_boundry:
-		_current_time_index += 1
-		time_indicator.texture = time_textures[_current_time_index]
+	var level_percentage: float = (level_seconds - remaining_seconds) / level_seconds
+	var index: int = level_percentage * time_textures.size()
+	time_indicator.texture = time_textures[index]
 
 func _update_money(amount: int) -> void:
 	money_label.text = str(amount)
@@ -45,3 +44,10 @@ func _on_invisibility_button_pressed() -> void:
 		return
 	_has_invisiblity_potion = false
 	_update_potion()
+
+func _on_start_day_pressed() -> void:
+	get_tree().paused = false
+	GameStateManager.start_day()
+
+func _on_next_day_pressed() -> void:
+	start_day_ui.visible = true

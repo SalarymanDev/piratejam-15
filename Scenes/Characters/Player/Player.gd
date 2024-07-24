@@ -18,6 +18,8 @@ func _input(event: InputEvent) -> void:
 	_handle_action(event as InputEventMouseButton)
 
 func _handle_action(event: InputEventMouseButton) -> void:
+	if !GameStateManager.controls_enabled():
+		return
 	if !event.pressed:
 		return
 	if event.button_index != MOUSE_BUTTON_LEFT:

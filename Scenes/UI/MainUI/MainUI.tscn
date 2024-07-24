@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0a1s4bo3krrq"]
+[gd_scene load_steps=13 format=3 uid="uid://b0a1s4bo3krrq"]
 
 [ext_resource type="Script" path="res://Scenes/UI/MainUI/MainUI.gd" id="1_ceh7a"]
 [ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_jpkjh"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c8uqnubygnygv" path="res://Assets/Sprites/UI/Time/3_night.png" id="5_eg4pa"]
 [ext_resource type="Texture2D" uid="uid://c3mqscmef7fmm" path="res://Assets/Sprites/UI/invisibility_potion_holder.png" id="8_3ndqy"]
 [ext_resource type="Texture2D" uid="uid://d30867e25nuk4" path="res://Assets/Sprites/potion.png" id="9_58uwv"]
+[ext_resource type="PackedScene" uid="uid://dmw8pi86flogu" path="res://Scenes/UI/StartDay/StartDayUI.tscn" id="11_no0r0"]
+[ext_resource type="PackedScene" uid="uid://b23bdnonslpmq" path="res://Scenes/UI/EndDay/EndDayUI.tscn" id="12_pdjk2"]
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -133,4 +135,13 @@ grow_vertical = 2
 texture = ExtResource("9_58uwv")
 expand_mode = 2
 
+[node name="StartDayUi" parent="." instance=ExtResource("11_no0r0")]
+layout_mode = 1
+
+[node name="EndDayUi" parent="." instance=ExtResource("12_pdjk2")]
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="InvisibilityButton" to="." method="_on_invisibility_button_pressed"]
+[connection signal="start_day_pressed" from="StartDayUi" to="." method="_on_start_day_pressed"]
+[connection signal="next_day_pressed" from="EndDayUi" to="." method="_on_next_day_pressed"]
