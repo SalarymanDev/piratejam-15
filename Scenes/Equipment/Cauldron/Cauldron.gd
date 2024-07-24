@@ -15,6 +15,7 @@ extends StaticBody2D
 @onready var dropoff_component: DropOffComponent = $DropOffComponent
 @onready var item_component: ItemComponent = $ItemComponent
 @onready var potion_recipes_component: PotionRecipesComponent = $PotionRecipesComponent
+@onready var recipe_table_component: RecipeTableComponent = $RecipeTableComponent
 @onready var clickable_component: ClickableComponent = $ClickableComponent
 @onready var timer: Timer = $Timer
 @onready var _original_tooltip := clickable_component.tooltip_text
@@ -55,7 +56,9 @@ func _on_timer_timeout() -> void:
 	star_sprite.visible = true
 	pickup_component.disabled = false
 	dropoff_component.disabled = true
-	item_component.item = potion_recipes_component.create_potion(takes_ingredients_component.get_ingredients())
+	# item_component.item = potion_recipes_component.create_potion(takes_ingredients_component.get_ingredients())
+	var inputs := Array(takes_ingredients_component.get_ingredients(), TYPE_OBJECT, &"Resource", ItemResource)
+	item_component.item = recipe_table_component.process_inputs(inputs)
 	clickable_component.update_tooltip(item_component.item.name)
 	takes_ingredients_component.clear()
 

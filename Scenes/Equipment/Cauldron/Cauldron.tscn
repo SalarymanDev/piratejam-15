@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://w2jway24bhsk"]
+[gd_scene load_steps=36 format=3 uid="uid://w2jway24bhsk"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/Cauldron/Cauldron.gd" id="1_r1vq5"]
 [ext_resource type="Texture2D" uid="uid://b7k5co3xe0bmj" path="res://Assets/Sprites/cauldron.png" id="2_8v285"]
@@ -26,6 +26,11 @@
 [ext_resource type="AudioStream" uid="uid://csjpnggyaespi" path="res://Assets/Audio/Pickup/Voice Approve 4.mp3" id="21_gxm03"]
 [ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="22_6jmco"]
 [ext_resource type="PackedScene" uid="uid://ch3j40q4jd81k" path="res://Components/PotionRecipes/PotionRecipesComponent.tscn" id="23_2yatd"]
+[ext_resource type="PackedScene" uid="uid://t70hmk4ewtkh" path="res://Components/RecipeTable/RecipeTableComponent.tscn" id="27_gum5e"]
+[ext_resource type="Resource" uid="uid://cxsh56hnd636k" path="res://Resources/Potions/TrashPotion.tres" id="28_1mufk"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="28_rp8ts"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="29_2uy5f"]
+[ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="30_wje6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0js4n"]
 size = Vector2(65, 13)
@@ -119,6 +124,12 @@ position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CircleShape2D_n4kpg")
 
 [node name="PotionRecipesComponent" parent="." instance=ExtResource("23_2yatd")]
+
+[node name="RecipeTableComponent" parent="." instance=ExtResource("27_gum5e")]
+default = ExtResource("28_1mufk")
+recipes = {
+[ExtResource("28_rp8ts"), ExtResource("29_2uy5f")]: ExtResource("30_wje6u")
+}
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_ingredient_event"]
