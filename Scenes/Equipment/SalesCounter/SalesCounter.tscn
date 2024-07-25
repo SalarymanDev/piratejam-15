@@ -21,7 +21,7 @@ size = Vector2(60, 60)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofpx5"]
 radius = 20.0
 
-[node name="SalesCounter" type="StaticBody2D"]
+[node name="SalesCounter" type="StaticBody2D" groups=["Invisibility"]]
 script = ExtResource("1_tm6de")
 potion_sold_scene = ExtResource("12_7m0of")
 

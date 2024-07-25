@@ -10,7 +10,7 @@ extends Control
 @onready var start_day_ui: Control = $StartDayUi
 @onready var end_day_ui: Control = $EndDayUi
 
-var _has_invisiblity_potion: bool = false
+var _has_invisiblity_potion: bool = true
 
 func _ready() -> void:
 	GameStateManager.time_changed_event.connect(_update_time)

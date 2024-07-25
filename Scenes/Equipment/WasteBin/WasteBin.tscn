@@ -20,7 +20,7 @@ radius = 20.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ix467"]
 size = Vector2(60, 60)
 
-[node name="WasteBin" type="StaticBody2D"]
+[node name="WasteBin" type="StaticBody2D" groups=["Invisibility"]]
 script = ExtResource("1_o1vnm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

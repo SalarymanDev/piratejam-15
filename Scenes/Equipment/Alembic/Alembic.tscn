@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="9_6anr0"]
 [ext_resource type="Script" path="res://Components/Pickup/PickUpComponent.gd" id="10_3n63h"]
 [ext_resource type="Texture2D" uid="uid://3ba750fxv8qd" path="res://Assets/Sprites/star.png" id="10_dhlhr"]
-[ext_resource type="Resource" path="res://Resources/RecipeTables/AlembicRecipeTable.tres" id="12_072s4"]
+[ext_resource type="Resource" uid="uid://disvb3cahmpcp" path="res://Resources/RecipeTables/AlembicRecipeTable.tres" id="12_072s4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ylh1"]
 size = Vector2(57.25, 9.875)
@@ -22,7 +22,7 @@ size = Vector2(64, 61)
 [sub_resource type="CircleShape2D" id="CircleShape2D_rjv17"]
 radius = 26.0192
 
-[node name="Alembic" type="StaticBody2D"]
+[node name="Alembic" type="StaticBody2D" groups=["Invisibility"]]
 script = ExtResource("1_y1pir")
 
 [node name="AlembicSprite" type="Sprite2D" parent="."]

@@ -28,7 +28,7 @@ size = Vector2(171.75, 121)
 [sub_resource type="CircleShape2D" id="CircleShape2D_jmebo"]
 radius = 20.0
 
-[node name="Table" type="StaticBody2D"]
+[node name="Table" type="StaticBody2D" groups=["Invisibility"]]
 script = ExtResource("1_o65w1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

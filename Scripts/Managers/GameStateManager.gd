@@ -16,10 +16,9 @@ var _potions_sold_today: Array[PotionResource] = []
 var _day_timer: Timer = Timer.new()
 var _invisibility_timer: Timer = Timer.new()
 var _level_seconds: int = 300
-var _invisibility_seconds: int = 60
+var _invisibility_seconds: int = 35
 var _fine_amount: int = 200
 var _controls_enabled: bool = false
-var _police_present: bool = false
 var _invisible: bool = false
 
 func _ready() -> void:
@@ -75,14 +74,24 @@ func get_day() -> int:
 func controls_enabled() -> bool:
 	return _controls_enabled
 
+func get_invisible() -> bool:
+	return _invisible
+
+func fine() -> void:
+	subtract_money(_fine_amount)
+
 func use_invisibility_potion() -> void:
 	_invisible = true
+	var nodes: Array[Node] = get_tree().get_nodes_in_group("Invisibility")
+	for node in nodes:
+		(node as Node2D).modulate = Color(1, 1, 1, 0.25)
 	_invisibility_timer.start(_invisibility_seconds)
 
 func _invisibility_timeout() -> void:
 	_invisible = false
-	if _police_present:
-		subtract_money(_fine_amount)
+	var nodes: Array[Node] = get_tree().get_nodes_in_group("Invisibility")
+	for node in nodes:
+		(node as Node2D).modulate = Color(1, 1, 1, 1)
 
 func _physics_process(_delta: float) -> void:
 	if !_day_timer.is_stopped():

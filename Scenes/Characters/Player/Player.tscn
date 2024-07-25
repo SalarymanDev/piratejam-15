@@ -13,7 +13,7 @@ radius = 35.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_lm263"]
 radius = 54.0093
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Invisibility"]]
 collision_mask = 3
 script = ExtResource("1_s103t")
 

@@ -7,13 +7,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjeai"]
 radius = 61.2944
 
-[node name="Police" type="CharacterBody2D"]
+[node name="Police" type="CharacterBody2D" groups=["Police"]]
 process_mode = 1
 y_sort_enabled = true
 script = ExtResource("1_mekxe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_kjeai")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
