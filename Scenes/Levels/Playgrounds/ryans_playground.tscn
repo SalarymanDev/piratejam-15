@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://wemfyrhm5f7f"]
+[gd_scene load_steps=23 format=3 uid="uid://wemfyrhm5f7f"]
 
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_cijhs"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="2_b3thu"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bqt68tspugd2i" path="res://Assets/Sprites/firewood.png" id="8_le5ea"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="9_yscs3"]
 [ext_resource type="Texture2D" uid="uid://d1p0nxkbd7qhi" path="res://Assets/Sprites/well.png" id="10_mc7wo"]
+[ext_resource type="Texture2D" uid="uid://cd5euro3cw6tt" path="res://Assets/Sprites/crate.png" id="11_8pc40"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="11_38d5h"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="11_gwuuu"]
 [ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="12_b6a0f"]
@@ -81,6 +82,7 @@ texture = ExtResource("10_mc7wo")
 position = Vector2(204, 347)
 scale = Vector2(2, 2)
 ingredient = ExtResource("12_k4jdq")
+texture = ExtResource("11_8pc40")
 
 [node name="Alembic" parent="NavigationRegion2D" instance=ExtResource("11_38d5h")]
 position = Vector2(531, 140)
@@ -91,7 +93,6 @@ scale = Vector2(1.5, 1.5)
 
 [node name="MortarPestle" parent="NavigationRegion2D" instance=ExtResource("13_xs64q")]
 position = Vector2(850, 136)
-cook_timer = 3
 
 [node name="SalesCounter2" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
 

@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://Components/TakesIngredients/TakesIngredientsComponent.gd" id="8_4kniq"]
 [ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/Raw/MandrakeRoot.tres" id="9_sfbv0"]
 [ext_resource type="Script" path="res://Components/RecipeTable/RecipeTableComponent.gd" id="10_rv6qa"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="11_4ugua"]
+[ext_resource type="Resource" uid="uid://cxsh56hnd636k" path="res://Resources/Potions/TrashPotion.tres" id="11_abup7"]
 [ext_resource type="Resource" uid="uid://buuwp1j4ym612" path="res://Resources/RecipeTables/MortarPestleRecipeTable.tres" id="12_ot13r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0hwj"]
@@ -24,6 +24,7 @@ radius = 26.0192
 
 [node name="MortarPestle" type="StaticBody2D"]
 script = ExtResource("1_ejbgi")
+cook_timer = 3
 
 [node name="PestleSprite" type="Sprite2D" parent="."]
 position = Vector2(-0.500004, 0.500002)
@@ -88,7 +89,7 @@ one_shot = true
 
 [node name="RecipeTableComponent" type="Node" parent="."]
 script = ExtResource("10_rv6qa")
-default = ExtResource("11_4ugua")
+default = ExtResource("11_abup7")
 recipe_table = ExtResource("12_ot13r")
 
 [connection signal="mouse_entered" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_entered"]
