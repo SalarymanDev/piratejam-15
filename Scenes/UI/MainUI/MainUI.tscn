@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://b0a1s4bo3krrq"]
 
 [ext_resource type="Script" path="res://Scenes/UI/MainUI/MainUI.gd" id="1_ceh7a"]
-[ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_jpkjh"]
+[ext_resource type="Theme" path="res://Assets/main.tres" id="1_jpkjh"]
 [ext_resource type="Texture2D" uid="uid://d044xdjie3itn" path="res://Assets/Sprites/UI/Time/0_dawn.png" id="1_wvaqh"]
 [ext_resource type="Texture2D" uid="uid://1lmhmvymosvg" path="res://Assets/Sprites/UI/notification_side.png" id="2_nsvoo"]
 [ext_resource type="Texture2D" uid="uid://ph6daoxf2yxl" path="res://Assets/Sprites/coin.png" id="3_46gjx"]

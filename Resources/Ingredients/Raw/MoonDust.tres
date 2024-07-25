@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://bytkgetwkkdsw"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://ccqyinlitbdr6"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_rb2k8"]
 [ext_resource type="Texture2D" uid="uid://bi8hn0fiyc4sp" path="res://Assets/Sprites/MoonDust.png" id="2_nd04t"]
