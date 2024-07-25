@@ -11,7 +11,7 @@ extends Control
 @onready var end_day_ui: Control = $EndDayUi
 
 var _has_invisiblity_potion: bool = false
-var _current_time_index: int = 0
+# var _current_time_index: int = 0
 
 func _ready() -> void:
 	GameStateManager.time_changed_event.connect(_update_time)
@@ -24,7 +24,7 @@ func _ready() -> void:
 func _update_time(remaining_seconds: float) -> void:
 	var level_seconds := GameStateManager.get_level_seconds()
 	var level_percentage: float = (level_seconds - remaining_seconds) / level_seconds
-	var index: int = level_percentage * time_textures.size()
+	var index: int = level_percentage * time_textures.size() as int
 	time_indicator.texture = time_textures[index]
 
 func _update_money(amount: int) -> void:

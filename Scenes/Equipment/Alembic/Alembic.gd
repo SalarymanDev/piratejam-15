@@ -8,11 +8,10 @@ extends StaticBody2D
 @onready var pickup_component: PickUpComponent = $PickUpComponent
 @onready var takes_ingredients_component: TakesIngredientComponent = $TakesIngredientComponent
 @onready var recipe_table_component: RecipeTableComponent = $RecipeTableComponent
-@onready var _original_tooltip := clickable_component.tooltip_text
 
 @export var cook_timer: int
 
-func _on_drop_off_component_drop_off_ingredient_event(ingredient: IngredientResource) -> void:
+func _on_drop_off_component_drop_off_ingredient_event(_ingredient: IngredientResource) -> void:
 	timer.start(cook_timer)
 	dropoff_component.disabled = true
 	takes_ingredients_component.disabled = true
