@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://csoimd8bt7slg"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://byt0w0v3varip"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_0vte1"]
 [ext_resource type="Texture2D" uid="uid://sb7f4wvbhax3" path="res://Assets/Sprites/DragonBlood.png" id="2_t53k3"]

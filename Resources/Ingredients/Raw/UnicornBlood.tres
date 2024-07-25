@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://byxr5ivup71a0"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://c10pijyxfrgyi"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_2u6fw"]
 [ext_resource type="Texture2D" uid="uid://bku87b5sprwwa" path="res://Assets/Sprites/UnicornBlood.png" id="2_0slgn"]

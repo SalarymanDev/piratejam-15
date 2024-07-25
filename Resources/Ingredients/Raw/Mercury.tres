@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://dpbwch4soo213"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_hwa76"]
-[ext_resource type="Texture2D" uid="uid://dfi7thxe44xe3" path="res://Assets/Sprites/phials/white-phial.png" id="2_bvkon"]
+[ext_resource type="Texture2D" uid="uid://bv6crby1t8qoc" path="res://Assets/Sprites/mercury.png" id="2_an1fw"]
 
 [resource]
 script = ExtResource("1_hwa76")
 ingredient = 5
 name = "Mercury"
 description = "Fluidity and change."
-texture = ExtResource("2_bvkon")
+texture = ExtResource("2_an1fw")

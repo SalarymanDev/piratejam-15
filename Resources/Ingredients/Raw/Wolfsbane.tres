@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://c3g5f8d14ut18"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://csovk45m2l8k4"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_atk4s"]
 [ext_resource type="Texture2D" uid="uid://b5s3lhpwwbmai" path="res://Assets/Sprites/Wolfsbane.png" id="2_xrwty"]

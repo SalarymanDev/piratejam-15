@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://ehyu2je1slix"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://camfg8jp47103"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_f0877"]
 [ext_resource type="Texture2D" uid="uid://dkj7vqasfdi3k" path="res://Assets/Sprites/BatWings.png" id="2_7uora"]
