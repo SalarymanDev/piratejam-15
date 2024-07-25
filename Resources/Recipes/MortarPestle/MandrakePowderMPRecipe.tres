@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://bbp8ckbqdy6tt"]
+
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="1_0abtb"]
+[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/Raw/MandrakeRoot.tres" id="1_4ndfr"]
+[ext_resource type="Resource" uid="uid://bnr2gq37y62l6" path="res://Resources/Ingredients/MortarPestle/MandrakePowder.tres" id="2_7e4ae"]
+
+[resource]
+script = ExtResource("1_0abtb")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_4ndfr")])
+output = ExtResource("2_7e4ae")

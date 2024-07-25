@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=3 format=3 uid="uid://buuwp1j4ym612"]
+
+[ext_resource type="Resource" uid="uid://bbp8ckbqdy6tt" path="res://Resources/Recipes/MortarPestle/MandrakePowderMPRecipe.tres" id="1_v4gvr"]
+[ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_y0f30"]
+
+[resource]
+script = ExtResource("1_y0f30")
+recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_v4gvr")])

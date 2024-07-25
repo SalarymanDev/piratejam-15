@@ -6,6 +6,7 @@ enum Ingredients {
 	MandrakeRoot = 4,
 	Wolfsbane = 8,
 	Salt = 16,
+	MandrakePowder,
 }
 
 enum Potions {

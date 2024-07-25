@@ -1,0 +1,98 @@
+[gd_scene load_steps=16 format=3 uid="uid://0olo4xrydpou"]
+
+[ext_resource type="Script" path="res://Scenes/Equipment/MortarPestle/MortarPestle.gd" id="1_ejbgi"]
+[ext_resource type="Texture2D" uid="uid://bif5c32wbtosm" path="res://Assets/Sprites/mortarpestle.png" id="2_iet1f"]
+[ext_resource type="Texture2D" uid="uid://3ba750fxv8qd" path="res://Assets/Sprites/star.png" id="3_c8jrn"]
+[ext_resource type="Script" path="res://Components/Clickable/ClickableComponent.gd" id="4_svhmv"]
+[ext_resource type="Script" path="res://Components/DropOff/DropOffComponent.gd" id="5_lqw7x"]
+[ext_resource type="Script" path="res://Components/Pickup/PickUpComponent.gd" id="6_k3s1a"]
+[ext_resource type="Script" path="res://Components/Item/ItemComponent.gd" id="7_6hgob"]
+[ext_resource type="Script" path="res://Components/TakesIngredients/TakesIngredientsComponent.gd" id="8_4kniq"]
+[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/Raw/MandrakeRoot.tres" id="9_sfbv0"]
+[ext_resource type="Script" path="res://Components/RecipeTable/RecipeTableComponent.gd" id="10_rv6qa"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="11_4ugua"]
+[ext_resource type="Resource" uid="uid://buuwp1j4ym612" path="res://Resources/RecipeTables/MortarPestleRecipeTable.tres" id="12_ot13r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0hwj"]
+size = Vector2(57.25, 9.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aq12l"]
+size = Vector2(64, 61)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08k7l"]
+radius = 26.0192
+
+[node name="MortarPestle" type="StaticBody2D"]
+script = ExtResource("1_ejbgi")
+
+[node name="PestleSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.500004, 0.500002)
+scale = Vector2(0.243164, 0.194336)
+texture = ExtResource("2_iet1f")
+
+[node name="HarvestableSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2, -49)
+scale = Vector2(0.0522461, 0.0424805)
+texture = ExtResource("3_c8jrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 7.9375)
+shape = SubResource("RectangleShape2D_k0hwj")
+
+[node name="ClickableComponent" type="Area2D" parent="."]
+script = ExtResource("4_svhmv")
+tooltip_text = "Mortar & Pestle"
+
+[node name="Label" type="Label" parent="ClickableComponent"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_aq12l")
+
+[node name="DropOffComponent" type="Area2D" parent="." node_paths=PackedStringArray("takes_ingredients_component")]
+position = Vector2(-1, 51)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("5_lqw7x")
+takes_ingredients_component = NodePath("../TakesIngredientComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_08k7l")
+
+[node name="PickUpComponent" type="Area2D" parent="." node_paths=PackedStringArray("item_component")]
+position = Vector2(-1, 51)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("6_k3s1a")
+item_component = NodePath("../ItemComponent")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
+shape = SubResource("CircleShape2D_08k7l")
+
+[node name="ItemComponent" type="Node" parent="."]
+script = ExtResource("7_6hgob")
+
+[node name="TakesIngredientComponent" type="Node2D" parent="."]
+position = Vector2(-1, 51)
+script = ExtResource("8_4kniq")
+takes_ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("9_sfbv0")])
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="RecipeTableComponent" type="Node" parent="."]
+script = ExtResource("10_rv6qa")
+default = ExtResource("11_4ugua")
+recipe_table = ExtResource("12_ot13r")
+
+[connection signal="mouse_entered" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_exited"]
+[connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_component_drop_off_ingredient_event"]
+[connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_pick_up_component_picked_up_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

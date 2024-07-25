@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scenes/Equipment/Table/Table.gd" id="1_o65w1"]
 [ext_resource type="Texture2D" uid="uid://chcbfxtaklqgi" path="res://Assets/Sprites/table.png" id="2_dw6bl"]
 [ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="3_5ctba"]
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="4_2t5u1"]
-[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="5_swy7r"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="4_2t5u1"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="5_swy7r"]
 [ext_resource type="PackedScene" uid="uid://0q4lt3ou3oig" path="res://Components/TakesPotion/TakesPotionComponent.tscn" id="6_q2c3h"]
 [ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="7_47uer"]
 [ext_resource type="PackedScene" uid="uid://cp7mesfqoflnd" path="res://Components/StoreItem/StoreItemComponent.tscn" id="7_vjd07"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/Pickup/PickUpComponent.tscn" id="12_cd7qq"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="13_01rb5"]
 [ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="14_7q8rv"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Salt.tres" id="15_11nnh"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="15_11nnh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbyxd"]
 size = Vector2(139, 38)

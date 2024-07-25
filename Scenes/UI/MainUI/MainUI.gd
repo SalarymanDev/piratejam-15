@@ -11,6 +11,7 @@ extends Control
 @onready var end_day_ui: Control = $EndDayUi
 
 var _has_invisiblity_potion: bool = false
+var _current_time_index: int = 0
 
 func _ready() -> void:
 	GameStateManager.time_changed_event.connect(_update_time)

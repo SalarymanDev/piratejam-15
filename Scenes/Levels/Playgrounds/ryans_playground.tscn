@@ -1,19 +1,20 @@
-[gd_scene load_steps=20 format=3 uid="uid://wemfyrhm5f7f"]
+[gd_scene load_steps=21 format=3 uid="uid://wemfyrhm5f7f"]
 
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_cijhs"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="2_b3thu"]
 [ext_resource type="PackedScene" uid="uid://dcdulbgx7vrmp" path="res://Scenes/Equipment/WasteBin/WasteBin.tscn" id="3_rxvju"]
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="4_hbuti"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Salt.tres" id="5_4kfl7"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="5_4kfl7"]
 [ext_resource type="Texture2D" uid="uid://bgnte4vncyqav" path="res://Assets/Sprites/salt-lick.png" id="6_56mnd"]
-[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Wood.tres" id="7_ax3ak"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="7_ax3ak"]
 [ext_resource type="Texture2D" uid="uid://bqt68tspugd2i" path="res://Assets/Sprites/firewood.png" id="8_le5ea"]
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="9_yscs3"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="9_yscs3"]
 [ext_resource type="Texture2D" uid="uid://d1p0nxkbd7qhi" path="res://Assets/Sprites/well.png" id="10_mc7wo"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="11_38d5h"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="11_gwuuu"]
 [ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="12_b6a0f"]
-[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/MandrakeRoot.tres" id="12_k4jdq"]
+[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/Raw/MandrakeRoot.tres" id="12_k4jdq"]
+[ext_resource type="PackedScene" uid="uid://0olo4xrydpou" path="res://Scenes/Equipment/MortarPestle/MortarPestle.tscn" id="13_xs64q"]
 
 [sub_resource type="Curve" id="Curve_swyk5"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.503876, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -33,8 +34,8 @@ curve_y = SubResource("Curve_8p78b")
 curve_z = SubResource("Curve_3iuhg")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ww3gs"]
-vertices = PackedVector2Array(569, 163, 758, 158, 1803, 155, 1888, 155, 1083, 578, 998, 578, 427, 125, 569, 133, 491, 133, 249, 131, 342, 125, 608, 158, 1888, 122, 1803, 122, 1716, 114, 1716, 81, 1911, 11, 1911, 1077, 1083, 611, 16, 1078, 998, 611, 608, 112, 249, 98, 342, 92, 758, 112, 1631, 114, 491, 163, 164, 131, 12, 17, 1631, 81, 427, 92, 164, 98)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 1, 0), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(3, 12, 16, 17), PackedInt32Array(18, 17, 19, 20), PackedInt32Array(3, 17, 18, 4), PackedInt32Array(11, 0, 7, 21), PackedInt32Array(10, 9, 22, 23), PackedInt32Array(13, 2, 1, 24, 25), PackedInt32Array(9, 8, 26, 19, 27), PackedInt32Array(28, 16, 15, 29), PackedInt32Array(30, 28, 29, 25, 24), PackedInt32Array(7, 6, 30, 21), PackedInt32Array(0, 5, 20, 19, 26), PackedInt32Array(27, 19, 28, 31), PackedInt32Array(22, 31, 28, 23), PackedInt32Array(30, 23, 28), PackedInt32Array(24, 21, 30), PackedInt32Array(13, 25, 14)])
+vertices = PackedVector2Array(279, 371, 569, 163, 888, 159, 1803, 155, 1888, 155, 1811, 538, 1726, 538, 810, 159, 16, 1078, 1079, 604, 1726, 571, 1811, 571, 1911, 1077, 1888, 122, 1803, 122, 1716, 114, 1716, 81, 1911, 11, 427, 125, 1631, 114, 888, 129, 810, 129, 491, 163, 279, 325, 929, 604, 1079, 558, 929, 558, 569, 133, 491, 133, 249, 131, 342, 125, 427, 92, 1631, 81, 249, 98, 342, 92, 129, 325, 164, 131, 12, 17, 164, 98, 129, 371)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6), PackedInt32Array(7, 2, 1), PackedInt32Array(8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16, 17), PackedInt32Array(18, 19, 15, 14, 20, 21), PackedInt32Array(4, 13, 17, 12), PackedInt32Array(4, 12, 11, 5), PackedInt32Array(22, 1, 0, 23), PackedInt32Array(24, 9, 8), PackedInt32Array(10, 9, 25, 6), PackedInt32Array(0, 6, 25, 26), PackedInt32Array(7, 1, 27, 21), PackedInt32Array(18, 21, 27, 28, 29, 30), PackedInt32Array(19, 18, 31, 32), PackedInt32Array(3, 2, 20, 14), PackedInt32Array(30, 29, 33, 34), PackedInt32Array(29, 28, 22, 23, 35, 36), PackedInt32Array(37, 17, 16, 32), PackedInt32Array(37, 32, 31, 34), PackedInt32Array(37, 34, 33, 38), PackedInt32Array(0, 26, 24, 8, 39), PackedInt32Array(39, 8, 37, 35), PackedInt32Array(36, 35, 37, 38)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(2, 8, 7, 1089, 1921, 1087, 1922, 1)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
@@ -53,7 +54,8 @@ position = Vector2(-5, -6)
 navigation_polygon = SubResource("NavigationPolygon_ww3gs")
 
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("2_b3thu")]
-position = Vector2(1040, 594)
+position = Vector2(1004, 580)
+scale = Vector2(2, 2)
 cook_seconds = 3
 
 [node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("3_rxvju")]
@@ -75,7 +77,7 @@ ingredient = ExtResource("9_yscs3")
 texture = ExtResource("10_mc7wo")
 
 [node name="IngredientSpawner4" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(683, 134)
+position = Vector2(204, 347)
 scale = Vector2(2, 2)
 ingredient = ExtResource("12_k4jdq")
 
@@ -85,6 +87,10 @@ position = Vector2(531, 140)
 [node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
 position = Vector2(1768, 554)
 
+[node name="MortarPestle" parent="NavigationRegion2D" instance=ExtResource("13_xs64q")]
+position = Vector2(850, 136)
+cook_timer = 3
+
 [node name="Player" parent="." instance=ExtResource("1_cijhs")]
 position = Vector2(459, 267)
 scale = Vector2(0.5, 0.5)
@@ -93,7 +99,7 @@ scale = Vector2(0.5, 0.5)
 visible = false
 
 [node name="MainUi" parent="CanvasLayer" instance=ExtResource("11_gwuuu")]
-offset_left = -9.0
+offset_left = 3.0
 offset_top = 4.0
-offset_right = 1914.0
-offset_bottom = 1078.0
+offset_right = -18.0
+offset_bottom = -13.0

@@ -1,16 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://cllo3pfqarwug"]
+[gd_scene load_steps=16 format=3 uid="uid://cllo3pfqarwug"]
 
 [ext_resource type="Script" path="res://Components/Clickable/ClickableComponent.gd" id="1_dt3tx"]
-[ext_resource type="Texture2D" uid="uid://d30867e25nuk4" path="res://Assets/Sprites/potion.png" id="1_xdhbw"]
 [ext_resource type="Script" path="res://Scenes/Equipment/Alembic/Alembic.gd" id="1_y1pir"]
 [ext_resource type="Script" path="res://Components/DropOff/DropOffComponent.gd" id="2_fp3ri"]
+[ext_resource type="Texture2D" uid="uid://dt1fuobt4lerk" path="res://Assets/Sprites/alembic.png" id="2_pu68q"]
 [ext_resource type="Script" path="res://Components/Item/ItemComponent.gd" id="5_v3dkg"]
 [ext_resource type="Script" path="res://Components/TakesIngredients/TakesIngredientsComponent.gd" id="6_72vtb"]
 [ext_resource type="Script" path="res://Components/RecipeTable/RecipeTableComponent.gd" id="7_l44ga"]
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Water.tres" id="7_ohnno"]
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="7_ohnno"]
 [ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="9_6anr0"]
 [ext_resource type="Script" path="res://Components/Pickup/PickUpComponent.gd" id="10_3n63h"]
 [ext_resource type="Texture2D" uid="uid://3ba750fxv8qd" path="res://Assets/Sprites/star.png" id="10_dhlhr"]
+[ext_resource type="Resource" uid="uid://djxuuch2wx7j8" path="res://Resources/RecipeTables/AlembicRecipeTable.tres" id="12_072s4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ylh1"]
 size = Vector2(57.25, 9.875)
@@ -25,9 +26,9 @@ radius = 26.0192
 script = ExtResource("1_y1pir")
 
 [node name="AlembicSprite" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
-scale = Vector2(0.0959473, 0.0819315)
-texture = ExtResource("1_xdhbw")
+position = Vector2(-0.500004, 0.500002)
+scale = Vector2(0.243164, 0.194336)
+texture = ExtResource("2_pu68q")
 
 [node name="HarvestableSprite" type="Sprite2D" parent="."]
 visible = false
@@ -88,6 +89,7 @@ one_shot = true
 [node name="RecipeTableComponent" type="Node" parent="."]
 script = ExtResource("7_l44ga")
 default = ExtResource("9_6anr0")
+recipe_table = ExtResource("12_072s4")
 
 [connection signal="mouse_entered" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_exited"]
