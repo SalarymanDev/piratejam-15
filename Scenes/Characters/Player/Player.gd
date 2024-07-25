@@ -54,6 +54,9 @@ func _handle_action(event: InputEventMouseButton) -> void:
 			navigation_component.target_position = pickup_component.global_position
 			return
 	
+	if event.global_position.y > 990 and event.global_position.x > 1800:
+		return
+	
 	current_action = Actions.Move
 	navigation_component.target_position = event.global_position
 

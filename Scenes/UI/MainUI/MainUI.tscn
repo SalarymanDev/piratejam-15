@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://b0a1s4bo3krrq"]
 
 [ext_resource type="Script" path="res://Scenes/UI/MainUI/MainUI.gd" id="1_ceh7a"]
-[ext_resource type="Theme" path="res://Assets/main.tres" id="1_jpkjh"]
+[ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_jpkjh"]
 [ext_resource type="Texture2D" uid="uid://d044xdjie3itn" path="res://Assets/Sprites/UI/Time/0_dawn.png" id="1_wvaqh"]
 [ext_resource type="Texture2D" uid="uid://1lmhmvymosvg" path="res://Assets/Sprites/UI/notification_side.png" id="2_nsvoo"]
 [ext_resource type="Texture2D" uid="uid://ph6daoxf2yxl" path="res://Assets/Sprites/coin.png" id="3_46gjx"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c3at7breygjan" path="res://Assets/Sprites/UI/Time/2_afternoon.png" id="4_ge8ua"]
 [ext_resource type="Texture2D" uid="uid://c8uqnubygnygv" path="res://Assets/Sprites/UI/Time/3_night.png" id="5_eg4pa"]
 [ext_resource type="Texture2D" uid="uid://c3mqscmef7fmm" path="res://Assets/Sprites/UI/invisibility_potion_holder.png" id="8_3ndqy"]
-[ext_resource type="Texture2D" uid="uid://d30867e25nuk4" path="res://Assets/Sprites/potion.png" id="9_58uwv"]
+[ext_resource type="Texture2D" uid="uid://dbdl25mk20m16" path="res://Assets/Sprites/potions/purple-potion.png" id="10_mae88"]
 [ext_resource type="PackedScene" uid="uid://dmw8pi86flogu" path="res://Scenes/UI/StartDay/StartDayUI.tscn" id="11_no0r0"]
 [ext_resource type="PackedScene" uid="uid://b23bdnonslpmq" path="res://Scenes/UI/EndDay/EndDayUI.tscn" id="12_pdjk2"]
 
@@ -125,14 +125,13 @@ texture_normal = ExtResource("8_3ndqy")
 stretch_mode = 0
 
 [node name="InvisibilityPotionTexture" type="TextureRect" parent="InvisibilityButton"]
-modulate = Color(0.258824, 0.258824, 0.258824, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("9_58uwv")
+texture = ExtResource("10_mae88")
 expand_mode = 2
 
 [node name="StartDayUi" parent="." instance=ExtResource("11_no0r0")]
