@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://b3oiwani0erfq"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/SalesCounter/SalesCounter.gd" id="1_tm6de"]
-[ext_resource type="Texture2D" uid="uid://cae2tiggj44r7" path="res://Assets/Sprites/shopSign.png" id="2_x2x7j"]
+[ext_resource type="Texture2D" uid="uid://clsv30sh8adyb" path="res://Assets/Sprites/store-counter.png" id="3_0weba"]
 [ext_resource type="PackedScene" uid="uid://0q4lt3ou3oig" path="res://Components/TakesPotion/TakesPotionComponent.tscn" id="3_qhhpc"]
 [ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="4_xexaw"]
 [ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="5_4n7bo"]
@@ -31,7 +31,7 @@ shape = SubResource("RectangleShape2D_843fc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_x2x7j")
+texture = ExtResource("3_0weba")
 
 [node name="TakesPotionComponent" parent="." instance=ExtResource("3_qhhpc")]
 

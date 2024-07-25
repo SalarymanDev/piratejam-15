@@ -86,10 +86,13 @@ position = Vector2(531, 140)
 
 [node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
 position = Vector2(1768, 554)
+scale = Vector2(1.5, 1.5)
 
 [node name="MortarPestle" parent="NavigationRegion2D" instance=ExtResource("13_xs64q")]
 position = Vector2(850, 136)
 cook_timer = 3
+
+[node name="SalesCounter2" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
 
 [node name="Player" parent="." instance=ExtResource("1_cijhs")]
 position = Vector2(459, 267)

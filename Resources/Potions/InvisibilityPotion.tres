@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://cp5fojqkt7qvq"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_p5hx4"]
-[ext_resource type="Texture2D" uid="uid://clj3yyga8uwdb" path="res://Assets/Sprites/phials/purple-phial.png" id="2_cpsp8"]
+[ext_resource type="Texture2D" uid="uid://dbdl25mk20m16" path="res://Assets/Sprites/potions/purple-potion.png" id="2_qgy7g"]
 
 [resource]
 script = ExtResource("1_p5hx4")
@@ -10,4 +10,4 @@ value = 0
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
 name = "Invisibility Potion"
 description = "Why can I see it then?"
-texture = ExtResource("2_cpsp8")
+texture = ExtResource("2_qgy7g")
