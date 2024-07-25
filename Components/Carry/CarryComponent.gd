@@ -11,6 +11,7 @@ func pickup() -> void:
 	if !_pickup_in_range:
 		return
 	if _current_item:
+		print("picking up")
 		_current_item = _pickup_in_range.swap(_current_item)
 		_update_sprite()
 		return
