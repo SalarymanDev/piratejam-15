@@ -13,24 +13,32 @@ var _current_day: int = 0
 var _current_money: int = 0
 var _potions_sold_per_day: Dictionary = {}
 var _potions_sold_today: Array[PotionResource] = []
-var _timer: Timer = Timer.new()
+var _day_timer: Timer = Timer.new()
+var _invisibility_timer: Timer = Timer.new()
 var _level_seconds: int = 300
+var _invisibility_seconds: int = 60
+var _fine_amount: int = 200
 var _controls_enabled: bool = false
+var _police_present: bool = false
+var _invisible: bool = false
 
 func _ready() -> void:
-	_timer.one_shot = true
-	get_tree().root.add_child.call_deferred(_timer)
-	_timer.timeout.connect(end_day)
+	_invisibility_timer.one_shot = true
+	get_tree().root.add_child.call_deferred(_invisibility_timer)
+	_invisibility_timer.timeout.connect(_invisibility_timeout)
+	_day_timer.one_shot = true
+	get_tree().root.add_child.call_deferred(_day_timer)
+	_day_timer.timeout.connect(_end_day)
 	emit_signal(money_changed_event.get_name(), _current_money)
 
 func start_day() -> void:
-	_timer.start(_level_seconds)
+	_day_timer.start(_level_seconds)
 	_controls_enabled = true
 	emit_signal(rent_changed_event.get_name(), _current_rent)
 	emit_signal(day_started_event.get_name(), _current_day)
 
-func end_day() -> void:
-	_timer.stop()
+func _end_day() -> void:
+	_day_timer.stop()
 	_controls_enabled = false
 	var revenue: int = 0
 	for potion_sold in _potions_sold_today:
@@ -67,6 +75,15 @@ func get_day() -> int:
 func controls_enabled() -> bool:
 	return _controls_enabled
 
+func use_invisibility_potion() -> void:
+	_invisible = true
+	_invisibility_timer.start(_invisibility_seconds)
+
+func _invisibility_timeout() -> void:
+	_invisible = false
+	if _police_present:
+		subtract_money(_fine_amount)
+
 func _physics_process(_delta: float) -> void:
-	if !_timer.is_stopped():
-		emit_signal(time_changed_event.get_name(), _timer.time_left)
+	if !_day_timer.is_stopped():
+		emit_signal(time_changed_event.get_name(), _day_timer.time_left)

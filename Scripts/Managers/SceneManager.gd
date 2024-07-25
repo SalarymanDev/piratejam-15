@@ -39,7 +39,7 @@ func _animate_fade_in() -> void:
 func _set_backdrop_alpha(value: float) -> void:
 	_fadeBackdrop.color.a = value
 
-func _set_music_volume(value: float) -> void:
+func _set_music_volume(_value: float) -> void:
 	pass
 	#var busIndex = AudioServer.get_bus_index("Music")
 	#AudioServer.set_bus_volume_db(busIndex, value)

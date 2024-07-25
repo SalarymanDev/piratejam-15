@@ -44,6 +44,7 @@ func _on_invisibility_button_pressed() -> void:
 		return
 	_has_invisiblity_potion = false
 	_update_potion()
+	GameStateManager.use_invisibility_potion()
 
 func _on_start_day_pressed() -> void:
 	get_tree().paused = false
