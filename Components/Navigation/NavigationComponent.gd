@@ -17,8 +17,9 @@ func _setup() -> void:
 func _physics_process(_delta: float) -> void:
 	if is_navigation_finished():
 		if !_previous_navigation_finished:
-			emit_signal(navigation_completed.get_name())
+			_previous_navigation_finished = true
 			character.velocity = Vector2.ZERO
+			emit_signal(navigation_completed.get_name())
 		return
 	
 	_previous_navigation_finished = false
