@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_r6o5a")
-ingredient = 2
+ingredient = 1
 name = "Wood"
 description = ""
 texture = ExtResource("2_a8eem")

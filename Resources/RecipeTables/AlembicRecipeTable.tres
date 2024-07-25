@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=3 format=3 uid="uid://djxuuch2wx7j8"]
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=3 format=3 uid="uid://disvb3cahmpcp"]
 
 [ext_resource type="Resource" uid="uid://dieu0gckjy4o4" path="res://Resources/Recipes/Alembic/DrinkingWaterAlembicRecipe.tres" id="1_dppwv"]
 [ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_wk8q2"]

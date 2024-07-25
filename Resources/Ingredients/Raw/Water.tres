@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_cx3ol")
 ingredient = 0
-name = ""
-description = ""
+name = "Water"
+description = "The clear and pure liquid of life"
 texture = ExtResource("2_hiej4")

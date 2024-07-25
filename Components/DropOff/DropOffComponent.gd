@@ -10,6 +10,8 @@ signal drop_off_potion_event(potion: PotionResource)
 
 func dropoff(item: ItemResource) -> bool:
 	if item is IngredientResource:
+		var test: IngredientResource = item
+		
 		if takes_ingredients_component and takes_ingredients_component.can_take(item as IngredientResource):
 			takes_ingredients_component.take(item as IngredientResource)
 			emit_signal(drop_off_ingredient_event.get_name(), item as IngredientResource)

@@ -12,7 +12,7 @@ func can_take(ingredient: IngredientResource) -> bool:
 	if disabled:
 		return false
 	if cauldron:
-		return _can_take_cauldron(ingredient)
+		return _can_take_cauldron(ingredient as IngredientResource)
 	return !_ingredients.has(ingredient)
 
 func take(ingredient: IngredientResource) -> bool:

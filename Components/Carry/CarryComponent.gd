@@ -27,6 +27,7 @@ func dropoff() -> void:
 		_current_item = null
 		_update_sprite()
 
+
 func _update_sprite() -> void:
 	if !_current_item:
 		sprite.texture = null
