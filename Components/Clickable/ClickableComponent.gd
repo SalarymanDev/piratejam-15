@@ -6,6 +6,7 @@ class_name ClickableComponent
 @onready var label: Label = $Label
 
 func _ready() -> void:
+	label.visible = false
 	label.text = tooltip_text
 
 func update_tooltip(text: String) -> void:
