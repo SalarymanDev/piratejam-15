@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_q6e1u"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_srlyv"]
-[ext_resource type="Texture2D" uid="uid://d30867e25nuk4" path="res://Assets/Sprites/potion.png" id="2_8oxal"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_eeu0r"]
+[ext_resource type="Texture2D" uid="uid://ceocctkivrqvp" path="res://Assets/Sprites/phials/blue-phial.png" id="4_unjwp"]
 
 [resource]
 script = ExtResource("1_q6e1u")
@@ -12,4 +12,4 @@ value = 1
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_srlyv"), ExtResource("2_eeu0r")])
 name = "Drinking Water"
 description = "Boiled water, impressive potion making skills."
-texture = ExtResource("2_8oxal")
+texture = ExtResource("4_unjwp")

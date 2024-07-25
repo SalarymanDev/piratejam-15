@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://drq72ptn3p5qi"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_jscjs"]
-[ext_resource type="Texture2D" uid="uid://cmheb5cp47h7m" path="res://Assets/Sprites/salt.png" id="2_s6wv4"]
+[ext_resource type="Texture2D" uid="uid://bdm3fyjydqnj" path="res://Assets/Sprites/powders/white-powder.png" id="2_h5q46"]
 
 [resource]
 script = ExtResource("1_jscjs")
 ingredient = 4
 name = "Salt"
 description = "Grains of salt used for purification and preservation."
-texture = ExtResource("2_s6wv4")
+texture = ExtResource("2_h5q46")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://cxsh56hnd636k"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_vqeiy"]
-[ext_resource type="Texture2D" uid="uid://d30867e25nuk4" path="res://Assets/Sprites/potion.png" id="2_l6cwo"]
+[ext_resource type="Texture2D" uid="uid://nqjao2fe41uf" path="res://Assets/Sprites/phials/black-phial.png" id="2_t2kgs"]
 
 [resource]
 script = ExtResource("1_vqeiy")
@@ -10,4 +10,4 @@ value = 0
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
 name = "Trash Potion"
 description = "A failure with no effect."
-texture = ExtResource("2_l6cwo")
+texture = ExtResource("2_t2kgs")

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://bnr2gq37y62l6"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_4mtbj"]
-[ext_resource type="Texture2D" uid="uid://cmheb5cp47h7m" path="res://Assets/Sprites/salt.png" id="2_1f0wf"]
+[ext_resource type="Texture2D" uid="uid://btoi1bv3poahn" path="res://Assets/Sprites/powders/tan-powder.png" id="2_tsfxg"]
 
 [resource]
 script = ExtResource("1_4mtbj")
 ingredient = 4
 name = "Mandrake Powder"
 description = "I didn't know Mandrakes wore makeup"
-texture = ExtResource("2_1f0wf")
+texture = ExtResource("2_tsfxg")
