@@ -13,6 +13,7 @@ extends CharacterBody2D
 
 var _leaving: bool = false
 var _rng := RandomNumberGenerator.new()
+var _has_fined: bool = false
 
 func _ready() -> void:
 	_on_navigation_completed()
@@ -29,6 +30,9 @@ func _on_idle_timeout() -> void:
 	navigation_component.target_position = target
 
 func _physics_process(_delta: float) -> void:
+	if !_has_fined and !GameStateManager.get_invisible():
+		GameStateManager.fine()
+		_has_fined = true
 	if velocity.x == 0:
 		return
 	if velocity.x > 0:
