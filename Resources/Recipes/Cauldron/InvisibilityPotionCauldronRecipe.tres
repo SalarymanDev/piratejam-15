@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=6 format=3 uid="uid://cl0gask54l25j"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_fma2o"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_ewanf"]
+[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="3_2vjmd"]
+[ext_resource type="Resource" uid="uid://cp5fojqkt7qvq" path="res://Resources/Potions/InvisibilityPotion.tres" id="4_alwow"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="4_psf41"]
+
+[resource]
+script = ExtResource("4_psf41")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_fma2o"), ExtResource("2_ewanf"), ExtResource("3_2vjmd")])
+output = ExtResource("4_alwow")

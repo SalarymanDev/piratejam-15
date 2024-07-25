@@ -41,4 +41,11 @@ enum Ingredients {
 enum Potions {
 	Trash,
 	DrinkingWater,
+	InvisibilityPotion,
+	BubblyTonic,
+	ElixirOfFlight,
+	ElixirOfSpeed,
+	ManicVapor,
+	DragonBreath,
+	NightshadeVapor
 }

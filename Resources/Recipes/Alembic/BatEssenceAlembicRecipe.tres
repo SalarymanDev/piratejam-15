@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://d4l2soc5lju7f"]
+
+[ext_resource type="Resource" uid="uid://dms03lwd1oid7" path="res://Resources/Ingredients/MortarPestle/BatPowder.tres" id="1_2pq78"]
+[ext_resource type="Resource" uid="uid://c7qgijvll0mxy" path="res://Resources/Ingredients/Alembic/BatEssence.tres" id="2_5vb06"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="3_0drhd"]
+
+[resource]
+script = ExtResource("3_0drhd")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_2pq78")])
+output = ExtResource("2_5vb06")

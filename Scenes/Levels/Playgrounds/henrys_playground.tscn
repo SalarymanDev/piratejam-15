@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cflebqfxo6rat"]
+[gd_scene load_steps=28 format=3 uid="uid://cflebqfxo6rat"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_wj5po"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="2_rl7cs"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bgnte4vncyqav" path="res://Assets/Sprites/salt-lick.png" id="17_8i1e8"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="17_n7eky"]
 [ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="18_u0cb1"]
+[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="18_uxl8m"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="19_pqwcn"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="21_p262u"]
 [ext_resource type="PackedScene" uid="uid://k3ekgyuiqs1s" path="res://Scenes/Equipment/Table/Table.tscn" id="21_u4urn"]
@@ -66,6 +67,13 @@ ingredient = ExtResource("15_2to6p")
 texture = ExtResource("17_8i1e8")
 audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
 tooltip = "Salt"
+
+[node name="MercurySpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-416, -15)
+ingredient = ExtResource("18_uxl8m")
+texture = ExtResource("17_8i1e8")
+audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
+tooltip = "Mercury"
 
 [node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(-550, 1)

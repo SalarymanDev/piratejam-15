@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://2aldkpkop06v"]
+
+[ext_resource type="Resource" uid="uid://pcjmrbaqnsb0" path="res://Resources/Ingredients/MortarPestle/FeatherPowder.tres" id="1_jd31b"]
+[ext_resource type="Resource" uid="uid://dpkjhtqxsui88" path="res://Resources/Ingredients/Alembic/PoisonOil.tres" id="2_66pl6"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="3_qd1k2"]
+
+[resource]
+script = ExtResource("3_qd1k2")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_jd31b")])
+output = ExtResource("2_66pl6")

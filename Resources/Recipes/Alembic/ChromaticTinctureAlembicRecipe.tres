@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://b6x3duuu8suna"]
+
+[ext_resource type="Resource" uid="uid://c10pijyxfrgyi" path="res://Resources/Ingredients/Raw/UnicornBlood.tres" id="1_8ubpc"]
+[ext_resource type="Resource" uid="uid://cyysi1il2ed53" path="res://Resources/Ingredients/Alembic/ChromaticTincture.tres" id="2_6hr5v"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="3_gq2dy"]
+
+[resource]
+script = ExtResource("3_gq2dy")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_8ubpc")])
+output = ExtResource("2_6hr5v")

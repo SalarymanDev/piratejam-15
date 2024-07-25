@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://4r3lyl324f65"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_ygpnh"]
+[ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="2_ubf53"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="3_dveb4"]
+
+[resource]
+script = ExtResource("3_dveb4")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_ygpnh")])
+output = ExtResource("2_ubf53")

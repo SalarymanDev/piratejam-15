@@ -1,8 +1,14 @@
-[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=3 format=3 uid="uid://buuwp1j4ym612"]
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=9 format=3 uid="uid://gah1qqswn5jd"]
 
 [ext_resource type="Resource" uid="uid://bbp8ckbqdy6tt" path="res://Resources/Recipes/MortarPestle/MandrakePowderMPRecipe.tres" id="1_v4gvr"]
 [ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_y0f30"]
+[ext_resource type="Resource" uid="uid://bljatl0a3nl2o" path="res://Resources/Recipes/MortarPestle/FineSaltMPRecipe.tres" id="2_1c4vb"]
+[ext_resource type="Resource" uid="uid://bun1g1h3d2sfd" path="res://Resources/Recipes/MortarPestle/DragonPasteMPRecipe.tres" id="3_nc3wi"]
+[ext_resource type="Resource" uid="uid://cgtwjil8fw488" path="res://Resources/Recipes/MortarPestle/FeatherPowderMPRecipe.tres" id="4_e232o"]
+[ext_resource type="Resource" uid="uid://3epxgebydoiq" path="res://Resources/Recipes/MortarPestle/EssenceOfNightshadeMPRecipe.tres" id="5_je7gp"]
+[ext_resource type="Resource" uid="uid://fqtme24aopcu" path="res://Resources/Recipes/MortarPestle/WolfPowderMPRecipe.tres" id="6_c36ms"]
+[ext_resource type="Resource" uid="uid://b4f7rnxr3e6s7" path="res://Resources/Recipes/MortarPestle/BatPowderMPRecipe.tres" id="7_ue4fr"]
 
 [resource]
 script = ExtResource("1_y0f30")
-recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_v4gvr")])
+recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_v4gvr"), ExtResource("2_1c4vb"), ExtResource("3_nc3wi"), ExtResource("4_e232o"), ExtResource("5_je7gp"), ExtResource("6_c36ms"), ExtResource("7_ue4fr")])
