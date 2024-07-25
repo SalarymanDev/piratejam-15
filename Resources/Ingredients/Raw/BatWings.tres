@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://camfg8jp47103"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_f0877"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_ht0ce"]
+
+[resource]
+script = ExtResource("1_f0877")
+ingredient = 8
+name = "Bat Wings"
+description = "Preserved wings of the common cave bat, representing flight over fury."
+texture = ExtResource("2_ht0ce")

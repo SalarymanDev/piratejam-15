@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://byt0w0v3varip"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_0vte1"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_tskaw"]
+
+[resource]
+script = ExtResource("1_0vte1")
+ingredient = 6
+name = "Dragon's Blood"
+description = "Dark crimson flakes used for protection, projection, and power."
+texture = ExtResource("2_tskaw")

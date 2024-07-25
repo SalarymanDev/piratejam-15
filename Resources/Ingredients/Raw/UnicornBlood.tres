@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://c10pijyxfrgyi"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_2u6fw"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_7plvk"]
+
+[resource]
+script = ExtResource("1_2u6fw")
+ingredient = 10
+name = "Unicorn Blood"
+description = "Polychromatic and known to be a controversial source of youth and vitality."
+texture = ExtResource("2_7plvk")

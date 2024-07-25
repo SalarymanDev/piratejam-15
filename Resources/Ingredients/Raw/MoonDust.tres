@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://ccqyinlitbdr6"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_rb2k8"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_e7tqi"]
+
+[resource]
+script = ExtResource("1_rb2k8")
+ingredient = 11
+name = "Moon Dust"
+description = "A glowing dust said to be most enchanting."
+texture = ExtResource("2_e7tqi")
