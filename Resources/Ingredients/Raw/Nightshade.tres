@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://ki0igx0pi4c6"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://depw6tiiokbs3"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_78jwu"]
-[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_nymmd"]
+[ext_resource type="Texture2D" uid="uid://ul7a38rtewn6" path="res://Assets/Sprites/Nightshade.png" id="2_gm8xf"]
 
 [resource]
 script = ExtResource("1_78jwu")
 ingredient = 9
 name = "Nightshade"
 description = "Dried petals of violet known to be dangerous and volatile."
-texture = ExtResource("2_nymmd")
+texture = ExtResource("2_gm8xf")
