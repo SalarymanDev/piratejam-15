@@ -28,10 +28,13 @@ enum Ingredients {
 	
 	## ALEMBIC OUTPUT INGREDIENTS
 	WolfsbaneExtract,
+	WolfsbaneOil,
 	SaltCrystals,
 	PurpleTincture,
 	ChromaticTincture,
-	MoonlightEssence
+	MoonlightEssence,
+	PoisonOil,
+	BatEssence
 	
 }
 

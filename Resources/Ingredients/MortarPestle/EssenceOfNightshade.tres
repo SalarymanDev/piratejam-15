@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://d4l41emscd3ft"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_gar47"]
+[ext_resource type="Texture2D" uid="uid://dincmlp38g51s" path="res://Assets/Sprites/beakers/purple-beaker.png" id="2_jvh7a"]
+
+[resource]
+script = ExtResource("1_gar47")
+ingredient = 18
+name = "Essence Of Nightshade"
+description = "A purple, turbid fluid."
+texture = ExtResource("2_jvh7a")

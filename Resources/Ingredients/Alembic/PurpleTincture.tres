@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://d3685v0sinoy1"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_0qcvc"]
+[ext_resource type="Texture2D" uid="uid://clj3yyga8uwdb" path="res://Assets/Sprites/phials/purple-phial.png" id="2_0qdal"]
+
+[resource]
+script = ExtResource("1_0qcvc")
+ingredient = 21
+name = "Purple Tincture"
+description = "A clear liquid that's barely purple at all."
+texture = ExtResource("2_0qdal")

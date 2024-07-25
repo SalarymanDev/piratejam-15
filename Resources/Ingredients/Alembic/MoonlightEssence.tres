@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://bmvgrxcluuj8b"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_hxk8x"]
+[ext_resource type="Texture2D" uid="uid://ceocctkivrqvp" path="res://Assets/Sprites/phials/blue-phial.png" id="2_s6sem"]
+
+[resource]
+script = ExtResource("1_hxk8x")
+ingredient = 24
+name = "Moonlight Essence"
+description = "A brightly illuminating liquid."
+texture = ExtResource("2_s6sem")

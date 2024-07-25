@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://b3g0wnfbmynse"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_7t4po"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_gjd1a"]
+
+[resource]
+script = ExtResource("1_7t4po")
+ingredient = 21
+name = "Salt Crystals"
+description = "Crystals of salt left behind from evaporation."
+texture = ExtResource("2_gjd1a")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://cla24laloek6e"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_4ibfx"]
+[ext_resource type="Texture2D" uid="uid://b882e8jbsu1ua" path="res://Assets/Sprites/beakers/tan-beaker.png" id="2_xc1et"]
+
+[resource]
+script = ExtResource("1_4ibfx")
+ingredient = 19
+name = "Wolfsbane Extract"
+description = "The extract is viscous and muddy."
+texture = ExtResource("2_xc1et")

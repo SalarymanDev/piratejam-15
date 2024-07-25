@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://c7qgijvll0mxy"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_mkcdx"]
+[ext_resource type="Texture2D" uid="uid://nqjao2fe41uf" path="res://Assets/Sprites/phials/black-phial.png" id="2_smjn8"]
+
+[resource]
+script = ExtResource("1_mkcdx")
+ingredient = 26
+name = "Bat Essence"
+description = "Dark, smoky liquid"
+texture = ExtResource("2_smjn8")

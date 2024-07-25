@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://ypg7sev501n8"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_lym1x"]
+[ext_resource type="Texture2D" uid="uid://bn8hv4sxds4tx" path="res://Assets/Sprites/powders/red-powder.png" id="2_enjgm"]
+
+[resource]
+script = ExtResource("1_lym1x")
+ingredient = 15
+name = "Dragon Paste"
+description = "A bloody, clotting mixture of red and brown."
+texture = ExtResource("2_enjgm")

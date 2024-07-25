@@ -13,7 +13,6 @@ func store(item: ItemResource) -> void:
 	_stored_item = item
 	item_component.item = item
 	_has_item = true
-	print("Currently storing a " + _stored_item.name)
 
 func dispense() -> void:
 	_has_item = !_has_item

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://cwdxhloqh2s5r"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_5ypx8"]
+[ext_resource type="Texture2D" uid="uid://dlslafppbphkv" path="res://Assets/Sprites/powders/purple-powder.png" id="2_w5v71"]
+
+[resource]
+script = ExtResource("1_5ypx8")
+ingredient = 13
+name = "Wolf's Powder"
+description = "A fine purple powder"
+texture = ExtResource("2_w5v71")

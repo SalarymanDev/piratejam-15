@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://dpkjhtqxsui88"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_1oss0"]
+[ext_resource type="Texture2D" uid="uid://cyeiqrijdg34t" path="res://Assets/Sprites/beakers/base-beaker.png" id="2_a2g8s"]
+
+[resource]
+script = ExtResource("1_1oss0")
+ingredient = 25
+name = "Poison Oil"
+description = "This toxic gas is both colorless and odorless."
+texture = ExtResource("2_a2g8s")

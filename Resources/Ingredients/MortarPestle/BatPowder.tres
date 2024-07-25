@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://dms03lwd1oid7"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_mg7f5"]
+[ext_resource type="Texture2D" uid="uid://cj0p6uel0i4fk" path="res://Assets/Sprites/powders/black-powder.png" id="2_lvjhl"]
+
+[resource]
+script = ExtResource("1_mg7f5")
+ingredient = 17
+name = "Bat Powder"
+description = "Black and brown dust with clumps of hair mixed in."
+texture = ExtResource("2_lvjhl")

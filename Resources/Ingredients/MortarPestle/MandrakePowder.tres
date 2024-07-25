@@ -7,5 +7,5 @@
 script = ExtResource("1_4mtbj")
 ingredient = 4
 name = "Mandrake Powder"
-description = "I didn't know Mandrakes wore makeup"
+description = "A pungeant, brown powder."
 texture = ExtResource("2_tsfxg")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://dpm4aeen2vw2l"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_w1m7w"]
+[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_kjmds"]
+
+[resource]
+script = ExtResource("1_w1m7w")
+ingredient = 19
+name = "Chromatic Tincture"
+description = "A viscous, multicolored fluid."
+texture = ExtResource("2_kjmds")

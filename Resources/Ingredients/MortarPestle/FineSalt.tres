@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://dq8qeas4dmy1c"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_g51ke"]
+[ext_resource type="Texture2D" uid="uid://dfi7thxe44xe3" path="res://Assets/Sprites/phials/white-phial.png" id="2_0j3in"]
+
+[resource]
+script = ExtResource("1_g51ke")
+ingredient = 14
+name = "Fine Salt"
+description = "Finely ground salt with little impurity"
+texture = ExtResource("2_0j3in")

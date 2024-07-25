@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://pcjmrbaqnsb0"]
+
+[ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_t6gng"]
+[ext_resource type="Texture2D" uid="uid://x6i0vuan5xao" path="res://Assets/Sprites/powders/green-powder.png" id="2_y5mtg"]
+
+[resource]
+script = ExtResource("1_t6gng")
+ingredient = 16
+name = "Feather Powder"
+description = "A fine green powder that stings the eyes."
+texture = ExtResource("2_y5mtg")
