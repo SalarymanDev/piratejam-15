@@ -8,6 +8,7 @@ extends StaticBody2D
 @onready var pickup_component: PickUpComponent = $PickUpComponent
 @onready var takes_ingredients_component: TakesIngredientComponent = $TakesIngredientComponent
 @onready var recipe_table_component: RecipeTableComponent = $RecipeTableComponent
+@onready var audio_component: AudioComponent = $AudioComponent
 @onready var original_tooltip := clickable_component.tooltip_text
 
 @export var cook_timer: int
@@ -16,6 +17,7 @@ func _on_drop_off_component_drop_off_ingredient_event(_ingredient: IngredientRes
 	timer.start(cook_timer)
 	dropoff_component.disabled = true
 	takes_ingredients_component.disabled = true
+	audio_component.loop()
 
 
 func _on_timer_timeout() -> void:
@@ -26,6 +28,7 @@ func _on_timer_timeout() -> void:
 	pickup_component.disabled = false
 	takes_ingredients_component.clear()
 	clickable_component.update_tooltip(output.name)
+	audio_component.stop()
 
 
 func _on_pick_up_component_picked_up_event() -> void:

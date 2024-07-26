@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://0olo4xrydpou"]
+[gd_scene load_steps=22 format=3 uid="uid://0olo4xrydpou"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/MortarPestle/MortarPestle.gd" id="1_ejbgi"]
 [ext_resource type="Texture2D" uid="uid://bif5c32wbtosm" path="res://Assets/Sprites/mortarpestle.png" id="2_iet1f"]
@@ -12,6 +12,12 @@
 [ext_resource type="Script" path="res://Components/RecipeTable/RecipeTableComponent.gd" id="10_rv6qa"]
 [ext_resource type="Resource" uid="uid://cxsh56hnd636k" path="res://Resources/Potions/TrashPotion.tres" id="11_abup7"]
 [ext_resource type="Resource" uid="uid://gah1qqswn5jd" path="res://Resources/RecipeTables/MortarPestleRecipeTable.tres" id="12_ot13r"]
+[ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="13_f0l6a"]
+[ext_resource type="AudioStream" uid="uid://dsum4d5tuqt83" path="res://Assets/Audio/MortarPestle/mortar_pestle_0.wav" id="14_675sy"]
+[ext_resource type="AudioStream" uid="uid://dao21wwrifsf0" path="res://Assets/Audio/MortarPestle/mortar_pestle_1.wav" id="15_8nja4"]
+[ext_resource type="AudioStream" uid="uid://b7ksnj3t84xii" path="res://Assets/Audio/MortarPestle/mortar_pestle_2.wav" id="16_oix85"]
+[ext_resource type="AudioStream" uid="uid://dwovbjlo8vonc" path="res://Assets/Audio/MortarPestle/mortar_pestle_3.wav" id="17_4y8bc"]
+[ext_resource type="AudioStream" uid="uid://k6l48vqv12ke" path="res://Assets/Audio/MortarPestle/mortar_pestle_4.wav" id="18_jmasx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0hwj"]
 size = Vector2(57.25, 9.875)
@@ -91,6 +97,9 @@ one_shot = true
 script = ExtResource("10_rv6qa")
 default = ExtResource("11_abup7")
 recipe_table = ExtResource("12_ot13r")
+
+[node name="AudioComponent" parent="." instance=ExtResource("13_f0l6a")]
+audio_clips = Array[AudioStream]([ExtResource("14_675sy"), ExtResource("15_8nja4"), ExtResource("16_oix85"), ExtResource("17_4y8bc"), ExtResource("18_jmasx")])
 
 [connection signal="mouse_entered" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_exited"]

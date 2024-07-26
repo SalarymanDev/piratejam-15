@@ -1,8 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bflv5p5pyq64p"]
+[gd_scene load_steps=10 format=3 uid="uid://bflv5p5pyq64p"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Police/Police.gd" id="1_mekxe"]
 [ext_resource type="Texture2D" uid="uid://cd1s2woeqcfv7" path="res://Assets/Sprites/alchemist.png" id="2_6f374"]
 [ext_resource type="PackedScene" uid="uid://c755fytkpll47" path="res://Components/Navigation/NavigationComponent.tscn" id="3_dcloc"]
+[ext_resource type="Script" path="res://Components/Audio/AudioComponent.gd" id="4_uj8kh"]
+[ext_resource type="AudioStream" uid="uid://vwnm3bf8xk5w" path="res://Assets/Audio/Sell/Coins Bag 1.mp3" id="5_rkmjl"]
+[ext_resource type="AudioStream" uid="uid://dwae0yaqaer6k" path="res://Assets/Audio/Sell/Coins Bag 2.mp3" id="6_4426s"]
+[ext_resource type="AudioStream" uid="uid://bxmpp70smxlqm" path="res://Assets/Audio/Sell/Coins Bag 3.mp3" id="7_uqgcp"]
+[ext_resource type="AudioStream" uid="uid://fhw0l4ibhtcf" path="res://Assets/Audio/Sell/Coins Bag 4.mp3" id="8_2nv3m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjeai"]
 radius = 61.2944
@@ -27,6 +32,10 @@ speed = 300.0
 one_shot = true
 
 [node name="LeaveTimer" type="Timer" parent="."]
+
+[node name="AudioComponent" type="Node2D" parent="."]
+script = ExtResource("4_uj8kh")
+audio_clips = Array[AudioStream]([ExtResource("5_rkmjl"), ExtResource("6_4426s"), ExtResource("7_uqgcp"), ExtResource("8_2nv3m")])
 
 [connection signal="navigation_completed" from="NavigationComponent" to="." method="_on_navigation_completed"]
 [connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timeout"]

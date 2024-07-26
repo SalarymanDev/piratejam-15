@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cl8ci2gqvsxgy"]
+[gd_scene load_steps=26 format=3 uid="uid://cl8ci2gqvsxgy"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_6rkv5"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_p1yvi"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="15_veeo4"]
 [ext_resource type="Texture2D" uid="uid://bgnte4vncyqav" path="res://Assets/Sprites/salt-lick.png" id="16_nh57v"]
 [ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="18_6seak"]
+[ext_resource type="PackedScene" uid="uid://0olo4xrydpou" path="res://Scenes/Equipment/MortarPestle/MortarPestle.tscn" id="20_6fixi"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="21_knp8a"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jmj5o"]
@@ -100,6 +101,9 @@ position = Vector2(-35, -178)
 
 [node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("18_6seak")]
 position = Vector2(468, 27)
+
+[node name="MortarPestle" parent="NavigationRegion2D" instance=ExtResource("20_6fixi")]
+position = Vector2(-243, -30)
 
 [node name="Player" parent="." instance=ExtResource("1_p1yvi")]
 position = Vector2(575, 323)

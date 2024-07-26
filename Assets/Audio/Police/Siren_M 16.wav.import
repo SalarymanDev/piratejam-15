@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blwe6bi3anlu8"
+path="res://.godot/imported/Siren_M 16.wav-558c1491c6aa11455a6017d52c3c1702.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Police/Siren_M 16.wav"
+dest_files=["res://.godot/imported/Siren_M 16.wav-558c1491c6aa11455a6017d52c3c1702.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

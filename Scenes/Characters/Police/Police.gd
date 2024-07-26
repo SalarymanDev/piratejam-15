@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var leave_time: float = 20
 
 @onready var navigation_component: NavigationComponent = $NavigationComponent
+@onready var audio_component: AudioComponent = $AudioComponent
 @onready var idle_timer: Timer = $IdleTimer
 @onready var leave_timer: Timer = $LeaveTimer
 @onready var sprite: Sprite2D = $Sprite2D
@@ -33,6 +34,7 @@ func _physics_process(_delta: float) -> void:
 	if !_has_fined and !GameStateManager.get_invisible():
 		GameStateManager.fine()
 		_has_fined = true
+		audio_component.play()
 	if velocity.x == 0:
 		return
 	if velocity.x > 0:
