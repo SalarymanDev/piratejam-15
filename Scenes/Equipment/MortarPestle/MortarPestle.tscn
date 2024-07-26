@@ -69,6 +69,7 @@ shape = SubResource("CircleShape2D_08k7l")
 [node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("7_8i5m0")]
 position = Vector2(0, 41.42)
 item_component = NodePath("../ItemComponent")
+is_swappable = false
 disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]

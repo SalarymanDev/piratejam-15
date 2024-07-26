@@ -1,18 +1,20 @@
-[gd_scene load_steps=17 format=3 uid="uid://cllo3pfqarwug"]
+[gd_scene load_steps=19 format=3 uid="uid://cllo3pfqarwug"]
 
-[ext_resource type="Script" path="res://Components/Clickable/ClickableComponent.gd" id="1_dt3tx"]
 [ext_resource type="Script" path="res://Scenes/Equipment/Alembic/Alembic.gd" id="1_y1pir"]
-[ext_resource type="Script" path="res://Components/DropOff/DropOffComponent.gd" id="2_fp3ri"]
 [ext_resource type="Texture2D" uid="uid://dt1fuobt4lerk" path="res://Assets/Sprites/alembic.png" id="2_pu68q"]
-[ext_resource type="Script" path="res://Components/Item/ItemComponent.gd" id="5_v3dkg"]
-[ext_resource type="Script" path="res://Components/TakesIngredients/TakesIngredientsComponent.gd" id="6_72vtb"]
-[ext_resource type="Script" path="res://Components/RecipeTable/RecipeTableComponent.gd" id="7_l44ga"]
+[ext_resource type="Texture2D" uid="uid://d2lhxt4l5ci5m" path="res://Assets/Sprites/alembic-full.png" id="3_qd1da"]
+[ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="5_mty3m"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="7_ohnno"]
+[ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="8_xeqwk"]
 [ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="9_6anr0"]
-[ext_resource type="Script" path="res://Components/Pickup/PickUpComponent.gd" id="10_3n63h"]
 [ext_resource type="Texture2D" uid="uid://3ba750fxv8qd" path="res://Assets/Sprites/star.png" id="10_dhlhr"]
+[ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/Pickup/PickUpComponent.tscn" id="10_i6a81"]
+[ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="11_ffn7x"]
 [ext_resource type="Resource" uid="uid://disvb3cahmpcp" path="res://Resources/RecipeTables/AlembicRecipeTable.tres" id="12_072s4"]
 [ext_resource type="AudioStream" uid="uid://d24ld0vvspuwo" path="res://Assets/Audio/Cauldron/Bubbles Big Long A.wav" id="13_gqo65"]
+[ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="13_yxv7p"]
+[ext_resource type="PackedScene" uid="uid://t70hmk4ewtkh" path="res://Components/RecipeTable/RecipeTableComponent.tscn" id="14_3ukrk"]
+[ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="15_spgsm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ylh1"]
 size = Vector2(57.25, 9.875)
@@ -25,6 +27,8 @@ radius = 26.0192
 
 [node name="Alembic" type="StaticBody2D" groups=["Invisibility"]]
 script = ExtResource("1_y1pir")
+empty_texture = ExtResource("2_pu68q")
+full_texture = ExtResource("3_qd1da")
 
 [node name="AlembicSprite" type="Sprite2D" parent="."]
 position = Vector2(-0.500004, 0.500002)
@@ -41,62 +45,44 @@ texture = ExtResource("10_dhlhr")
 position = Vector2(-1, 7.9375)
 shape = SubResource("RectangleShape2D_3ylh1")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_gqo65")
-
-[node name="ClickableComponent" type="Area2D" parent="."]
-script = ExtResource("1_dt3tx")
+[node name="ClickableComponent" parent="." instance=ExtResource("5_mty3m")]
 tooltip_text = "Alembic"
-
-[node name="Label" type="Label" parent="ClickableComponent"]
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
 position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_mfmjc")
 
-[node name="DropOffComponent" type="Area2D" parent="." node_paths=PackedStringArray("takes_ingredients_component")]
-position = Vector2(-1, 51)
-collision_layer = 8
-collision_mask = 0
-script = ExtResource("2_fp3ri")
-takes_ingredients_component = NodePath("../TakesIngredientComponent")
+[node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component") instance=ExtResource("8_xeqwk")]
+position = Vector2(2.08165e-12, 50)
+takes_ingredients_component = NodePath("../TakesIngredientsComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
-position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_rjv17")
 
-[node name="PickUpComponent" type="Area2D" parent="." node_paths=PackedStringArray("item_component")]
-position = Vector2(-1, 51)
-collision_layer = 4
-collision_mask = 0
-script = ExtResource("10_3n63h")
+[node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("10_i6a81")]
+position = Vector2(2.08165e-12, 50)
 item_component = NodePath("../ItemComponent")
-disabled = true
+is_swappable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
 shape = SubResource("CircleShape2D_rjv17")
 
-[node name="ItemComponent" type="Node" parent="."]
-script = ExtResource("5_v3dkg")
-
-[node name="TakesIngredientComponent" type="Node2D" parent="."]
-position = Vector2(-1, 51)
-script = ExtResource("6_72vtb")
+[node name="TakesIngredientsComponent" parent="." instance=ExtResource("11_ffn7x")]
 takes_ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("7_ohnno")])
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 
-[node name="RecipeTableComponent" type="Node" parent="."]
-script = ExtResource("7_l44ga")
+[node name="RecipeTableComponent" parent="." instance=ExtResource("14_3ukrk")]
 default = ExtResource("9_6anr0")
 recipe_table = ExtResource("12_072s4")
 
-[connection signal="mouse_entered" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="ClickableComponent" to="ClickableComponent" method="_on_mouse_exited"]
+[node name="ItemComponent" parent="." instance=ExtResource("13_yxv7p")]
+
+[node name="AudioComponent" parent="." instance=ExtResource("15_spgsm")]
+audio_clips = Array[AudioStream]([ExtResource("13_gqo65")])
+
 [connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_component_drop_off_ingredient_event"]
 [connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_pick_up_component_picked_up_event"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

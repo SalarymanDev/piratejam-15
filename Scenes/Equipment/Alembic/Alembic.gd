@@ -1,26 +1,27 @@
 extends StaticBody2D
 
 @onready var timer: Timer = $Timer
-@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var audio_component: AudioComponent = $AudioComponent
 @onready var clickable_component: ClickableComponent = $ClickableComponent
 @onready var dropoff_component: DropOffComponent = $DropOffComponent
 @onready var harvest_sprite: Sprite2D = $HarvestableSprite
 @onready var item_component: ItemComponent = $ItemComponent
 @onready var pickup_component: PickUpComponent = $PickUpComponent
-@onready var takes_ingredients_component: TakesIngredientComponent = $TakesIngredientComponent
+@onready var takes_ingredients_component: TakesIngredientComponent = $TakesIngredientsComponent
 @onready var recipe_table_component: RecipeTableComponent = $RecipeTableComponent
 @onready var main_sprite: Sprite2D = $AlembicSprite
 @onready var original_tooltip := clickable_component.tooltip_text
 
+@export var empty_texture: Texture2D
+@export var full_texture: Texture2D
 @export var cook_timer: int
 
 func _on_drop_off_component_drop_off_ingredient_event(_ingredient: IngredientResource) -> void:
 	timer.start(cook_timer)
 	dropoff_component.disabled = true
 	takes_ingredients_component.disabled = true
-	audio_player.play(0.0)
-	main_sprite.texture = load("res://Assets/Sprites/alembic-full.png")
-	
+	audio_component.play()
+	main_sprite.texture = full_texture
 
 
 func _on_timer_timeout() -> void:
@@ -31,8 +32,7 @@ func _on_timer_timeout() -> void:
 	pickup_component.disabled = false
 	takes_ingredients_component.clear()
 	clickable_component.update_tooltip(output.name)
-	audio_player.stop()
-	
+	audio_component.stop()
 
 
 func _on_pick_up_component_picked_up_event() -> void:
@@ -42,4 +42,4 @@ func _on_pick_up_component_picked_up_event() -> void:
 	pickup_component.disabled = true
 	takes_ingredients_component.disabled = false
 	clickable_component.update_tooltip(original_tooltip)
-	main_sprite.texture = load("res://Assets/Sprites/alembic.png")
+	main_sprite.texture = empty_texture
