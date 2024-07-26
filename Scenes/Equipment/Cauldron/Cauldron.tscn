@@ -1,8 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://w2jway24bhsk"]
+[gd_scene load_steps=34 format=3 uid="uid://w2jway24bhsk"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/Cauldron/Cauldron.gd" id="1_r1vq5"]
 [ext_resource type="Texture2D" uid="uid://b7k5co3xe0bmj" path="res://Assets/Sprites/cauldron.png" id="2_8v285"]
-[ext_resource type="Texture2D" uid="uid://cof8mvwti5vx6" path="res://Assets/Sprites/fire.png" id="3_jyuae"]
 [ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="3_nulrp"]
 [ext_resource type="Texture2D" uid="uid://bvj14cvrnb6qx" path="res://Assets/Sprites/smoke.png" id="4_d7uq5"]
 [ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="5_1n2u4"]
@@ -51,12 +50,6 @@ cook_seconds = 10
 position = Vector2(2.08165e-12, -3)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("2_8v285")
-
-[node name="FireSprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(2.08165e-12, 15)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("3_jyuae")
 
 [node name="SteamSprite2D" type="Sprite2D" parent="."]
 visible = false

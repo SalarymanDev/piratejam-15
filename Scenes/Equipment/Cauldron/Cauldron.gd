@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @export var cook_seconds: int
 
-@onready var fire_sprite: Sprite2D = $FireSprite2D
+@onready var cauldron_sprite: Sprite2D = $CauldronSprite2D
 @onready var steam_sprite: Sprite2D = $SteamSprite2D
 @onready var star_sprite: Sprite2D = $StarSprite2D
 @onready var boil_audio_component: AudioComponent = $BoilAudioComponent
@@ -31,10 +31,9 @@ func _on_drop_off_ingredient_event(ingredient: IngredientResource) -> void:
 			return
 		Enums.Ingredients.Wood:
 			_has_wood = true
-			fire_sprite.visible = true
 			fire_audio_component.play()
-			fire_sprite.visible = true
 			_handle_boil_audio()
+			cauldron_sprite.texture = load("res://Assets/Sprites/cauldron-active.png")
 			return
 	
 	if _has_water:
@@ -48,7 +47,7 @@ func _handle_boil_audio() -> void:
 		takes_ingredients_component.disabled = true
 
 func _on_timer_timeout() -> void:
-	fire_sprite.visible = false
+	cauldron_sprite.texture = load("res://Assets/Sprites/cauldron.png")
 	steam_sprite.visible = false
 	fire_audio_component.stop()
 	boil_audio_component.stop()
