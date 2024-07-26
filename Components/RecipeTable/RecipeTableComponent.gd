@@ -5,24 +5,40 @@ class_name RecipeTableComponent
 @export var recipe_table: RecipeTableResource
 
 func process_inputs(inputs: Array[ItemResource]) -> ItemResource:
-	#print(inputs[0].name)
-	#print(inputs[1].name)
-	#print(inputs[2].name)
-	
+
+	#
+	#var recipe_map := recipe_table.getRecipes()
+	#inputs.sort()
+	#
+	#if recipe_map.has(inputs):
+		#return recipe_map.get(inputs)
+	#else:
+		#return default
+		
 	var recipe_map := recipe_table.getRecipes()
 	inputs.sort()
 	
-	#for key: Variant in recipe_map:
-		#for i: Variant in key:
-			#print(i.name)
-		#print(" ")
-		
-	#for key: Array[ItemResource] in recipe_map:
-		#for i: int in range(0, key.size()):
-			#print(key[i].name + " " + inputs[i].name)
-		#print(" ")
+	
+	var has_recipe: bool = false
+	var recipe_key: Array[ItemResource]
+	
+	# For some reason sorting the input and sorting the key just don't seem to do anything
+	# I wrote all this code here just to handle checking if the recipe is right, but I don't think we need it
+	
+	for key: Array[ItemResource] in recipe_map:	
+		if inputs.size() == key.size():
+			var working_inputs: Array[ItemResource] = inputs
 			
-	if recipe_map.has(inputs):
-		return recipe_map.get(inputs)
+			for i: ItemResource in key:
+				var index: int = working_inputs.find(i)
+				if index >= 0:
+					working_inputs.remove_at(index)
+		
+			if working_inputs.size() == 0:
+				has_recipe = true
+				recipe_key = key
+	
+	if has_recipe:
+		return recipe_map.get(recipe_key)
 	else:
 		return default
