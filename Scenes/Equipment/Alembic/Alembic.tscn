@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cllo3pfqarwug"]
+[gd_scene load_steps=17 format=3 uid="uid://cllo3pfqarwug"]
 
 [ext_resource type="Script" path="res://Components/Clickable/ClickableComponent.gd" id="1_dt3tx"]
 [ext_resource type="Script" path="res://Scenes/Equipment/Alembic/Alembic.gd" id="1_y1pir"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Components/Pickup/PickUpComponent.gd" id="10_3n63h"]
 [ext_resource type="Texture2D" uid="uid://3ba750fxv8qd" path="res://Assets/Sprites/star.png" id="10_dhlhr"]
 [ext_resource type="Resource" uid="uid://disvb3cahmpcp" path="res://Resources/RecipeTables/AlembicRecipeTable.tres" id="12_072s4"]
+[ext_resource type="AudioStream" uid="uid://d24ld0vvspuwo" path="res://Assets/Audio/Cauldron/Bubbles Big Long A.wav" id="13_gqo65"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ylh1"]
 size = Vector2(57.25, 9.875)
@@ -39,6 +40,9 @@ texture = ExtResource("10_dhlhr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 7.9375)
 shape = SubResource("RectangleShape2D_3ylh1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_gqo65")
 
 [node name="ClickableComponent" type="Area2D" parent="."]
 script = ExtResource("1_dt3tx")

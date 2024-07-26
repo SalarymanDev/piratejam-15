@@ -94,8 +94,6 @@ scale = Vector2(1.5, 1.5)
 [node name="MortarPestle" parent="NavigationRegion2D" instance=ExtResource("13_xs64q")]
 position = Vector2(850, 136)
 
-[node name="SalesCounter2" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
-
 [node name="Table" parent="NavigationRegion2D" instance=ExtResource("14_w1jdh")]
 position = Vector2(1375, 153)
 
