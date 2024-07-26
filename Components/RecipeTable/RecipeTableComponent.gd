@@ -6,12 +6,9 @@ class_name RecipeTableComponent
 
 func process_inputs(inputs: Array[ItemResource]) -> ItemResource:
 	var recipe_map := recipe_table.getRecipes()
-	inputs.sort_custom(sort_by_name)
+	inputs.sort_custom(RecipeResource.sort_by_name)
 	
 	if recipe_map.has(inputs):
 		return recipe_map.get(inputs)
 	else:
 		return default
-
-func sort_by_name(a: ItemResource, b: ItemResource) -> bool:
-		return a.name < b.name
