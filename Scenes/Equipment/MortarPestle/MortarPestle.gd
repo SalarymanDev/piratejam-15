@@ -6,7 +6,7 @@ extends StaticBody2D
 @onready var harvest_sprite: Sprite2D = $HarvestableSprite
 @onready var item_component: ItemComponent = $ItemComponent
 @onready var pickup_component: PickUpComponent = $PickUpComponent
-@onready var takes_ingredients_component: TakesIngredientComponent = $TakesIngredientComponent
+@onready var takes_ingredients_component: TakesIngredientComponent = $TakesIngredientsComponent
 @onready var recipe_table_component: RecipeTableComponent = $RecipeTableComponent
 @onready var audio_component: AudioComponent = $AudioComponent
 @onready var original_tooltip := clickable_component.tooltip_text
