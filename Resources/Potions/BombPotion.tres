@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://x0xbp5hst8vt"]
+
+[ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_3xyfb"]
+[ext_resource type="Texture2D" uid="uid://dq0shhq48boik" path="res://Assets/Sprites/potions/black-potion.png" id="2_lhdqc"]
+
+[resource]
+script = ExtResource("1_3xyfb")
+potion = 9
+value = 20
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+name = "Bomb Potion"
+description = "This potion is the bomb... no literally"
+texture = ExtResource("2_lhdqc")

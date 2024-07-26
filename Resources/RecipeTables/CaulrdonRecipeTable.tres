@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=4 format=3 uid="uid://61gd8mka2i7m"]
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=5 format=3 uid="uid://61gd8mka2i7m"]
 
 [ext_resource type="Resource" uid="uid://clu826sm1dsuv" path="res://Resources/Recipes/Cauldron/DrinkingWaterCauldronRecipe.tres" id="1_62f75"]
 [ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_tuaqe"]
 [ext_resource type="Resource" uid="uid://cl0gask54l25j" path="res://Resources/Recipes/Cauldron/InvisibilityPotionCauldronRecipe.tres" id="2_ryaxt"]
+[ext_resource type="Resource" uid="uid://bsjbpyrvo55mm" path="res://Resources/Recipes/Cauldron/BombPotionCauldron.tres" id="3_a7y2d"]
 
 [resource]
 script = ExtResource("1_tuaqe")
-recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt")])
+recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt"), ExtResource("3_a7y2d")])

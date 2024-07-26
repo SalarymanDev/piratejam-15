@@ -16,6 +16,7 @@ enum Ingredients {
 	Nightshade,
 	UnicornBlood,
 	MoonDust,
+	FireHerb,
 	
 	## MORTAR AND PESTLE OUTPUT INGREDIENTS
 	MandrakePowder,
@@ -34,7 +35,8 @@ enum Ingredients {
 	ChromaticTincture,
 	MoonlightEssence,
 	PoisonOil,
-	BatEssence
+	BatEssence,
+	LiquidBlaze
 	
 }
 
@@ -47,5 +49,6 @@ enum Potions {
 	ElixirOfSpeed,
 	ManicVapor,
 	DragonBreath,
-	NightshadeVapor
+	NightshadeVapor,
+	BombPotion
 }
