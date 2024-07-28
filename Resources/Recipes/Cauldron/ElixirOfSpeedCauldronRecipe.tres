@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=8 format=3 uid="uid://cteuga7axu87p"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_7ju1u"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="1_w8q05"]
+[ext_resource type="Resource" uid="uid://dms03lwd1oid7" path="res://Resources/Ingredients/MortarPestle/BatPowder.tres" id="2_knya8"]
+[ext_resource type="Resource" uid="uid://cla24laloek6e" path="res://Resources/Ingredients/Alembic/WolfsbaneExtract.tres" id="3_73367"]
+[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="4_gibvq"]
+[ext_resource type="Resource" uid="uid://tq04rde14ejh" path="res://Resources/Potions/ElixirOfSpeed.tres" id="5_yr4vu"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="6_wlg0t"]
+
+[resource]
+script = ExtResource("6_wlg0t")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_7ju1u"), ExtResource("2_knya8"), ExtResource("3_73367"), ExtResource("4_gibvq"), ExtResource("1_w8q05")])
+output = ExtResource("5_yr4vu")

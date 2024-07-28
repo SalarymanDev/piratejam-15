@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=11 format=3 uid="uid://disvb3cahmpcp"]
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=14 format=3 uid="uid://disvb3cahmpcp"]
 
 [ext_resource type="Resource" uid="uid://dieu0gckjy4o4" path="res://Resources/Recipes/Alembic/DrinkingWaterAlembicRecipe.tres" id="1_dppwv"]
 [ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_wk8q2"]
@@ -9,8 +9,11 @@
 [ext_resource type="Resource" uid="uid://4r3lyl324f65" path="res://Resources/Recipes/Alembic/PurpleTinctureAlembicRecipe.tres" id="6_ge180"]
 [ext_resource type="Resource" uid="uid://bvgy3mt4mwfdv" path="res://Resources/Recipes/Alembic/SaltCrystalsAlembicRecipe.tres" id="7_8mnjf"]
 [ext_resource type="Resource" uid="uid://dafn42peccumm" path="res://Resources/Recipes/Alembic/WolfsbaneOilAlembicRecipe.tres" id="8_5ywer"]
-[ext_resource type="Resource" uid="uid://b44oaq8jnl8ts" path="res://Resources/Recipes/Alembic/LiquidBlazeAlembicRecipe.tres" id="9_huiu2"]
+[ext_resource type="Resource" uid="uid://fmbobpn8iwco" path="res://Resources/Recipes/Alembic/LiquidBlazeAlembicRecipe.tres" id="9_huiu2"]
+[ext_resource type="Resource" uid="uid://c7kvgnvs2b1d1" path="res://Resources/Recipes/Alembic/DragonBreathAlembicRecipe.tres" id="10_n3xdj"]
+[ext_resource type="Resource" uid="uid://c6ad88fwmluq3" path="res://Resources/Recipes/Alembic/ManicVaporAlembicRecipe.tres" id="11_y1u5p"]
+[ext_resource type="Resource" uid="uid://ddeqsgajdft3j" path="res://Resources/Recipes/Alembic/NightshadeVaporAlembicRecipe.tres" id="12_nux3g"]
 
 [resource]
 script = ExtResource("1_wk8q2")
-recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_dppwv"), ExtResource("2_hwr88"), ExtResource("3_6r5ng"), ExtResource("4_8o665"), ExtResource("5_iy0pa"), ExtResource("6_ge180"), ExtResource("7_8mnjf"), ExtResource("8_5ywer"), ExtResource("9_huiu2")])
+recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_dppwv"), ExtResource("2_hwr88"), ExtResource("3_6r5ng"), ExtResource("4_8o665"), ExtResource("5_iy0pa"), ExtResource("6_ge180"), ExtResource("7_8mnjf"), ExtResource("8_5ywer"), ExtResource("9_huiu2"), ExtResource("10_n3xdj"), ExtResource("11_y1u5p"), ExtResource("12_nux3g")])

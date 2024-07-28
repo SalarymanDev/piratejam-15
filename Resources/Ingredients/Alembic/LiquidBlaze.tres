@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://4gsbphgt4itf"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://b6bhpmkvl44cd"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_qsquo"]
 [ext_resource type="Texture2D" uid="uid://dpmcqns6if3df" path="res://Assets/Sprites/phials/red-phial.png" id="2_rywbn"]
 
 [resource]
 script = ExtResource("1_qsquo")
-ingredient = 17
+ingredient = 28
 name = "Liquid Blaze"
-description = "It burns when I pee"
+description = "This hot liquid clears the sinuses. It might also go well on eggs."
 texture = ExtResource("2_rywbn")

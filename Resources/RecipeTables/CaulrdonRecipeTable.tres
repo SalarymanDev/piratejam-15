@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=5 format=3 uid="uid://61gd8mka2i7m"]
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=8 format=3 uid="uid://61gd8mka2i7m"]
 
 [ext_resource type="Resource" uid="uid://clu826sm1dsuv" path="res://Resources/Recipes/Cauldron/DrinkingWaterCauldronRecipe.tres" id="1_62f75"]
 [ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_tuaqe"]
 [ext_resource type="Resource" uid="uid://cl0gask54l25j" path="res://Resources/Recipes/Cauldron/InvisibilityPotionCauldronRecipe.tres" id="2_ryaxt"]
-[ext_resource type="Resource" uid="uid://bsjbpyrvo55mm" path="res://Resources/Recipes/Cauldron/BombPotionCauldron.tres" id="3_a7y2d"]
+[ext_resource type="Resource" path="res://Resources/Recipes/Cauldron/BombPotionCauldron.tres" id="3_a7y2d"]
+[ext_resource type="Resource" uid="uid://mg3qew2yad8g" path="res://Resources/Recipes/Cauldron/BubblyTonicCauldronRecipe.tres" id="4_w4m6w"]
+[ext_resource type="Resource" uid="uid://4nlub834ktrv" path="res://Resources/Recipes/Cauldron/ElixirOfFlightPotionCauldron.tres" id="5_kv8oo"]
+[ext_resource type="Resource" uid="uid://cteuga7axu87p" path="res://Resources/Recipes/Cauldron/ElixirOfSpeedCauldronRecipe.tres" id="6_ej1rh"]
 
 [resource]
 script = ExtResource("1_tuaqe")
-recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt"), ExtResource("3_a7y2d")])
+recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt"), ExtResource("3_a7y2d"), ExtResource("4_w4m6w"), ExtResource("5_kv8oo"), ExtResource("6_ej1rh")])

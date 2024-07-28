@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=8 format=3 uid="uid://4nlub834ktrv"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_2wvep"]
+[ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="2_3qwrw"]
+[ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="3_fw87l"]
+[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="4_18rbw"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="5_cn4hn"]
+[ext_resource type="Resource" uid="uid://casfx1alqu2q5" path="res://Resources/Potions/NightshadeVapor.tres" id="6_i2acp"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="7_3mkyg"]
+
+[resource]
+script = ExtResource("7_3mkyg")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_2wvep"), ExtResource("2_3qwrw"), ExtResource("3_fw87l"), ExtResource("4_18rbw"), ExtResource("5_cn4hn")])
+output = ExtResource("6_i2acp")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://ddeqsgajdft3j"]
+
+[ext_resource type="Resource" uid="uid://d4l41emscd3ft" path="res://Resources/Ingredients/MortarPestle/EssenceOfNightshade.tres" id="1_6nbom"]
+[ext_resource type="Resource" uid="uid://casfx1alqu2q5" path="res://Resources/Potions/NightshadeVapor.tres" id="2_v804d"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="3_kqkhd"]
+
+[resource]
+script = ExtResource("3_kqkhd")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_6nbom")])
+output = ExtResource("2_v804d")

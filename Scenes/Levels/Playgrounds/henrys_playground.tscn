@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cflebqfxo6rat"]
+[gd_scene load_steps=31 format=3 uid="uid://cflebqfxo6rat"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_wj5po"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="2_rl7cs"]
@@ -21,31 +21,30 @@
 [ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="18_u0cb1"]
 [ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="18_uxl8m"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="19_pqwcn"]
+[ext_resource type="PackedScene" uid="uid://0olo4xrydpou" path="res://Scenes/Equipment/MortarPestle/MortarPestle.tscn" id="20_34ka6"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="21_p262u"]
 [ext_resource type="PackedScene" uid="uid://k3ekgyuiqs1s" path="res://Scenes/Equipment/Table/Table.tscn" id="21_u4urn"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="22_xglq1"]
+[ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="23_dx5o7"]
+[ext_resource type="Resource" uid="uid://csovk45m2l8k4" path="res://Resources/Ingredients/Raw/Wolfsbane.tres" id="25_uvfob"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_tlxl7"]
-vertices = PackedVector2Array(406, -9, 27, -141, 300, -143, 425, -143, 508, -9, 205, 202, 505, 256, -509, 256, 6, 202, -144, 188, -262, 188, -348, 179, -473, 179, -510, -38, -473, 106, 510, -194, 425, -216, 510, -260, -510, -260, 300, -216, 406, 64, 507, 64, 205, 104, -344, 5, -98, -141, 6, 104, -183, -146, -98, -214, -308, -146, -344, -68, -308, -219, -350, -146, -350, -219, -262, 118, -348, 106, -144, 118, -469, -68, -475, -146, -183, -219, -469, 5, -475, -219, 27, -214)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 8, 7, 10), PackedInt32Array(11, 10, 7, 12), PackedInt32Array(12, 7, 13, 14), PackedInt32Array(15, 4, 3, 16, 17), PackedInt32Array(18, 17, 16, 19), PackedInt32Array(20, 21, 6, 5, 22), PackedInt32Array(23, 24, 1, 0, 20, 22, 25), PackedInt32Array(24, 23, 26, 27), PackedInt32Array(28, 26, 23, 29), PackedInt32Array(30, 28, 29, 31, 32), PackedInt32Array(33, 10, 11, 34, 23), PackedInt32Array(25, 8, 9, 35), PackedInt32Array(31, 29, 36, 37), PackedInt32Array(27, 26, 38), PackedInt32Array(23, 25, 35, 33), PackedInt32Array(39, 23, 34, 14), PackedInt32Array(36, 39, 14, 13, 18, 37), PackedInt32Array(40, 37, 18), PackedInt32Array(2, 1, 41, 19), PackedInt32Array(18, 19, 41, 27, 38), PackedInt32Array(18, 38, 30), PackedInt32Array(18, 30, 32), PackedInt32Array(18, 32, 40)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_pbhih"]
+vertices = PackedVector2Array(-349, 22, -185, 13, 406, -9, 406, 64, 321, 100, 122, 100, 27, -141, 300, -143, 425, -143, 373, -109, 248, -109, 162, -119, -303, 13, 508, -9, 373, -36, 510, -194, 321, 198, 505, 256, -509, 256, 122, 198, -101, 190, -219, 190, -348, 179, -219, 120, -473, 179, -473, 106, -510, -89, -474, 22, 248, -36, 162, -46, 37, -46, 425, -216, 510, -260, 507, 64, 37, -119, -185, -57, -98, -141, -510, -260, 300, -216, -349, -51, -303, -57, -348, 106, -183, -146, -98, -214, -183, -219, -101, 120, -308, -146, -474, -51, -475, -146, 27, -214, -308, -219, -350, -146, -350, -219, -475, -219)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10, 11), PackedInt32Array(12, 1, 0), PackedInt32Array(13, 2, 14, 9, 8, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 19, 18, 21), PackedInt32Array(21, 18, 22, 23), PackedInt32Array(24, 22, 18), PackedInt32Array(25, 24, 18, 26, 27), PackedInt32Array(14, 2, 1, 28), PackedInt32Array(29, 28, 1, 30), PackedInt32Array(15, 8, 31, 32), PackedInt32Array(3, 33, 17, 16, 4), PackedInt32Array(6, 34, 30, 1, 35, 36), PackedInt32Array(37, 32, 31, 38), PackedInt32Array(12, 0, 39, 40), PackedInt32Array(10, 28, 29, 11), PackedInt32Array(6, 11, 34), PackedInt32Array(23, 22, 41), PackedInt32Array(42, 43, 36, 35), PackedInt32Array(43, 42, 44), PackedInt32Array(5, 19, 20, 45), PackedInt32Array(0, 5, 45, 23, 41), PackedInt32Array(46, 42, 35, 40), PackedInt32Array(0, 41, 25, 27), PackedInt32Array(47, 27, 26, 48), PackedInt32Array(7, 6, 49, 38), PackedInt32Array(37, 38, 49, 43, 44), PackedInt32Array(37, 44, 50), PackedInt32Array(50, 46, 51, 52), PackedInt32Array(37, 50, 52), PackedInt32Array(37, 52, 53), PackedInt32Array(26, 37, 53, 48), PackedInt32Array(51, 46, 40, 39, 47), PackedInt32Array(48, 51, 47)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 535, 286, 541, -291)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 30.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jy0ga"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se75c"]
 size = Vector2(20, 612)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ruv3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6k26"]
 
 [node name="HenrysPlayground" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("19_pqwcn")]
-position = Vector2(575, 323)
-scale = Vector2(0.5, 0.5)
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." groups=["Navigation"]]
 position = Vector2(575, 323)
-navigation_polygon = SubResource("NavigationPolygon_tlxl7")
+navigation_polygon = SubResource("NavigationPolygon_pbhih")
 
 [node name="Well" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-412, -183)
@@ -68,19 +67,12 @@ texture = ExtResource("17_8i1e8")
 audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
 tooltip = "Salt"
 
-[node name="MercurySpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
-position = Vector2(-416, -15)
-ingredient = ExtResource("18_uxl8m")
-texture = ExtResource("17_8i1e8")
-audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
-tooltip = "Mercury"
-
 [node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(-550, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallWest"]
-shape = SubResource("RectangleShape2D_jy0ga")
+shape = SubResource("RectangleShape2D_se75c")
 
 [node name="WallEast" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(550, 1)
@@ -88,7 +80,7 @@ scale = Vector2(1, 30)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallEast"]
-shape = SubResource("RectangleShape2D_1ruv3")
+shape = SubResource("RectangleShape2D_k6k26")
 
 [node name="WallSouth" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(0, 300)
@@ -96,7 +88,7 @@ scale = Vector2(56, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallSouth"]
-shape = SubResource("RectangleShape2D_1ruv3")
+shape = SubResource("RectangleShape2D_k6k26")
 
 [node name="WallNorth" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(0, -300)
@@ -104,24 +96,49 @@ scale = Vector2(56, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallNorth"]
-shape = SubResource("RectangleShape2D_1ruv3")
+shape = SubResource("RectangleShape2D_k6k26")
 
 [node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("16_dpns2")]
 position = Vector2(362, -180)
 
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("17_n7eky")]
 position = Vector2(-35, -178)
-cook_seconds = 2
 
 [node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("18_u0cb1")]
 position = Vector2(468, 27)
 
-[node name="Table" parent="NavigationRegion2D" instance=ExtResource("21_u4urn")]
-position = Vector2(105, 157)
+[node name="MortarPestle" parent="NavigationRegion2D" instance=ExtResource("20_34ka6")]
+position = Vector2(-243, -30)
 
 [node name="Alembic" parent="NavigationRegion2D" instance=ExtResource("22_xglq1")]
-position = Vector2(-202, 145)
+position = Vector2(-159, 147)
+
+[node name="Table" parent="NavigationRegion2D" instance=ExtResource("21_u4urn")]
+position = Vector2(221, 153)
+
+[node name="IngredientSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-411, -15)
+ingredient = ExtResource("23_dx5o7")
+audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
+tooltip = "Bat Wings"
+
+[node name="IngredientSpawner2" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(310, -73)
+ingredient = ExtResource("18_uxl8m")
+audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
+tooltip = "Mercury"
+
+[node name="IngredientSpawner3" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(99, -83)
+ingredient = ExtResource("25_uvfob")
+audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
+tooltip = "Wolfsbane"
+
+[node name="Player" parent="." instance=ExtResource("19_pqwcn")]
+position = Vector2(575, 323)
+scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainUi" parent="CanvasLayer" instance=ExtResource("21_p262u")]
+metadata/_edit_use_anchors_ = true

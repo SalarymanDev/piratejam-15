@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://c7kvgnvs2b1d1"]
+
+[ext_resource type="Resource" uid="uid://ypg7sev501n8" path="res://Resources/Ingredients/MortarPestle/DragonPaste.tres" id="1_j53n5"]
+[ext_resource type="Resource" uid="uid://eu6tcndtv2ke" path="res://Resources/Potions/DragonBreath.tres" id="2_onsjk"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="3_7t172"]
+
+[resource]
+script = ExtResource("3_7t172")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_j53n5")])
+output = ExtResource("2_onsjk")
