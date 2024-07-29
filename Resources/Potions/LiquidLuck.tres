@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://bavnjcc65ad4q"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://bqscw7qjbegvt"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_q0h2i"]
 [ext_resource type="Texture2D" uid="uid://dq0shhq48boik" path="res://Assets/Sprites/potions/black-potion.png" id="2_15i0q"]
 
 [resource]
 script = ExtResource("1_q0h2i")
-potion = 9
+potion = 10
 value = 12
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
-name = "Bomb Potion"
-description = "Highly volatile potion DO NOT DROP"
+name = "Liquid Luck"
+description = "The exact effects of the potion are unkown, but users report greatly improved odds of success"
 texture = ExtResource("2_15i0q")

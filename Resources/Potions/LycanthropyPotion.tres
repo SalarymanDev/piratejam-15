@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://di7whsjnotvot"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://dr2bg6vhdvn3f"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_mhrfv"]
 [ext_resource type="Texture2D" uid="uid://bj7lhqb3mfkgp" path="res://Assets/Sprites/phials/green-phial.png" id="2_c67q0"]
 
 [resource]
 script = ExtResource("1_mhrfv")
-potion = 12
+potion = 13
 value = 7
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
-name = "Antivenom"
-description = "Perhaps this could be useful to someone."
+name = "Lycanthropy Potion"
+description = "A potion for transfiguring into a wearwolf"
 texture = ExtResource("2_c67q0")

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://cxsh56hnd636k"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_vqeiy"]
-[ext_resource type="Texture2D" uid="uid://bb8eof85t6abi" path="res://Assets/Sprites/potions/blue-potion.png" id="2_yjhfi"]
+[ext_resource type="Texture2D" uid="uid://dq0shhq48boik" path="res://Assets/Sprites/potions/black-potion.png" id="2_eqhgv"]
 
 [resource]
 script = ExtResource("1_vqeiy")
-potion = 17
-value = 9
+potion = 0
+value = 0
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
-name = "Elixir of Magic"
-description = "Wizards, witches, and warlocks. All likely candidates for this new recipe."
-texture = ExtResource("2_yjhfi")
+name = "Trash Potion"
+description = "I wonder what went wrong"
+texture = ExtResource("2_eqhgv")
