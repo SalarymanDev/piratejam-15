@@ -28,10 +28,11 @@ func _on_timer_timeout() -> void:
 	var input := Array(takes_ingredients_component.get_ingredients(), TYPE_OBJECT, &"Resource", ItemResource)
 	var output := recipe_table_component.process_inputs(input)
 	item_component.item = output
-	harvest_sprite.show()
-	pickup_component.disabled = false
 	takes_ingredients_component.clear()
-	clickable_component.update_tooltip(output.name)
+	pickup_component.disabled = false
+	if item_component.item != null:
+		clickable_component.update_tooltip(output.name)
+		harvest_sprite.show()
 	audio_component.stop()
 
 
