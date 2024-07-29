@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0a1s4bo3krrq"]
+[gd_scene load_steps=20 format=3 uid="uid://b0a1s4bo3krrq"]
 
 [ext_resource type="Script" path="res://Scenes/UI/MainUI/MainUI.gd" id="1_ceh7a"]
 [ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_jpkjh"]
@@ -12,6 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://dbdl25mk20m16" path="res://Assets/Sprites/potions/purple-potion.png" id="10_mae88"]
 [ext_resource type="PackedScene" uid="uid://dmw8pi86flogu" path="res://Scenes/UI/StartDay/StartDayUI.tscn" id="11_no0r0"]
 [ext_resource type="PackedScene" uid="uid://b23bdnonslpmq" path="res://Scenes/UI/EndDay/EndDayUI.tscn" id="12_pdjk2"]
+[ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="13_h3w5m"]
+[ext_resource type="AudioStream" uid="uid://bwwl6n8njtmhy" path="res://Assets/Audio/Invisibility/PotionUse1.mp3" id="14_a1dc5"]
+[ext_resource type="AudioStream" uid="uid://cob22hqmr7i8a" path="res://Assets/Audio/Invisibility/PotionUse2.mp3" id="15_dhc1k"]
+[ext_resource type="AudioStream" uid="uid://cgmuqrfbaggr2" path="res://Assets/Audio/Invisibility/PotionUse3.mp3" id="16_ddpi4"]
+[ext_resource type="AudioStream" uid="uid://bkl1lmfnwbqgb" path="res://Assets/Audio/Invisibility/PotionUse4.mp3" id="17_m5p6k"]
+[ext_resource type="AudioStream" uid="uid://dprj5cffgucw1" path="res://Assets/Audio/Invisibility/PotionUse5.mp3" id="18_w0dgp"]
+[ext_resource type="AudioStream" uid="uid://xg1t2uy2bngu" path="res://Assets/Audio/Invisibility/PotionUse6.mp3" id="19_1j3qy"]
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -140,6 +147,9 @@ layout_mode = 1
 [node name="EndDayUi" parent="." instance=ExtResource("12_pdjk2")]
 visible = false
 layout_mode = 1
+
+[node name="AudioComponent" parent="." instance=ExtResource("13_h3w5m")]
+audio_clips = Array[AudioStream]([ExtResource("14_a1dc5"), ExtResource("15_dhc1k"), ExtResource("16_ddpi4"), ExtResource("17_m5p6k"), ExtResource("18_w0dgp"), ExtResource("19_1j3qy")])
 
 [connection signal="pressed" from="InvisibilityButton" to="." method="_on_invisibility_button_pressed"]
 [connection signal="start_day_pressed" from="StartDayUi" to="." method="_on_start_day_pressed"]

@@ -9,6 +9,7 @@ extends Control
 @onready var invsibility_potion_button: TextureButton = $InvisibilityButton
 @onready var start_day_ui: Control = $StartDayUi
 @onready var end_day_ui: Control = $EndDayUi
+@onready var potion_use_audio: AudioComponent = $AudioComponent
 
 var _has_invisiblity_potion: bool = true
 
@@ -45,6 +46,7 @@ func _on_invisibility_button_pressed() -> void:
 	_has_invisiblity_potion = false
 	_update_potion()
 	GameStateManager.use_invisibility_potion()
+	potion_use_audio.play()
 
 func _on_start_day_pressed() -> void:
 	get_tree().paused = false
