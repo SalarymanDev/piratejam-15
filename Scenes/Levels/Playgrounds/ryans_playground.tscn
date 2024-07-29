@@ -1,6 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://wemfyrhm5f7f"]
+[gd_scene load_steps=25 format=3 uid="uid://wemfyrhm5f7f"]
 
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_cijhs"]
+[ext_resource type="Texture2D" uid="uid://c1y17lmpg1xw3" path="res://Assets/Sprites/cobblestone.png" id="1_dj4wp"]
+[ext_resource type="Texture2D" uid="uid://cty0snctdqm76" path="res://Assets/Sprites/stonebrick.png" id="2_7plpw"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="2_b3thu"]
 [ext_resource type="PackedScene" uid="uid://dcdulbgx7vrmp" path="res://Scenes/Equipment/WasteBin/WasteBin.tscn" id="3_rxvju"]
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="4_hbuti"]
@@ -20,10 +22,31 @@
 [ext_resource type="Resource" uid="uid://byt0w0v3varip" path="res://Resources/Ingredients/Raw/DragonBlood.tres" id="16_uev22"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ww3gs"]
-vertices = PackedVector2Array(279, 371, 569, 163, 810, 159, 888, 159, 1296, 178, 871, 608, 929, 604, 1079, 604, 16, 1078, 1709, 575, 1827, 575, 1911, 1077, 1455, 178, 1803, 155, 1888, 155, 1827, 535, 1709, 535, 1888, 122, 1911, 11, 491, 163, 279, 325, 12, 17, 1803, 122, 1455, 120, 721, 608, 871, 562, 929, 558, 1296, 120, 427, 92, 888, 129, 427, 125, 810, 129, 249, 131, 342, 125, 569, 133, 491, 133, 249, 98, 342, 92, 1079, 558, 284, 582, 284, 536, 721, 562, 134, 582, 134, 536, 129, 371, 129, 325, 164, 98, 164, 131)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(8, 7, 9, 10, 11), PackedInt32Array(0, 12, 13, 14, 15, 16), PackedInt32Array(14, 17, 18, 11), PackedInt32Array(14, 11, 10, 15), PackedInt32Array(4, 12, 0), PackedInt32Array(19, 1, 0, 20), PackedInt32Array(21, 18, 17, 22, 23), PackedInt32Array(24, 5, 8), PackedInt32Array(6, 5, 25, 26), PackedInt32Array(13, 12, 23, 22), PackedInt32Array(21, 23, 27, 28), PackedInt32Array(27, 4, 3, 29), PackedInt32Array(30, 28, 27, 29, 31), PackedInt32Array(32, 33, 30, 31, 34, 35), PackedInt32Array(33, 32, 36, 37), PackedInt32Array(9, 7, 38, 16), PackedInt32Array(39, 40, 41, 24), PackedInt32Array(39, 24, 8, 42), PackedInt32Array(43, 42, 8, 21, 44), PackedInt32Array(0, 16, 38, 26), PackedInt32Array(0, 26, 25, 41, 40), PackedInt32Array(0, 40, 43, 44), PackedInt32Array(45, 44, 21), PackedInt32Array(2, 1, 34, 31), PackedInt32Array(21, 28, 37), PackedInt32Array(21, 37, 36, 46), PackedInt32Array(45, 21, 46, 47), PackedInt32Array(19, 20, 45, 47, 32, 35)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(2, 8, 7, 1089, 1921, 1087, 1922, 1)])
+vertices = PackedVector2Array(1703, 750, 965, 1021, 871, 608, 929, 604, 1079, 604, 1703, 717, 1709, 575, 1787, 575, 1787, 717, 929, 558, 871, 562, 888, 159, 1455, 178, 1709, 535, 1079, 558, 1296, 178, 569, 163, 569, 145, 810, 145, 810, 159, 721, 562, 888, 145, 1296, 145, 1455, 145, 1787, 145, 1787, 535, 1787, 750, 1787, 1021, 143, 1020, 143, 582, 284, 582, 721, 608, 284, 536, 143, 536, 143, 371, 279, 371, 279, 325, 143, 325, 143, 145, 491, 145, 491, 163)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(4, 6, 7, 8, 5), PackedInt32Array(9, 3, 2, 10, 11), PackedInt32Array(12, 13, 6, 4, 14, 15), PackedInt32Array(16, 17, 18, 19, 20), PackedInt32Array(11, 21, 22, 15, 14, 9), PackedInt32Array(12, 23, 24, 25, 13), PackedInt32Array(19, 11, 10, 20), PackedInt32Array(0, 26, 27, 1), PackedInt32Array(1, 28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39, 40), PackedInt32Array(31, 2, 1), PackedInt32Array(16, 20, 31, 30, 32), PackedInt32Array(40, 16, 32, 35, 36)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(133, 135, 131, 1030, 1799, 1032, 1797, 131)])
 source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avoi7"]
+texture = ExtResource("1_dj4wp")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmkmy"]
+texture = ExtResource("2_7plpw")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_lsx1n"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_avoi7")
+sources/2 = SubResource("TileSetAtlasSource_kmkmy")
 
 [node name="RyansPlayground" type="Node2D"]
 
@@ -31,13 +54,19 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 position = Vector2(-5, -6)
 navigation_polygon = SubResource("NavigationPolygon_ww3gs")
 
+[node name="TileMap" type="TileMap" parent="NavigationRegion2D"]
+position = Vector2(5, 7)
+tile_set = SubResource("TileSet_lsx1n")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 2, 0, 65535, 2, 0, 131071, 2, 0, 196607, 2, 0, 262143, 2, 0, 327679, 2, 0, 393215, 2, 0, 458751, 2, 0, 524287, 2, 0, 589823, 2, 0, -65535, 2, 0, 65537, 1, 0, 131073, 1, 0, 196609, 1, 0, 262145, 1, 0, 327681, 1, 0, 393217, 1, 0, 458753, 1, 0, 524289, 2, 0, -65534, 2, 0, 65538, 1, 0, 131074, 1, 0, 196610, 1, 0, 262146, 1, 0, 327682, 1, 0, 393218, 1, 0, 458754, 1, 0, 524290, 2, 0, -65533, 2, 0, 65539, 1, 0, 131075, 1, 0, 196611, 1, 0, 262147, 1, 0, 327683, 1, 0, 393219, 1, 0, 458755, 1, 0, 524291, 2, 0, -65532, 2, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, 262148, 1, 0, 327684, 1, 0, 393220, 1, 0, 458756, 1, 0, 524292, 2, 0, -65531, 2, 0, 65541, 1, 0, 131077, 1, 0, 196613, 1, 0, 262149, 1, 0, 327685, 1, 0, 393221, 1, 0, 458757, 1, 0, 524293, 2, 0, -65530, 2, 0, 65542, 1, 0, 131078, 1, 0, 196614, 1, 0, 262150, 1, 0, 327686, 1, 0, 393222, 1, 0, 458758, 1, 0, 524294, 2, 0, -65529, 2, 0, 65543, 1, 0, 131079, 1, 0, 196615, 1, 0, 262151, 1, 0, 327687, 1, 0, 393223, 1, 0, 458759, 1, 0, 524295, 2, 0, -65528, 2, 0, 65544, 1, 0, 131080, 1, 0, 196616, 1, 0, 262152, 1, 0, 327688, 1, 0, 393224, 1, 0, 458760, 1, 0, 524296, 2, 0, -65527, 2, 0, 65545, 1, 0, 131081, 1, 0, 196617, 1, 0, 262153, 1, 0, 327689, 1, 0, 393225, 1, 0, 458761, 1, 0, 524297, 2, 0, -65526, 2, 0, 65546, 1, 0, 131082, 1, 0, 196618, 1, 0, 262154, 1, 0, 327690, 1, 0, 393226, 1, 0, 458762, 1, 0, 524298, 2, 0, -65525, 2, 0, 65547, 1, 0, 131083, 1, 0, 196619, 1, 0, 262155, 1, 0, 327691, 1, 0, 393227, 1, 0, 458763, 1, 0, 524299, 2, 0, -65524, 2, 0, 65548, 1, 0, 131084, 1, 0, 196620, 1, 0, 262156, 1, 0, 327692, 1, 0, 393228, 1, 0, 458764, 1, 0, 524300, 2, 0, -65523, 2, 0, 65549, 1, 0, 131085, 1, 0, 196621, 1, 0, 262157, 1, 0, 327693, 1, 0, 393229, 1, 0, 458765, 1, 0, 524301, 2, 0, -65521, 2, 0, 65551, 2, 0, 131087, 2, 0, 196623, 2, 0, 262159, 2, 0, 327695, 2, 0, 393231, 2, 0, 458767, 2, 0, 524303, 2, 0, -65536, 2, 0, 0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 262144, 2, 0, 327680, 2, 0, 393216, 2, 0, 458752, 2, 0, 524288, 2, 0, -65522, 2, 0, 14, 2, 0, 65550, 2, 0, 131086, 2, 0, 196622, 2, 0, 262158, 2, 0, 327694, 2, 0, 393230, 2, 0, 458766, 2, 0, 524302, 2, 0, 15, 2, 0, 13, 2, 0, 12, 2, 0, 11, 2, 0, 10, 2, 0, 9, 2, 0, 8, 2, 0, 7, 2, 0, 6, 2, 0, 5, 2, 0, 4, 2, 0, 3, 2, 0, 2, 2, 0, 1, 2, 0)
+
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("2_b3thu")]
 position = Vector2(1004, 580)
 scale = Vector2(2, 2)
 cook_seconds = 3
 
 [node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("3_rxvju")]
-position = Vector2(1845, 138)
+position = Vector2(1745, 733)
 
 [node name="IngredientSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(206, 114)
