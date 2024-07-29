@@ -8,6 +8,7 @@ signal rent_changed_event(amount: int)
 signal revenue_changed_event(amount: int)
 signal profit_changed_event(amount: int)
 signal police_inbound_event
+signal invisibility_potion_changed(has_potion: bool)
 
 var _current_rent: int = 0
 var _current_day: int = 0
@@ -93,10 +94,20 @@ func fine() -> void:
 
 func use_invisibility_potion() -> void:
 	_invisible = true
+	_has_invisibility_potion = false
+	emit_signal(invisibility_potion_changed.get_name(), _has_invisibility_potion)
 	var nodes: Array[Node] = get_tree().get_nodes_in_group("Invisibility")
 	for node in nodes:
 		(node as Node2D).modulate = Color(1, 1, 1, 0.25)
 	_invisibility_timer.start(_invisibility_seconds)
+
+func fill_invisibility_potion() -> void:
+	_has_invisibility_potion = true
+	emit_signal(invisibility_potion_changed.get_name(), _has_invisibility_potion)
+
+var _has_invisibility_potion: bool = true
+func has_invisibility_potion() -> bool:
+	return _has_invisibility_potion
 
 func _invisibility_timeout() -> void:
 	_invisible = false

@@ -11,15 +11,14 @@ extends Control
 @onready var end_day_ui: Control = $EndDayUi
 @onready var potion_use_audio: AudioComponent = $AudioComponent
 
-var _has_invisiblity_potion: bool = true
-
 func _ready() -> void:
 	GameStateManager.time_changed_event.connect(_update_time)
 	GameStateManager.money_changed_event.connect(_update_money)
 	GameStateManager.day_started_event.connect(_update_day)
+	GameStateManager.invisibility_potion_changed.connect(_update_potion)
 	_update_day(GameStateManager.get_day())
 	_update_money(GameStateManager.get_money())
-	_update_potion()
+	_update_potion(GameStateManager.has_invisibility_potion())
 
 func _update_time(remaining_seconds: float) -> void:
 	var level_seconds := GameStateManager.get_level_seconds()
@@ -33,18 +32,16 @@ func _update_money(amount: int) -> void:
 func _update_day(current_day: int) -> void:
 	day_label.text = "Day %d" % current_day
 
-func _update_potion() -> void:
-	if _has_invisiblity_potion:
+func _update_potion(has_potion: bool) -> void:
+	if has_potion:
 		invsibility_potion_button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	else:
 		invsibility_potion_button.mouse_default_cursor_shape = Control.CURSOR_ARROW
-	invisbility_potion_texture.visible = _has_invisiblity_potion
+	invisbility_potion_texture.visible = has_potion
 
 func _on_invisibility_button_pressed() -> void:
-	if !_has_invisiblity_potion:
+	if !GameStateManager.has_invisibility_potion():
 		return
-	_has_invisiblity_potion = false
-	_update_potion()
 	GameStateManager.use_invisibility_potion()
 	potion_use_audio.play()
 
