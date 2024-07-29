@@ -89,6 +89,7 @@ recipe_table = ExtResource("12_ot13r")
 
 [node name="AudioComponent" parent="." instance=ExtResource("13_f0l6a")]
 audio_clips = Array[AudioStream]([ExtResource("14_675sy"), ExtResource("15_8nja4"), ExtResource("16_oix85"), ExtResource("17_4y8bc"), ExtResource("18_jmasx")])
+volume_db = -5.0
 
 [connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_component_drop_off_ingredient_event"]
 [connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_pick_up_component_picked_up_event"]

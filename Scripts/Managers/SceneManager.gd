@@ -4,10 +4,15 @@ const _ANIMATION_DURATION: float = 1.0
 var _current_scene: Node = null
 var _fadeBackdrop: ColorRect = ColorRect.new()
 var _current_scene_path: String = ""
+var _music_clip: AudioStream = preload("res://Assets/Audio/Music/Funky Chill 2 loop.wav")
+var _music_player: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 
 func _ready() -> void:
 	var root := get_tree().root
 	_current_scene = root.get_child(root.get_child_count() - 1)
+	_music_player.stream = _music_clip
+	root.add_child.call_deferred(_music_player)
+	_music_player.play.call_deferred()
 
 func start_game() -> void:
 	_current_scene_path = "res://Scenes/Levels/Main.tscn"

@@ -53,12 +53,13 @@ func _end_day() -> void:
 	for potion_sold in _potions_sold_today:
 		revenue += potion_sold.value
 	var profit: int = revenue - _current_rent
-	add_money(profit)
+	subtract_money(_current_rent)
 	emit_signal(day_completed_event.get_name(), revenue, _current_rent, profit, _current_money)
 	_potions_sold_per_day[_current_day] = _potions_sold_today
 	_potions_sold_today = []
 	_current_day += 1
 	_current_rent += 100
+	emit_signal(rent_changed_event.get_name(), _current_rent)
 
 func sell_potion(potion: PotionResource) -> void:
 	add_money(potion.value)
