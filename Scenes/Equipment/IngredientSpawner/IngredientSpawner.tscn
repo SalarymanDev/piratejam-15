@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://i8qelg4ew3me"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.gd" id="1_kx42m"]
-[ext_resource type="Texture2D" uid="uid://cd5euro3cw6tt" path="res://Assets/Sprites/crate.png" id="2_bv87x"]
+[ext_resource type="Texture2D" uid="uid://cd5euro3cw6tt" path="res://Assets/Sprites/crate.png" id="2_ib2s4"]
 [ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="3_yv8nr"]
 [ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="4_f0v16"]
 [ext_resource type="PackedScene" uid="uid://dq3e1l424jqhp" path="res://Components/Audio/AudioComponent.tscn" id="6_6w6ge"]
@@ -13,30 +13,29 @@
 [ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="10_ds5oq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flrha"]
-size = Vector2(46, 54)
+size = Vector2(65, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63h6p"]
-size = Vector2(48, 55)
+size = Vector2(60, 60)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0mwnx"]
 radius = 20.0
 
 [node name="IngredientSpawner" type="StaticBody2D" groups=["Invisibility"]]
 script = ExtResource("1_kx42m")
-texture = ExtResource("2_bv87x")
+texture = ExtResource("2_ib2s4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.08, 0.08)
-texture = ExtResource("2_bv87x")
+texture = ExtResource("2_ib2s4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_flrha")
 
 [node name="ClickableComponent" parent="." instance=ExtResource("3_yv8nr")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
-position = Vector2(1, -3)
 shape = SubResource("RectangleShape2D_63h6p")
 
 [node name="ZIndexComponent" parent="." instance=ExtResource("4_f0v16")]
@@ -44,11 +43,12 @@ shape = SubResource("RectangleShape2D_63h6p")
 [node name="ItemComponent" parent="." instance=ExtResource("6_pf1xn")]
 
 [node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("6_bk5or")]
-position = Vector2(0, 52)
+position = Vector2(2.08165e-12, 45)
 item_component = NodePath("../ItemComponent")
 is_swappable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
+position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CircleShape2D_0mwnx")
 
 [node name="AudioComponent" parent="." instance=ExtResource("6_6w6ge")]

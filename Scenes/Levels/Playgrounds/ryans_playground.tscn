@@ -28,10 +28,11 @@
 [ext_resource type="Resource" uid="uid://csovk45m2l8k4" path="res://Resources/Ingredients/Raw/Wolfsbane.tres" id="25_mei2s"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ww3gs"]
-vertices = PackedVector2Array(1703, 750, 965, 1021, 871, 608, 929, 604, 1079, 604, 1703, 717, 1709, 575, 1787, 575, 1787, 717, 929, 558, 871, 562, 888, 159, 1455, 178, 1709, 535, 1079, 558, 1296, 178, 569, 163, 569, 145, 810, 145, 810, 159, 721, 562, 888, 145, 1296, 145, 1455, 145, 1787, 145, 1787, 535, 1787, 750, 1787, 1021, 143, 1020, 143, 582, 284, 582, 721, 608, 284, 536, 143, 536, 143, 371, 279, 371, 279, 325, 143, 325, 143, 145, 491, 145, 491, 163)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(4, 6, 7, 8, 5), PackedInt32Array(9, 3, 2, 10, 11), PackedInt32Array(12, 13, 6, 4, 14, 15), PackedInt32Array(16, 17, 18, 19, 20), PackedInt32Array(11, 21, 22, 15, 14, 9), PackedInt32Array(12, 23, 24, 25, 13), PackedInt32Array(19, 11, 10, 20), PackedInt32Array(0, 26, 27, 1), PackedInt32Array(1, 28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39, 40), PackedInt32Array(31, 2, 1), PackedInt32Array(16, 20, 31, 30, 32), PackedInt32Array(40, 16, 32, 35, 36)])
+vertices = PackedVector2Array(648, 892, 864, 626, 911, 622, 1104, 622, 1712, 647, 1718, 757, 965, 996, 648, 995, 1254, 609, 1119, 609, 1104, 539, 1119, 526, 864, 543, 911, 539, 1712, 464, 1254, 526, 1762, 170, 1762, 464, 1053, 170, 1053, 192, 1718, 647, 1762, 757, 1762, 996, 496, 892, 496, 995, 487, 995, 487, 895, 335, 895, 335, 995, 331, 995, 331, 895, 179, 895, 179, 995, 168, 995, 168, 718, 275, 718, 729, 626, 275, 638, 168, 638, 168, 497, 278, 497, 729, 543, 278, 417, 168, 417, 168, 190, 245, 190, 245, 189, 267, 189, 267, 190, 347, 190, 347, 191, 428, 191, 428, 192, 509, 192, 509, 194, 644, 194, 644, 192)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(8, 4, 3, 9), PackedInt32Array(9, 3, 10, 11), PackedInt32Array(2, 1, 12, 13), PackedInt32Array(14, 4, 8, 15), PackedInt32Array(16, 17, 14, 18), PackedInt32Array(19, 18, 14, 15, 11), PackedInt32Array(4, 20, 5), PackedInt32Array(5, 21, 22, 6), PackedInt32Array(23, 24, 25, 26), PackedInt32Array(27, 28, 29, 30), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(31, 34, 35, 30), PackedInt32Array(36, 37, 38, 39, 40, 41), PackedInt32Array(42, 43, 44, 45), PackedInt32Array(45, 46, 47, 48), PackedInt32Array(42, 45, 48), PackedInt32Array(42, 48, 49, 50), PackedInt32Array(50, 51, 52, 42), PackedInt32Array(42, 52, 53, 54, 40), PackedInt32Array(55, 56, 19, 11, 10, 13), PackedInt32Array(36, 1, 0, 23, 35, 37), PackedInt32Array(54, 55, 13, 12, 41, 40), PackedInt32Array(27, 30, 35), PackedInt32Array(26, 27, 35, 23)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(133, 135, 131, 1030, 1799, 1032, 1797, 131)])
 source_geometry_group_name = &"navigation_polygon_source_group"
+agent_radius = 35.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avoi7"]
 texture = ExtResource("1_dj4wp")
@@ -123,34 +124,20 @@ tooltip = "Wolf's Bane"
 
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("2_b3thu")]
 position = Vector2(1004, 580)
-scale = Vector2(2, 2)
 cook_seconds = 3
 
 [node name="WoodStack" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(796, 584)
-scale = Vector2(2, 2)
 ingredient = ExtResource("7_ax3ak")
 texture = ExtResource("8_le5ea")
+tooltip = "Wood"
+instance_scale = 2.0
 
-[node name="WaterWell" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
+[node name="Well" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(1186, 567)
 ingredient = ExtResource("9_yscs3")
 texture = ExtResource("10_mc7wo")
-
-[node name="Sprite2D" parent="NavigationRegion2D/WaterWell" index="0"]
-texture = ExtResource("10_mc7wo")
-
-[node name="CollisionShape2D" parent="NavigationRegion2D/WaterWell" index="1"]
-position = Vector2(4, 3)
-
-[node name="CollisionShape2D" parent="NavigationRegion2D/WaterWell/ClickableComponent" index="1"]
-position = Vector2(3, 2)
-
-[node name="PickUpComponent" parent="NavigationRegion2D/WaterWell" index="5"]
-position = Vector2(6, 84)
-
-[node name="AudioComponent" parent="NavigationRegion2D/WaterWell" index="6"]
-visible = false
+tooltip = "Water"
 
 [node name="Alembic" parent="NavigationRegion2D" instance=ExtResource("11_38d5h")]
 position = Vector2(212, 670)
@@ -160,7 +147,7 @@ position = Vector2(215, 449)
 
 [node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
 position = Vector2(1768, 554)
-scale = Vector2(1.5, 1.5)
+instance_scale = 2.0
 
 [node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("3_rxvju")]
 position = Vector2(1772, 697)
@@ -179,11 +166,10 @@ position = Vector2(459, 267)
 scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="MainUi" parent="CanvasLayer" instance=ExtResource("11_gwuuu")]
 offset_left = 6.0
 offset_top = 16.0
 offset_right = -15.0
 offset_bottom = -1.0
-
-[editable path="NavigationRegion2D/WaterWell"]
