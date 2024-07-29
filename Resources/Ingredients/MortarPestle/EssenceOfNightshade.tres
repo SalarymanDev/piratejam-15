@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_gar47")
-ingredient = 9
+ingredient = 19
 name = "Essence Of Nightshade"
 description = "A purple, turbid fluid."
 texture = ExtResource("2_jvh7a")

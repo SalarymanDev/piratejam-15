@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="4_jokd7"]
 [ext_resource type="Resource" uid="uid://d3685v0sinoy1" path="res://Resources/Ingredients/Alembic/PurpleTincture.tres" id="5_kfqkb"]
 [ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="6_4gkq6"]
-[ext_resource type="Resource" uid="uid://4hjvd2rfj075" path="res://Resources/Potions/Antivenom.tres" id="6_or48c"]
+[ext_resource type="Resource" uid="uid://6gnmnnrpxp8s" path="res://Resources/Potions/Antivenom.tres" id="6_or48c"]
 
 [resource]
 script = ExtResource("6_4gkq6")

@@ -3,7 +3,7 @@
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_a1vom"]
 [ext_resource type="Resource" uid="uid://csovk45m2l8k4" path="res://Resources/Ingredients/Raw/Wolfsbane.tres" id="3_bkyx2"]
 [ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="4_eluv8"]
-[ext_resource type="Resource" uid="uid://di7whsjnotvot" path="res://Resources/Potions/LycanthropyPotion.tres" id="5_3jcd5"]
+[ext_resource type="Resource" uid="uid://dr2bg6vhdvn3f" path="res://Resources/Potions/LycanthropyPotion.tres" id="5_3jcd5"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="5_kdsua"]
 [ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="7_trril"]
 

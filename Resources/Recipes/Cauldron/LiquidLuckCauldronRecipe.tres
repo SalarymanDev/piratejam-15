@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="2_2d1cx"]
 [ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="3_tkobx"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="4_rjcx4"]
-[ext_resource type="Resource" uid="uid://bavnjcc65ad4q" path="res://Resources/Potions/LiquidLuck.tres" id="5_2pnf1"]
+[ext_resource type="Resource" uid="uid://bqscw7qjbegvt" path="res://Resources/Potions/LiquidLuck.tres" id="5_2pnf1"]
 [ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="6_tl7ar"]
 
 [resource]

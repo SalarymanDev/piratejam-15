@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cflebqfxo6rat"]
+[gd_scene load_steps=38 format=3 uid="uid://cflebqfxo6rat"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_wj5po"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="2_rl7cs"]
@@ -16,28 +16,37 @@
 [ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="14_ixspn"]
 [ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="15_2to6p"]
 [ext_resource type="PackedScene" uid="uid://dcdulbgx7vrmp" path="res://Scenes/Equipment/WasteBin/WasteBin.tscn" id="16_dpns2"]
-[ext_resource type="Texture2D" uid="uid://bgnte4vncyqav" path="res://Assets/Sprites/salt-lick.png" id="17_8i1e8"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="17_n7eky"]
 [ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="18_u0cb1"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="19_pqwcn"]
 [ext_resource type="PackedScene" uid="uid://0olo4xrydpou" path="res://Scenes/Equipment/MortarPestle/MortarPestle.tscn" id="20_34ka6"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="21_p262u"]
 [ext_resource type="PackedScene" uid="uid://k3ekgyuiqs1s" path="res://Scenes/Equipment/Table/Table.tscn" id="21_u4urn"]
+[ext_resource type="Texture2D" uid="uid://cd5euro3cw6tt" path="res://Assets/Sprites/crate.png" id="22_po4pn"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="22_xglq1"]
 [ext_resource type="Resource" uid="uid://ki0igx0pi4c6" path="res://Resources/Ingredients/Raw/Nightshade.tres" id="23_0iowq"]
+[ext_resource type="Resource" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="23_aptjq"]
 [ext_resource type="Resource" uid="uid://cuew4t7n5rpk1" path="res://Resources/Ingredients/Raw/CockatriceFeather.tres" id="24_l28jq"]
+[ext_resource type="Resource" uid="uid://byt0w0v3varip" path="res://Resources/Ingredients/Raw/DragonBlood.tres" id="24_neu71"]
+[ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="25_ah8xk"]
+[ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/Raw/MandrakeRoot.tres" id="27_opv8w"]
+[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="28_e541t"]
+[ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="29_h5ua0"]
+[ext_resource type="Resource" uid="uid://c10pijyxfrgyi" path="res://Resources/Ingredients/Raw/UnicornBlood.tres" id="31_jhlrr"]
+[ext_resource type="Resource" uid="uid://csovk45m2l8k4" path="res://Resources/Ingredients/Raw/Wolfsbane.tres" id="32_vn1u3"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbhih"]
-vertices = PackedVector2Array(-349, 22, -185, 13, 406, -9, 406, 64, 321, 100, 122, 100, 27, -141, 300, -143, 425, -143, 373, -109, 248, -109, 162, -119, -303, 13, 508, -9, 373, -36, 510, -194, 321, 198, 505, 256, -509, 256, 122, 198, -101, 190, -219, 190, -348, 179, -219, 120, -473, 179, -473, 106, -510, -89, -474, 22, 248, -36, 162, -46, 37, -46, 425, -216, 510, -260, 507, 64, 37, -119, -185, -57, -98, -141, -510, -260, 300, -216, -349, -51, -303, -57, -348, 106, -183, -146, -98, -214, -183, -219, -101, 120, -308, -146, -474, -51, -475, -146, 27, -214, -308, -219, -350, -146, -350, -219, -475, -219)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10, 11), PackedInt32Array(12, 1, 0), PackedInt32Array(13, 2, 14, 9, 8, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 19, 18, 21), PackedInt32Array(21, 18, 22, 23), PackedInt32Array(24, 22, 18), PackedInt32Array(25, 24, 18, 26, 27), PackedInt32Array(14, 2, 1, 28), PackedInt32Array(29, 28, 1, 30), PackedInt32Array(15, 8, 31, 32), PackedInt32Array(3, 33, 17, 16, 4), PackedInt32Array(6, 34, 30, 1, 35, 36), PackedInt32Array(37, 32, 31, 38), PackedInt32Array(12, 0, 39, 40), PackedInt32Array(10, 28, 29, 11), PackedInt32Array(6, 11, 34), PackedInt32Array(23, 22, 41), PackedInt32Array(42, 43, 36, 35), PackedInt32Array(43, 42, 44), PackedInt32Array(5, 19, 20, 45), PackedInt32Array(0, 5, 45, 23, 41), PackedInt32Array(46, 42, 35, 40), PackedInt32Array(0, 41, 25, 27), PackedInt32Array(47, 27, 26, 48), PackedInt32Array(7, 6, 49, 38), PackedInt32Array(37, 38, 49, 43, 44), PackedInt32Array(37, 44, 50), PackedInt32Array(50, 46, 51, 52), PackedInt32Array(37, 50, 52), PackedInt32Array(37, 52, 53), PackedInt32Array(26, 37, 53, 48), PackedInt32Array(51, 46, 40, 39, 47), PackedInt32Array(48, 51, 47)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -539, 287, 535, 286, 541, -291)])
+vertices = PackedVector2Array(204, -216, 204, -143, 203, -174, 203, -247, 297, 102, -185, 13, 202, -13, 327, -13, 417, 115, 486, 251, 510, 395, -510, 395, -366, 325, 361, 251, -29, -29, 164, -51, 486, 178, 510, 115, -154, -29, -484, 325, -510, -21, -484, 255, 510, -258, 510, -58, 417, -58, 413, -125, 413, -236, -185, -57, -154, -102, 164, -124, 202, -86, 39, -51, 327, -86, 361, 178, 313, -125, 297, 200, -29, -102, 39, -124, 155, 200, -95, 198, 155, 102, -220, 198, -366, 255, -345, 175, -220, 125, -470, 175, -470, 102, -345, 102, -414, -21, -303, 13, -95, 125, -303, -57, -414, -94, 313, -236, 313, -216, 313, -143, -510, -94, -510, -146, -448, -145, -448, -146, -206, -145, -206, -144, -86, -144, -86, -140, 40, -140, 78, -174, 40, -213, -81, -213, -81, -217, 78, -247, -206, -217, -206, -218, -416, -218, -416, -219, -510, -219, -510, -258)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12, 13), PackedInt32Array(6, 5, 14, 15), PackedInt32Array(9, 16, 17, 10), PackedInt32Array(18, 14, 5), PackedInt32Array(19, 12, 11), PackedInt32Array(19, 11, 20, 21), PackedInt32Array(22, 23, 24, 25, 26), PackedInt32Array(18, 5, 27, 28), PackedInt32Array(15, 29, 30, 6), PackedInt32Array(31, 15, 14), PackedInt32Array(24, 8, 7, 32, 25), PackedInt32Array(8, 17, 16, 33), PackedInt32Array(34, 25, 32, 30), PackedInt32Array(35, 4, 33, 13), PackedInt32Array(31, 14, 36, 37), PackedInt32Array(35, 13, 12, 38), PackedInt32Array(38, 12, 39, 40), PackedInt32Array(41, 39, 12, 42), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(45, 43, 42, 21), PackedInt32Array(45, 21, 20, 46), PackedInt32Array(47, 46, 20, 48, 49), PackedInt32Array(44, 43, 47, 49, 5), PackedInt32Array(8, 33, 4), PackedInt32Array(5, 4, 40), PackedInt32Array(40, 39, 50), PackedInt32Array(5, 40, 50, 44), PackedInt32Array(51, 49, 48, 52), PackedInt32Array(53, 54, 0, 3), PackedInt32Array(1, 55, 34, 30, 29), PackedInt32Array(52, 56, 57, 58), PackedInt32Array(57, 59, 58), PackedInt32Array(51, 52, 58, 60, 61), PackedInt32Array(27, 51, 61, 28), PackedInt32Array(28, 61, 62, 63), PackedInt32Array(36, 28, 63, 64, 37), PackedInt32Array(1, 29, 37, 64, 65, 2), PackedInt32Array(66, 67, 68, 69), PackedInt32Array(68, 70, 71, 69), PackedInt32Array(71, 72, 73), PackedInt32Array(73, 74, 75), PackedInt32Array(65, 64, 66, 69), PackedInt32Array(71, 73, 75, 69), PackedInt32Array(22, 26, 53, 3), PackedInt32Array(75, 22, 3, 69)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-541, -291, -543, 430, 3, 432, 541, 429, 541, -291)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 30.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se75c"]
-size = Vector2(20, 612)
+size = Vector2(20, 754)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6k26"]
+size = Vector2(20, 24.9)
 
 [node name="HenrysPlayground" type="Node2D"]
 
@@ -46,31 +55,25 @@ position = Vector2(575, 323)
 navigation_polygon = SubResource("NavigationPolygon_pbhih")
 
 [node name="Well" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
-position = Vector2(-412, -183)
+position = Vector2(423, 214)
 ingredient = ExtResource("2_rl7cs")
 texture = ExtResource("4_uk2cr")
 audio_clips = Array[AudioStream]([ExtResource("4_iv5fs"), ExtResource("5_g0wxf"), ExtResource("6_5pq6q"), ExtResource("7_mg12o"), ExtResource("8_xuhcm")])
 tooltip = "Well"
 
 [node name="WoodSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
-position = Vector2(-245, -183)
+position = Vector2(-157, 161)
 ingredient = ExtResource("9_uyw8o")
 texture = ExtResource("10_fcjnb")
 audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
 tooltip = "Firewood"
-
-[node name="SaltSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
-position = Vector2(-410, 142)
-ingredient = ExtResource("15_2to6p")
-texture = ExtResource("17_8i1e8")
-audio_clips = Array[AudioStream]([ExtResource("11_k4wl2"), ExtResource("12_4aet2"), ExtResource("13_2m6ki"), ExtResource("14_ixspn")])
-tooltip = "Salt"
 
 [node name="WallWest" type="StaticBody2D" parent="NavigationRegion2D"]
 position = Vector2(-550, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallWest"]
+position = Vector2(0, 71)
 shape = SubResource("RectangleShape2D_se75c")
 
 [node name="WallEast" type="StaticBody2D" parent="NavigationRegion2D"]
@@ -79,6 +82,7 @@ scale = Vector2(1, 30)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallEast"]
+position = Vector2(0, 2.45)
 shape = SubResource("RectangleShape2D_k6k26")
 
 [node name="WallSouth" type="StaticBody2D" parent="NavigationRegion2D"]
@@ -87,6 +91,7 @@ scale = Vector2(56, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/WallSouth"]
+position = Vector2(0, 137)
 shape = SubResource("RectangleShape2D_k6k26")
 
 [node name="WallNorth" type="StaticBody2D" parent="NavigationRegion2D"]
@@ -101,7 +106,8 @@ shape = SubResource("RectangleShape2D_k6k26")
 position = Vector2(362, -180)
 
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("17_n7eky")]
-position = Vector2(-35, -178)
+position = Vector2(-407, 138)
+cook_seconds = 2
 
 [node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("18_u0cb1")]
 position = Vector2(468, 27)
@@ -110,28 +116,76 @@ position = Vector2(468, 27)
 position = Vector2(-243, -30)
 
 [node name="Alembic" parent="NavigationRegion2D" instance=ExtResource("22_xglq1")]
-position = Vector2(-159, 147)
+position = Vector2(-424, 282)
 
 [node name="Table" parent="NavigationRegion2D" instance=ExtResource("21_u4urn")]
 position = Vector2(221, 153)
 
-[node name="IngredientSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
-position = Vector2(-411, -15)
+[node name="SaltSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-476, -58)
 ingredient = ExtResource("15_2to6p")
-audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
+texture = ExtResource("22_po4pn")
 tooltip = "Salt"
 
-[node name="IngredientSpawner2" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
-position = Vector2(310, -73)
-ingredient = ExtResource("23_0iowq")
-audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
-tooltip = "Nighthsade"
+[node name="FireHerbSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-385, -182)
+ingredient = ExtResource("23_aptjq")
+texture = ExtResource("22_po4pn")
+tooltip = "Fire Herb"
 
-[node name="IngredientSpawner3" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
-position = Vector2(99, -83)
+[node name="DragonBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-478, -183)
+ingredient = ExtResource("24_neu71")
+texture = ExtResource("22_po4pn")
+tooltip = "Dragon's Blood"
+
+[node name="BatwingSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(264, -50)
+ingredient = ExtResource("25_ah8xk")
+texture = ExtResource("22_po4pn")
+tooltip = "Bat Wings"
+
+[node name="CockatriceFeatherSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-268, -182)
 ingredient = ExtResource("24_l28jq")
-audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
-tooltip = "Cock"
+texture = ExtResource("22_po4pn")
+tooltip = "Cockatrice Feathers"
+
+[node name="MandrakeRootSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-143, -181)
+ingredient = ExtResource("27_opv8w")
+texture = ExtResource("22_po4pn")
+tooltip = "Mandrake Root"
+
+[node name="Mercury Spawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-91, -66)
+ingredient = ExtResource("28_e541t")
+texture = ExtResource("22_po4pn")
+tooltip = "Mercury"
+
+[node name="MoonDustSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(-23, -177)
+ingredient = ExtResource("29_h5ua0")
+texture = ExtResource("22_po4pn")
+tooltip = "Moon Dust"
+
+[node name="NightShadeSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(101, -88)
+ingredient = ExtResource("23_0iowq")
+texture = ExtResource("22_po4pn")
+tooltip = "Night Shade"
+
+[node name="UnicornBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(140, -211)
+ingredient = ExtResource("31_jhlrr")
+texture = ExtResource("22_po4pn")
+tooltip = "Unicorn Blood"
+
+[node name="WolfsBaneSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
+position = Vector2(266, -180)
+ingredient = ExtResource("32_vn1u3")
+texture = ExtResource("22_po4pn")
+tooltip = "Wolf's Bane"
 
 [node name="Player" parent="." instance=ExtResource("19_pqwcn")]
 position = Vector2(575, 323)

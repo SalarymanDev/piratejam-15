@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_g51ke")
-ingredient = 14
+ingredient = 15
 name = "Fine Salt"
 description = "Finely ground salt with little impurity"
 texture = ExtResource("2_0j3in")

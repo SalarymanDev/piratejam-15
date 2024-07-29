@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_5ypx8")
-ingredient = 13
+ingredient = 14
 name = "Wolf's Powder"
 description = "A fine purple powder"
 texture = ExtResource("2_w5v71")

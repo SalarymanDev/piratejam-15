@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_hxk8x")
-ingredient = 24
+ingredient = 25
 name = "Moonlight Essence"
 description = "A brightly illuminating liquid."
 texture = ExtResource("2_s6sem")

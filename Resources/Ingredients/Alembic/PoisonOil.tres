@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_1oss0")
-ingredient = 25
+ingredient = 26
 name = "Poison Oil"
 description = "This toxic gas is both colorless and odorless."
 texture = ExtResource("2_a2g8s")

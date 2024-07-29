@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_cj53e")
-ingredient = 22
+ingredient = 24
 name = "Chromatic Tincture"
 description = "A viscous, multicolored fluid."
 texture = ExtResource("2_nknyg")

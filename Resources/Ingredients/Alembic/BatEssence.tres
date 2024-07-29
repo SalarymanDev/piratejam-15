@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_mkcdx")
-ingredient = 26
+ingredient = 27
 name = "Bat Essence"
 description = "Dark, smoky liquid"
 texture = ExtResource("2_smjn8")
