@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cllo3pfqarwug"]
+[gd_scene load_steps=18 format=3 uid="uid://cllo3pfqarwug"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/Alembic/Alembic.gd" id="1_y1pir"]
 [ext_resource type="Texture2D" uid="uid://dt1fuobt4lerk" path="res://Assets/Sprites/alembic.png" id="2_pu68q"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://kp38v1bep0br" path="res://Components/Clickable/ClickableComponent.tscn" id="5_mty3m"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="7_ohnno"]
 [ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="8_xeqwk"]
-[ext_resource type="Resource" uid="uid://0ue72ao6x0nw" path="res://Resources/Potions/DrinkingWater.tres" id="9_6anr0"]
 [ext_resource type="Texture2D" uid="uid://3ba750fxv8qd" path="res://Assets/Sprites/star.png" id="10_dhlhr"]
 [ext_resource type="PackedScene" uid="uid://bmqjfcq75klgl" path="res://Components/Pickup/PickUpComponent.tscn" id="10_i6a81"]
 [ext_resource type="PackedScene" uid="uid://ccfrus2lxbs5j" path="res://Components/TakesIngredients/TakesIngredientsComponent.tscn" id="11_ffn7x"]
@@ -75,7 +74,6 @@ wait_time = 3.0
 one_shot = true
 
 [node name="RecipeTableComponent" parent="." instance=ExtResource("14_3ukrk")]
-default = ExtResource("9_6anr0")
 recipe_table = ExtResource("12_072s4")
 
 [node name="ItemComponent" parent="." instance=ExtResource("13_yxv7p")]
