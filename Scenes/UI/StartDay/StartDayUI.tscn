@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dmw8pi86flogu"]
 
 [ext_resource type="Script" path="res://Scenes/UI/StartDay/StartDayUI.gd" id="1_04wkk"]
-[ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_g1txj"]
+[ext_resource type="Theme" path="res://Assets/main.tres" id="1_g1txj"]
 [ext_resource type="Texture2D" uid="uid://b3aaqqb0efncq" path="res://Assets/Sprites/UI/upgrades.png" id="2_mx83h"]
 [ext_resource type="Texture2D" uid="uid://hha2k0im5e7g" path="res://Assets/Sprites/UI/Button/button.png" id="3_o2w6a"]
 [ext_resource type="Texture2D" uid="uid://daeylj4cuw133" path="res://Assets/Sprites/UI/Button/button_pressed.png" id="4_iidsr"]
@@ -16,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_g1txj")
 script = ExtResource("1_04wkk")
+notes = Array[String](["Moon Dust and Mercury seem to work well together... but with what?", "Wolfsbane has magic warding properties...", "How did I make Dragon's Breath before?", "Cockatrice poison found in feathers...", "Mandrake may induce hallucinations... or transumations?", "Bat wings and salt may make something but I'll need break them down first.", "If I want an elixir I should put mercury in it", "The Bomb Potion may require some fire and smoke..."])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -38,10 +39,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 96.0
+offset_left = 100.0
 offset_top = 129.0
-offset_right = -95.0
-offset_bottom = -165.0
+offset_right = -99.0
+offset_bottom = -318.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
@@ -84,6 +85,40 @@ theme_override_font_sizes/font_size = 30
 text = "100"
 horizontal_alignment = 1
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 350.0
+offset_right = -99.0
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_g1txj")
+theme_override_colors/font_color = Color(0.258824, 0.258824, 0.258824, 1)
+theme_override_font_sizes/font_size = 31
+text = "Note to Self:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="TextureRect/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="NoteLabel" type="Label" parent="TextureRect/VBoxContainer2/HBoxContainer4"]
+custom_minimum_size = Vector2(350, 125)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.258824, 0.258824, 0.258824, 1)
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="StartButton" type="TextureButton" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 7
@@ -118,5 +153,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Start Day"
+autowrap_mode = 2
 
 [connection signal="pressed" from="TextureRect/StartButton" to="." method="_on_start_button_pressed"]
