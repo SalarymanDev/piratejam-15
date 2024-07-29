@@ -147,7 +147,7 @@ position = Vector2(215, 449)
 
 [node name="SalesCounter" parent="NavigationRegion2D" instance=ExtResource("12_b6a0f")]
 position = Vector2(1768, 554)
-instance_scale = 2.0
+instance_scale = 1.5
 
 [node name="WasteBin" parent="NavigationRegion2D" instance=ExtResource("3_rxvju")]
 position = Vector2(1772, 697)
