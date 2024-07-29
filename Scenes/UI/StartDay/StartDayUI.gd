@@ -14,7 +14,7 @@ func _ready() -> void:
 	money_label.text = str(GameStateManager._current_money)
 	rent_label.text = str(GameStateManager._current_rent)
 	
-	var rand_index: int = randi_range(0, notes.size())
+	var rand_index: int = randi_range(0, notes.size() - 1)
 	note_label.text = notes[rand_index]
 
 func _on_start_button_pressed() -> void:

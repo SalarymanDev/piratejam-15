@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_g1txj")
 script = ExtResource("1_04wkk")
-notes = Array[String](["Moon Dust and Mercury seem to work well together... but with what?", "Wolfsbane has magic warding properties...", "How did I make Dragon's Breath before?", "Cockatrice poison found in feathers...", "Mandrake may induce hallucinations... or transumations?", "Bat wings and salt may make something but I'll need break them down first.", "If I want an elixir I should put mercury in it", "The Bomb Potion may require some fire and smoke..."])
+notes = Array[String](["Moon Dust and Mercury seem to work well together... but with what?", "Wolfsbane has magic warding properties...", "How did I make Dragon's Breath before?", "Cockatrice poison found in feathers...", "Mandrake may induce hallucinations... or transumations?", "Bat wings and salt may make something but I'll need break them down first.", "If I want an elixir I should put mercury in it", "The Bomb Potion may require some fire and smoke...", "Bat Wings seem to have invigorating properties", "I believe Unicorn Blood is a good source of life essence..."])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

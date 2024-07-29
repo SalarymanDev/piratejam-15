@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cflebqfxo6rat"]
+[gd_scene load_steps=37 format=3 uid="uid://cflebqfxo6rat"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_wj5po"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="2_rl7cs"]
@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://0olo4xrydpou" path="res://Scenes/Equipment/MortarPestle/MortarPestle.tscn" id="20_34ka6"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="21_p262u"]
 [ext_resource type="PackedScene" uid="uid://k3ekgyuiqs1s" path="res://Scenes/Equipment/Table/Table.tscn" id="21_u4urn"]
-[ext_resource type="Texture2D" uid="uid://cd5euro3cw6tt" path="res://Assets/Sprites/crate.png" id="22_po4pn"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="22_xglq1"]
 [ext_resource type="Resource" uid="uid://ki0igx0pi4c6" path="res://Resources/Ingredients/Raw/Nightshade.tres" id="23_0iowq"]
 [ext_resource type="Resource" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="23_aptjq"]
@@ -124,67 +123,56 @@ position = Vector2(221, 153)
 [node name="SaltSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-476, -58)
 ingredient = ExtResource("15_2to6p")
-texture = ExtResource("22_po4pn")
 tooltip = "Salt"
 
 [node name="FireHerbSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-385, -182)
 ingredient = ExtResource("23_aptjq")
-texture = ExtResource("22_po4pn")
 tooltip = "Fire Herb"
 
 [node name="DragonBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-478, -183)
 ingredient = ExtResource("24_neu71")
-texture = ExtResource("22_po4pn")
 tooltip = "Dragon's Blood"
 
 [node name="BatwingSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(264, -50)
 ingredient = ExtResource("25_ah8xk")
-texture = ExtResource("22_po4pn")
 tooltip = "Bat Wings"
 
 [node name="CockatriceFeatherSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-268, -182)
 ingredient = ExtResource("24_l28jq")
-texture = ExtResource("22_po4pn")
 tooltip = "Cockatrice Feathers"
 
 [node name="MandrakeRootSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-143, -181)
 ingredient = ExtResource("27_opv8w")
-texture = ExtResource("22_po4pn")
 tooltip = "Mandrake Root"
 
 [node name="Mercury Spawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-91, -66)
 ingredient = ExtResource("28_e541t")
-texture = ExtResource("22_po4pn")
 tooltip = "Mercury"
 
 [node name="MoonDustSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-23, -177)
 ingredient = ExtResource("29_h5ua0")
-texture = ExtResource("22_po4pn")
 tooltip = "Moon Dust"
 
 [node name="NightShadeSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(101, -88)
 ingredient = ExtResource("23_0iowq")
-texture = ExtResource("22_po4pn")
 tooltip = "Night Shade"
 
 [node name="UnicornBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(140, -211)
 ingredient = ExtResource("31_jhlrr")
-texture = ExtResource("22_po4pn")
 tooltip = "Unicorn Blood"
 
 [node name="WolfsBaneSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(266, -180)
 ingredient = ExtResource("32_vn1u3")
-texture = ExtResource("22_po4pn")
 tooltip = "Wolf's Bane"
 
 [node name="Player" parent="." instance=ExtResource("19_pqwcn")]

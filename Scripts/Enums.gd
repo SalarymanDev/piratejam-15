@@ -51,7 +51,6 @@ enum Potions {
 	DragonBreath,
 	NightshadeVapor,
 	BombPotion,
-	
 	LiquidLuck,
 	DraughtOfStamina,
 	Antivenom,
@@ -62,5 +61,9 @@ enum Potions {
 	ElixirOfMagic,
 	DeadlyPoison,
 	DraughtOfHealing,
-	PhilosophersPotion
+	PhilosophersPotion,
+	
+	LesserHealingPot,
+	LesserStaminaPot,
+	LesserMagicPot
 }

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=6 format=3 uid="uid://cjbob703lrjid"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_kl0g2"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_4cjj4"]
+[ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="3_ss08w"]
+[ext_resource type="Resource" uid="uid://c01to4np7fwbt" path="res://Resources/Potions/LesserStaminaPot.tres" id="4_imc0x"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="5_wlgln"]
+
+[resource]
+script = ExtResource("5_wlgln")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_kl0g2"), ExtResource("2_4cjj4"), ExtResource("3_ss08w")])
+output = ExtResource("4_imc0x")

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=19 format=3 uid="uid://61gd8mka2i7m"]
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=22 format=3 uid="uid://61gd8mka2i7m"]
 
 [ext_resource type="Resource" uid="uid://clu826sm1dsuv" path="res://Resources/Recipes/Cauldron/DrinkingWaterCauldronRecipe.tres" id="1_62f75"]
 [ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_tuaqe"]
@@ -18,7 +18,10 @@
 [ext_resource type="Resource" uid="uid://hnqi1olq1a7n" path="res://Resources/Recipes/Cauldron/DeadlyPoisonCauldronRecipe.tres" id="15_rxu3o"]
 [ext_resource type="Resource" uid="uid://myfpkwcyorl7" path="res://Resources/Recipes/Cauldron/DraughtOfHealingCauldronRecipe.tres" id="16_30ry6"]
 [ext_resource type="Resource" uid="uid://b0k5wm1ewn1b3" path="res://Resources/Recipes/Cauldron/PhilosophersPotionCauldronRecipe.tres" id="17_s665m"]
+[ext_resource type="Resource" uid="uid://cvbxnelf0tn73" path="res://Resources/Recipes/Cauldron/LesserHealingPotCauldronRecipe.tres" id="18_k8fvv"]
+[ext_resource type="Resource" uid="uid://bqihtw5cm5g4t" path="res://Resources/Recipes/Cauldron/LesserMagicPotCauldronRecipe.tres" id="19_e5w0h"]
+[ext_resource type="Resource" uid="uid://cjbob703lrjid" path="res://Resources/Recipes/Cauldron/LesserStaminaPotCauldronRecipe.tres" id="20_e5wt8"]
 
 [resource]
 script = ExtResource("1_tuaqe")
-recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt"), ExtResource("3_a7y2d"), ExtResource("4_w4m6w"), ExtResource("5_kv8oo"), ExtResource("6_ej1rh"), ExtResource("7_28adp"), ExtResource("8_pefxm"), ExtResource("9_xq68s"), ExtResource("10_f2gn7"), ExtResource("11_kwa7n"), ExtResource("12_ub1sk"), ExtResource("13_r2f8d"), ExtResource("14_873oy"), ExtResource("15_rxu3o"), ExtResource("16_30ry6"), ExtResource("17_s665m")])
+recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt"), ExtResource("3_a7y2d"), ExtResource("4_w4m6w"), ExtResource("5_kv8oo"), ExtResource("6_ej1rh"), ExtResource("7_28adp"), ExtResource("8_pefxm"), ExtResource("9_xq68s"), ExtResource("10_f2gn7"), ExtResource("11_kwa7n"), ExtResource("12_ub1sk"), ExtResource("13_r2f8d"), ExtResource("14_873oy"), ExtResource("15_rxu3o"), ExtResource("16_30ry6"), ExtResource("17_s665m"), ExtResource("18_k8fvv"), ExtResource("19_e5w0h"), ExtResource("20_e5wt8")])
