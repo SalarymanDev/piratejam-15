@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://bf71xxkinc70b"]
+
+[ext_resource type="Texture2D" uid="uid://bqrmn0o3oamix" path="res://Assets/Sprites/police/door.png" id="1_7f2i5"]
+[ext_resource type="Script" path="res://Scenes/PoliceSpawner/PoliceSpawner.gd" id="1_e2so3"]
+[ext_resource type="PackedScene" uid="uid://bflv5p5pyq64p" path="res://Scenes/Characters/Police/Police.tscn" id="2_sx1mr"]
+[ext_resource type="Texture2D" uid="uid://uvtcih2r6id3" path="res://Assets/Sprites/Lights/point_light.webp" id="4_0bac7"]
+[ext_resource type="AudioStream" uid="uid://blwe6bi3anlu8" path="res://Assets/Audio/Police/Siren_M 16.wav" id="6_1ese7"]
+
+[sub_resource type="Animation" id="Animation_vl46t"]
+resource_name = "PoliceLights"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedPointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 2.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BluePointLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.0, 0.0, 2.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kqdc"]
+_data = {
+"PoliceLights": SubResource("Animation_vl46t")
+}
+
+[node name="PoliceSpawner" type="Node2D"]
+script = ExtResource("1_e2so3")
+police_officer_scene = ExtResource("2_sx1mr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_7f2i5")
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(2.08165e-12, 60)
+
+[node name="RedPointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(-128, 0)
+color = Color(1, 0, 0, 1)
+energy = 0.0
+shadow_enabled = true
+texture = ExtResource("4_0bac7")
+texture_scale = 2.5
+
+[node name="BluePointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0, 1, 1)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("4_0bac7")
+texture_scale = 2.5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_1ese7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1kqdc")
+}
+speed_scale = 3.0
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_finished"]

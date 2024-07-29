@@ -11,6 +11,7 @@ var _is_moving := false
 
 func _ready() -> void:
 	assert(audio_clips.size() > 0)
+	_rng.randomize()
 
 func _play() -> void:
 	audio_player.stream = audio_clips[_rng.randi_range(0, audio_clips.size() - 1)]

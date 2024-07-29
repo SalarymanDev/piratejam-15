@@ -7,6 +7,7 @@ signal money_changed_event(amount: int)
 signal rent_changed_event(amount: int)
 signal revenue_changed_event(amount: int)
 signal profit_changed_event(amount: int)
+signal police_inbound_event
 
 var _current_rent: int = 0
 var _current_day: int = 0
@@ -15,19 +16,26 @@ var _potions_sold_per_day: Dictionary = {}
 var _potions_sold_today: Array[PotionResource] = []
 var _day_timer: Timer = Timer.new()
 var _invisibility_timer: Timer = Timer.new()
-var _level_seconds: int = 300
+var _level_seconds: int = 150
 var _invisibility_seconds: int = 35
 var _fine_amount: int = 200
 var _controls_enabled: bool = false
 var _invisible: bool = false
+var _police_timer: Timer = Timer.new()
+
+var _rng := RandomNumberGenerator.new()
 
 func _ready() -> void:
+	_rng.randomize()
 	_invisibility_timer.one_shot = true
 	get_tree().root.add_child.call_deferred(_invisibility_timer)
 	_invisibility_timer.timeout.connect(_invisibility_timeout)
 	_day_timer.one_shot = true
 	get_tree().root.add_child.call_deferred(_day_timer)
 	_day_timer.timeout.connect(_end_day)
+	_police_timer.one_shot = true
+	get_tree().root.add_child.call_deferred(_police_timer)
+	_police_timer.timeout.connect(_police_inbound)
 	emit_signal(money_changed_event.get_name(), _current_money)
 
 func start_day() -> void:
@@ -35,6 +43,8 @@ func start_day() -> void:
 	_controls_enabled = true
 	emit_signal(rent_changed_event.get_name(), _current_rent)
 	emit_signal(day_started_event.get_name(), _current_day)
+	if _current_day >= 3:
+		_police_timer.start(_rng.randf_range(40, _level_seconds - 40))
 
 func _end_day() -> void:
 	_day_timer.stop()
@@ -92,6 +102,9 @@ func _invisibility_timeout() -> void:
 	var nodes: Array[Node] = get_tree().get_nodes_in_group("Invisibility")
 	for node in nodes:
 		(node as Node2D).modulate = Color(1, 1, 1, 1)
+
+func _police_inbound() -> void:
+	emit_signal(police_inbound_event.get_name())
 
 func _physics_process(_delta: float) -> void:
 	if !_day_timer.is_stopped():
