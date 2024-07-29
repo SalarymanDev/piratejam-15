@@ -60,19 +60,20 @@ tooltip_text = "Mortar & Pestle"
 shape = SubResource("RectangleShape2D_aq12l")
 
 [node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component") instance=ExtResource("5_4m87w")]
-position = Vector2(0, 41.42)
+position = Vector2(45, 4)
 takes_ingredients_component = NodePath("../TakesIngredientsComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
 shape = SubResource("CircleShape2D_08k7l")
 
 [node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("7_8i5m0")]
-position = Vector2(0, 41.42)
+position = Vector2(44, 2)
 item_component = NodePath("../ItemComponent")
 is_swappable = false
 disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]
+position = Vector2(2, 2)
 shape = SubResource("CircleShape2D_08k7l")
 
 [node name="TakesIngredientsComponent" parent="." instance=ExtResource("8_r0p78")]

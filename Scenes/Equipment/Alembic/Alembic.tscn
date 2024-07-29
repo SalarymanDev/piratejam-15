@@ -53,14 +53,14 @@ position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_mfmjc")
 
 [node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component") instance=ExtResource("8_xeqwk")]
-position = Vector2(2.08165e-12, 50)
+position = Vector2(46, 7)
 takes_ingredients_component = NodePath("../TakesIngredientsComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
 shape = SubResource("CircleShape2D_rjv17")
 
 [node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("10_i6a81")]
-position = Vector2(2.08165e-12, 50)
+position = Vector2(45, 7)
 item_component = NodePath("../ItemComponent")
 is_swappable = false
 

@@ -37,7 +37,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_dw6bl")
 
 [node name="StoredItemSprite" type="Sprite2D" parent="."]
-position = Vector2(-42, -37)
+position = Vector2(4, -49)
 scale = Vector2(0.07, 0.07)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -54,7 +54,7 @@ destroy = true
 [node name="StoreItemComponent" parent="." instance=ExtResource("7_vjd07")]
 
 [node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component", "takes_potion_component") instance=ExtResource("7_47uer")]
-position = Vector2(-111, -23)
+position = Vector2(2, -72)
 takes_ingredients_component = NodePath("../TakesIngredientsComponent")
 takes_potion_component = NodePath("../TakesPotionComponent")
 
@@ -69,10 +69,11 @@ position = Vector2(4.125, -3)
 shape = SubResource("RectangleShape2D_5jjul")
 
 [node name="AudioComponent" parent="." instance=ExtResource("9_15a6u")]
+visible = false
 audio_clips = Array[AudioStream]([ExtResource("10_iblqe")])
 
 [node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("12_cd7qq")]
-position = Vector2(-111, -23)
+position = Vector2(0, -73)
 item_component = NodePath("../ItemComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]

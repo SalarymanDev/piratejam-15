@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://bldm5h3tp6cam"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://x0xbp5hst8vt"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_3xyfb"]
 [ext_resource type="Texture2D" uid="uid://dq0shhq48boik" path="res://Assets/Sprites/potions/black-potion.png" id="2_lhdqc"]

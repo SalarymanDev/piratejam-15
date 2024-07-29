@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://clavn8rkgug12" path="res://Assets/Audio/Waste/drop_trashbag_with_bottles_002.wav" id="8_rxyar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rsmjj"]
-size = Vector2(65, 13)
+size = Vector2(40, 51)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1wxfm"]
 radius = 20.0
@@ -28,7 +28,7 @@ scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_c8v1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_rsmjj")
 
 [node name="TakesIngredientsComponent" parent="." instance=ExtResource("2_fsn1q")]
@@ -39,7 +39,7 @@ takes_ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtR
 destroy = true
 
 [node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component", "takes_potion_component") instance=ExtResource("5_ghsf5")]
-position = Vector2(2.08165e-12, 45)
+position = Vector2(-35, 1)
 takes_ingredients_component = NodePath("../TakesIngredientsComponent")
 takes_potion_component = NodePath("../TakesPotionComponent")
 
@@ -53,6 +53,7 @@ tooltip_text = "Trash"
 shape = SubResource("RectangleShape2D_ix467")
 
 [node name="AudioComponent" parent="." instance=ExtResource("7_xqjw5")]
+visible = false
 audio_clips = Array[AudioStream]([ExtResource("8_rxyar")])
 
 [connection signal="drop_off_ingredient_event" from="DropOffComponent" to="." method="_on_drop_off_ingredient_event"]

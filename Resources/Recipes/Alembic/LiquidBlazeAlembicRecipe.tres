@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://fmbobpn8iwco"]
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=4 format=3 uid="uid://b44oaq8jnl8ts"]
 
-[ext_resource type="Resource" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="1_txifg"]
-[ext_resource type="Resource" uid="uid://b6bhpmkvl44cd" path="res://Resources/Ingredients/Alembic/LiquidBlaze.tres" id="2_dhgeg"]
+[ext_resource type="Resource" uid="uid://rw7y4402l4le" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="1_txifg"]
+[ext_resource type="Resource" uid="uid://4gsbphgt4itf" path="res://Resources/Ingredients/Alembic/LiquidBlaze.tres" id="2_dhgeg"]
 [ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="3_nu0jh"]
 
 [resource]

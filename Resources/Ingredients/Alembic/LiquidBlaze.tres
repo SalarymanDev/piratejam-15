@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://b6bhpmkvl44cd"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://4gsbphgt4itf"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_qsquo"]
 [ext_resource type="Texture2D" uid="uid://dpmcqns6if3df" path="res://Assets/Sprites/phials/red-phial.png" id="2_rywbn"]

@@ -13,10 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://7ndrlvq36m5f" path="res://Scenes/UI/PotionSold/PotionSold.tscn" id="12_7m0of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_843fc"]
-size = Vector2(65, 13)
+size = Vector2(44, 113)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w707a"]
-size = Vector2(60, 60)
+size = Vector2(47, 121)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofpx5"]
 radius = 20.0
@@ -26,7 +26,7 @@ script = ExtResource("1_tm6de")
 potion_sold_scene = ExtResource("12_7m0of")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_843fc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -39,10 +39,11 @@ texture = ExtResource("3_0weba")
 tooltip_text = "Sales Counter"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
+position = Vector2(0.5, 2.5)
 shape = SubResource("RectangleShape2D_w707a")
 
 [node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_potion_component") instance=ExtResource("5_4n7bo")]
-position = Vector2(2.08165e-12, 45)
+position = Vector2(-32, 0)
 takes_potion_component = NodePath("../TakesPotionComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
