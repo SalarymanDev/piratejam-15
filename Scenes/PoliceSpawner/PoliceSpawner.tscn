@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bf71xxkinc70b"]
 
-[ext_resource type="Texture2D" uid="uid://bqrmn0o3oamix" path="res://Assets/Sprites/police/door.png" id="1_7f2i5"]
 [ext_resource type="Script" path="res://Scenes/PoliceSpawner/PoliceSpawner.gd" id="1_e2so3"]
 [ext_resource type="PackedScene" uid="uid://bflv5p5pyq64p" path="res://Scenes/Characters/Police/Police.tscn" id="2_sx1mr"]
+[ext_resource type="Texture2D" uid="uid://cpigvqdfq7md1" path="res://Assets/Sprites/door.png" id="3_1yub5"]
 [ext_resource type="Texture2D" uid="uid://uvtcih2r6id3" path="res://Assets/Sprites/Lights/point_light.webp" id="4_0bac7"]
 [ext_resource type="AudioStream" uid="uid://blwe6bi3anlu8" path="res://Assets/Audio/Police/Siren_M 16.wav" id="6_1ese7"]
 
@@ -44,8 +44,8 @@ script = ExtResource("1_e2so3")
 police_officer_scene = ExtResource("2_sx1mr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.12, 0.12)
-texture = ExtResource("1_7f2i5")
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_1yub5")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(2.08165e-12, 60)
