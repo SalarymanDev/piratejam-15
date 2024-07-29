@@ -16,6 +16,11 @@ func pickup() -> void:
 		return
 		
 	_current_item = _pickup_in_range.pickup()
+	if _current_item is PotionResource:
+		if (_current_item as PotionResource).potion == Enums.Potions.InvisibilityPotion:
+			if !GameStateManager.has_invisibility_potion():
+				_current_item = null
+				GameStateManager.fill_invisibility_potion()
 	_update_sprite()
 
 func dropoff() -> void:
