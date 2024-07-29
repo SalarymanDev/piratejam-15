@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="RecipeResource" load_steps=7 format=3 uid="uid://bifbcu2d384r"]
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=8 format=3 uid="uid://bifbcu2d384r"]
 
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_f5fav"]
 [ext_resource type="Resource" uid="uid://ki0igx0pi4c6" path="res://Resources/Ingredients/Raw/Nightshade.tres" id="2_r5vts"]
-[ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="3_s4nhs"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="4_beihm"]
+[ext_resource type="Resource" uid="uid://c10pijyxfrgyi" path="res://Resources/Ingredients/Raw/UnicornBlood.tres" id="4_naa7r"]
 [ext_resource type="Resource" uid="uid://d26four8wprnh" path="res://Resources/Potions/DraughtOfStamina.tres" id="5_g3yu4"]
+[ext_resource type="Resource" uid="uid://dms03lwd1oid7" path="res://Resources/Ingredients/MortarPestle/BatPowder.tres" id="5_v2xft"]
 [ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="6_6p530"]
 
 [resource]
 script = ExtResource("6_6p530")
-inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_f5fav"), ExtResource("2_r5vts"), ExtResource("3_s4nhs"), ExtResource("4_beihm")])
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_f5fav"), ExtResource("2_r5vts"), ExtResource("4_beihm"), ExtResource("4_naa7r"), ExtResource("5_v2xft")])
 output = ExtResource("5_g3yu4")

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_mhrfv")
 potion = 13
-value = 7
+value = 4
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
 name = "Lycanthropy Potion"
 description = "A potion for transfiguring into a wearwolf"

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_3xyfb")
 potion = 9
-value = 12
+value = 5
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
 name = "Bomb Potion"
 description = "Highly volatile potion DO NOT DROP"

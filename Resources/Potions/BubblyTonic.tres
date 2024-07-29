@@ -10,7 +10,7 @@
 [resource]
 script = ExtResource("1_lkecn")
 potion = 3
-value = 5
+value = 4
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_d58jo"), ExtResource("2_grsih"), ExtResource("3_yyatb"), ExtResource("4_3nsl2")])
 name = "Bubbly Tonic"
 description = "A useful tonic for soothing indigestion."

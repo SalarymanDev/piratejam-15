@@ -9,7 +9,7 @@
 [resource]
 script = ExtResource("1_p5hx4")
 potion = 2
-value = 12
+value = 2
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_op5gs"), ExtResource("2_vp360"), ExtResource("3_jypxj")])
 name = "Invisibility Potion"
 description = "An invisibility potion that is... visible."
