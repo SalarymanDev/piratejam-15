@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://0olo4xrydpou"]
+[gd_scene load_steps=27 format=3 uid="uid://0olo4xrydpou"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/MortarPestle/MortarPestle.gd" id="1_ejbgi"]
 [ext_resource type="Texture2D" uid="uid://bif5c32wbtosm" path="res://Assets/Sprites/mortarpestle.png" id="2_iet1f"]
@@ -11,7 +11,6 @@
 [ext_resource type="Resource" uid="uid://cuew4t7n5rpk1" path="res://Resources/Ingredients/Raw/CockatriceFeather.tres" id="9_eks1k"]
 [ext_resource type="PackedScene" uid="uid://ct1u42fmqi8je" path="res://Components/Item/ItemComponent.tscn" id="9_p0cwi"]
 [ext_resource type="Resource" uid="uid://byt0w0v3varip" path="res://Resources/Ingredients/Raw/DragonBlood.tres" id="10_q8mmq"]
-[ext_resource type="Resource" uid="uid://cxsh56hnd636k" path="res://Resources/Potions/TrashPotion.tres" id="11_abup7"]
 [ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/Raw/MandrakeRoot.tres" id="11_d4w01"]
 [ext_resource type="Resource" uid="uid://ki0igx0pi4c6" path="res://Resources/Ingredients/Raw/Nightshade.tres" id="12_87vdd"]
 [ext_resource type="Resource" uid="uid://gah1qqswn5jd" path="res://Resources/RecipeTables/MortarPestleRecipeTable.tres" id="12_ot13r"]
@@ -86,7 +85,6 @@ wait_time = 3.0
 one_shot = true
 
 [node name="RecipeTableComponent" parent="." instance=ExtResource("19_q1i6i")]
-default = ExtResource("11_abup7")
 recipe_table = ExtResource("12_ot13r")
 
 [node name="AudioComponent" parent="." instance=ExtResource("13_f0l6a")]

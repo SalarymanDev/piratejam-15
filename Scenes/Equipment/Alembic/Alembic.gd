@@ -29,11 +29,15 @@ func _on_timer_timeout() -> void:
 	var output := recipe_table_component.process_inputs(input)
 	item_component.item = output
 	takes_ingredients_component.clear()
-	pickup_component.disabled = false
-	if item_component.item != null:
-		clickable_component.update_tooltip(output.name)
-		harvest_sprite.show()
 	audio_component.stop()
+	
+	if item_component.item != null:
+		pickup_component.disabled = false
+		harvest_sprite.show()
+		clickable_component.update_tooltip(output.name)
+	else:
+		dropoff_component.disabled = false
+		main_sprite.texture = empty_texture
 
 
 func _on_pick_up_component_picked_up_event() -> void:
