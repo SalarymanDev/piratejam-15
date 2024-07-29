@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://c7eflg5t1nlmg"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_cx3ol"]
-[ext_resource type="Texture2D" uid="uid://ceocctkivrqvp" path="res://Assets/Sprites/phials/blue-phial.png" id="2_ymcq1"]
+[ext_resource type="Texture2D" uid="uid://cnt5om2qw4bou" path="res://Assets/Sprites/beakers/blue-beaker.png" id="2_ttftx"]
 
 [resource]
 script = ExtResource("1_cx3ol")
 ingredient = 0
 name = "Water"
 description = "The clear and pure liquid of life"
-texture = ExtResource("2_ymcq1")
+texture = ExtResource("2_ttftx")

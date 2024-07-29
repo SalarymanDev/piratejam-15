@@ -17,13 +17,13 @@
 [ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="15_11nnh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbyxd"]
-size = Vector2(139, 38)
+size = Vector2(81.75, 37.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehc68"]
 radius = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5jjul"]
-size = Vector2(171.75, 121)
+size = Vector2(103.75, 62.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jmebo"]
 radius = 20.0
@@ -32,16 +32,16 @@ radius = 20.0
 script = ExtResource("1_o65w1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
-scale = Vector2(0.2, 0.2)
+position = Vector2(2, -1)
+scale = Vector2(0.106836, 0.0882813)
 texture = ExtResource("2_dw6bl")
 
 [node name="StoredItemSprite" type="Sprite2D" parent="."]
-position = Vector2(4, -49)
+position = Vector2(4, -38)
 scale = Vector2(0.07, 0.07)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_bbyxd")
 
 [node name="TakesIngredientsComponent" parent="." instance=ExtResource("3_5ctba")]
@@ -54,7 +54,7 @@ destroy = true
 [node name="StoreItemComponent" parent="." instance=ExtResource("7_vjd07")]
 
 [node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_ingredients_component", "takes_potion_component") instance=ExtResource("7_47uer")]
-position = Vector2(2, -72)
+position = Vector2(2, -39)
 takes_ingredients_component = NodePath("../TakesIngredientsComponent")
 takes_potion_component = NodePath("../TakesPotionComponent")
 
@@ -65,7 +65,6 @@ shape = SubResource("CircleShape2D_ehc68")
 tooltip_text = "Table"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableComponent"]
-position = Vector2(4.125, -3)
 shape = SubResource("RectangleShape2D_5jjul")
 
 [node name="AudioComponent" parent="." instance=ExtResource("9_15a6u")]
@@ -73,7 +72,8 @@ visible = false
 audio_clips = Array[AudioStream]([ExtResource("10_iblqe")])
 
 [node name="PickUpComponent" parent="." node_paths=PackedStringArray("item_component") instance=ExtResource("12_cd7qq")]
-position = Vector2(0, -73)
+visible = false
+position = Vector2(3, -39)
 item_component = NodePath("../ItemComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpComponent"]

@@ -127,6 +127,12 @@ ingredient = ExtResource("24_btn7o")
 texture = ExtResource("11_8pc40")
 tooltip = "Unicorn Blood"
 
+[node name="WolfsBaneSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
+position = Vector2(884, 138)
+ingredient = ExtResource("25_mei2s")
+texture = ExtResource("11_8pc40")
+tooltip = "Wolf's Bane"
+
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("2_b3thu")]
 position = Vector2(1004, 580)
 scale = Vector2(2, 2)
@@ -172,13 +178,13 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(1772, 697)
 
 [node name="Table" parent="NavigationRegion2D" instance=ExtResource("14_w1jdh")]
-position = Vector2(325, 954)
+position = Vector2(250, 951)
 
-[node name="IngredientSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(884, 138)
-ingredient = ExtResource("25_mei2s")
-texture = ExtResource("11_8pc40")
-tooltip = "Wolf's Bane"
+[node name="Table2" parent="NavigationRegion2D" instance=ExtResource("14_w1jdh")]
+position = Vector2(406, 951)
+
+[node name="Table3" parent="NavigationRegion2D" instance=ExtResource("14_w1jdh")]
+position = Vector2(567, 948)
 
 [node name="Player" parent="." instance=ExtResource("1_cijhs")]
 position = Vector2(459, 267)
