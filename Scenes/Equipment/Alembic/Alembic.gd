@@ -37,6 +37,7 @@ func _on_timer_timeout() -> void:
 		clickable_component.update_tooltip(output.name)
 	else:
 		dropoff_component.disabled = false
+		takes_ingredients_component.disabled = false
 		main_sprite.texture = empty_texture
 
 
