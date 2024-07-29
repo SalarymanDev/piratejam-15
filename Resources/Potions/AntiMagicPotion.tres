@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://bihbn25ec0d6"]
+
+[ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_2wslt"]
+[ext_resource type="Texture2D" uid="uid://ceocctkivrqvp" path="res://Assets/Sprites/phials/blue-phial.png" id="2_7t5wr"]
+
+[resource]
+script = ExtResource("1_2wslt")
+potion = 14
+value = 8
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+name = "Anti-Magic Potion"
+description = "A powerful defense against magic, perhaps"
+texture = ExtResource("2_7t5wr")

@@ -1,13 +1,24 @@
-[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=8 format=3 uid="uid://61gd8mka2i7m"]
+[gd_resource type="Resource" script_class="RecipeTableResource" load_steps=19 format=3 uid="uid://61gd8mka2i7m"]
 
 [ext_resource type="Resource" uid="uid://clu826sm1dsuv" path="res://Resources/Recipes/Cauldron/DrinkingWaterCauldronRecipe.tres" id="1_62f75"]
 [ext_resource type="Script" path="res://Scripts/RecipeTableResource.gd" id="1_tuaqe"]
 [ext_resource type="Resource" uid="uid://cl0gask54l25j" path="res://Resources/Recipes/Cauldron/InvisibilityPotionCauldronRecipe.tres" id="2_ryaxt"]
-[ext_resource type="Resource" path="res://Resources/Recipes/Cauldron/BombPotionCauldron.tres" id="3_a7y2d"]
+[ext_resource type="Resource" uid="uid://b4fj3usfrsrmw" path="res://Resources/Recipes/Cauldron/BombPotionCauldron.tres" id="3_a7y2d"]
 [ext_resource type="Resource" uid="uid://mg3qew2yad8g" path="res://Resources/Recipes/Cauldron/BubblyTonicCauldronRecipe.tres" id="4_w4m6w"]
 [ext_resource type="Resource" uid="uid://4nlub834ktrv" path="res://Resources/Recipes/Cauldron/ElixirOfFlightPotionCauldron.tres" id="5_kv8oo"]
 [ext_resource type="Resource" uid="uid://cteuga7axu87p" path="res://Resources/Recipes/Cauldron/ElixirOfSpeedCauldronRecipe.tres" id="6_ej1rh"]
+[ext_resource type="Resource" uid="uid://cs1t4ujohr4hm" path="res://Resources/Recipes/Cauldron/LiquidLuckCauldronRecipe.tres" id="7_28adp"]
+[ext_resource type="Resource" uid="uid://bifbcu2d384r" path="res://Resources/Recipes/Cauldron/DraughtOfStaminaCauldronRecipe.tres" id="8_pefxm"]
+[ext_resource type="Resource" uid="uid://cxmb2f0174qfm" path="res://Resources/Recipes/Cauldron/AntivenomCauldronRecipe.tres" id="9_xq68s"]
+[ext_resource type="Resource" uid="uid://k0w1ks8vbhml" path="res://Resources/Recipes/Cauldron/LycanthropyPotionCauldronRecipe.tres" id="10_f2gn7"]
+[ext_resource type="Resource" uid="uid://c06v3c0jjgpm3" path="res://Resources/Recipes/Cauldron/AntiMagicPotionCauldronRecipe.tres" id="11_kwa7n"]
+[ext_resource type="Resource" uid="uid://bajbi6cktij01" path="res://Resources/Recipes/Cauldron/SilvertonguePotionCauldronRecipe.tres" id="12_ub1sk"]
+[ext_resource type="Resource" uid="uid://cb5la53uodtwb" path="res://Resources/Recipes/Cauldron/DraughtOfIllusionCauldronRecipe.tres" id="13_r2f8d"]
+[ext_resource type="Resource" uid="uid://bbm6mf4nqeul" path="res://Resources/Recipes/Cauldron/ElixirOfMagicCauldronRecipe.tres" id="14_873oy"]
+[ext_resource type="Resource" uid="uid://hnqi1olq1a7n" path="res://Resources/Recipes/Cauldron/DeadlyPoisonCauldronRecipe.tres" id="15_rxu3o"]
+[ext_resource type="Resource" uid="uid://myfpkwcyorl7" path="res://Resources/Recipes/Cauldron/DraughtOfHealingCauldronRecipe.tres" id="16_30ry6"]
+[ext_resource type="Resource" uid="uid://b0k5wm1ewn1b3" path="res://Resources/Recipes/Cauldron/PhilosophersPotionCauldronRecipe.tres" id="17_s665m"]
 
 [resource]
 script = ExtResource("1_tuaqe")
-recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt"), ExtResource("3_a7y2d"), ExtResource("4_w4m6w"), ExtResource("5_kv8oo"), ExtResource("6_ej1rh")])
+recipes = Array[Resource("res://Scripts/RecipeResource.gd")]([ExtResource("1_62f75"), ExtResource("2_ryaxt"), ExtResource("3_a7y2d"), ExtResource("4_w4m6w"), ExtResource("5_kv8oo"), ExtResource("6_ej1rh"), ExtResource("7_28adp"), ExtResource("8_pefxm"), ExtResource("9_xq68s"), ExtResource("10_f2gn7"), ExtResource("11_kwa7n"), ExtResource("12_ub1sk"), ExtResource("13_r2f8d"), ExtResource("14_873oy"), ExtResource("15_rxu3o"), ExtResource("16_30ry6"), ExtResource("17_s665m")])

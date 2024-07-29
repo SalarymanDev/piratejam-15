@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cflebqfxo6rat"]
+[gd_scene load_steps=30 format=3 uid="uid://cflebqfxo6rat"]
 
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="1_wj5po"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="2_rl7cs"]
@@ -19,14 +19,13 @@
 [ext_resource type="Texture2D" uid="uid://bgnte4vncyqav" path="res://Assets/Sprites/salt-lick.png" id="17_8i1e8"]
 [ext_resource type="PackedScene" uid="uid://w2jway24bhsk" path="res://Scenes/Equipment/Cauldron/Cauldron.tscn" id="17_n7eky"]
 [ext_resource type="PackedScene" uid="uid://b3oiwani0erfq" path="res://Scenes/Equipment/SalesCounter/SalesCounter.tscn" id="18_u0cb1"]
-[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="18_uxl8m"]
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="19_pqwcn"]
 [ext_resource type="PackedScene" uid="uid://0olo4xrydpou" path="res://Scenes/Equipment/MortarPestle/MortarPestle.tscn" id="20_34ka6"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="21_p262u"]
 [ext_resource type="PackedScene" uid="uid://k3ekgyuiqs1s" path="res://Scenes/Equipment/Table/Table.tscn" id="21_u4urn"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="22_xglq1"]
-[ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="23_dx5o7"]
-[ext_resource type="Resource" uid="uid://csovk45m2l8k4" path="res://Resources/Ingredients/Raw/Wolfsbane.tres" id="25_uvfob"]
+[ext_resource type="Resource" uid="uid://ki0igx0pi4c6" path="res://Resources/Ingredients/Raw/Nightshade.tres" id="23_0iowq"]
+[ext_resource type="Resource" uid="uid://cuew4t7n5rpk1" path="res://Resources/Ingredients/Raw/CockatriceFeather.tres" id="24_l28jq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pbhih"]
 vertices = PackedVector2Array(-349, 22, -185, 13, 406, -9, 406, 64, 321, 100, 122, 100, 27, -141, 300, -143, 425, -143, 373, -109, 248, -109, 162, -119, -303, 13, 508, -9, 373, -36, 510, -194, 321, 198, 505, 256, -509, 256, 122, 198, -101, 190, -219, 190, -348, 179, -219, 120, -473, 179, -473, 106, -510, -89, -474, 22, 248, -36, 162, -46, 37, -46, 425, -216, 510, -260, 507, 64, 37, -119, -185, -57, -98, -141, -510, -260, 300, -216, -349, -51, -303, -57, -348, 106, -183, -146, -98, -214, -183, -219, -101, 120, -308, -146, -474, -51, -475, -146, 27, -214, -308, -219, -350, -146, -350, -219, -475, -219)
@@ -118,21 +117,21 @@ position = Vector2(221, 153)
 
 [node name="IngredientSpawner" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(-411, -15)
-ingredient = ExtResource("23_dx5o7")
+ingredient = ExtResource("15_2to6p")
 audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
-tooltip = "Bat Wings"
+tooltip = "Salt"
 
 [node name="IngredientSpawner2" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(310, -73)
-ingredient = ExtResource("18_uxl8m")
+ingredient = ExtResource("23_0iowq")
 audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
-tooltip = "Mercury"
+tooltip = "Nighthsade"
 
 [node name="IngredientSpawner3" parent="NavigationRegion2D" instance=ExtResource("1_wj5po")]
 position = Vector2(99, -83)
-ingredient = ExtResource("25_uvfob")
+ingredient = ExtResource("24_l28jq")
 audio_clips = Array[AudioStream]([ExtResource("14_ixspn")])
-tooltip = "Wolfsbane"
+tooltip = "Cock"
 
 [node name="Player" parent="." instance=ExtResource("19_pqwcn")]
 position = Vector2(575, 323)

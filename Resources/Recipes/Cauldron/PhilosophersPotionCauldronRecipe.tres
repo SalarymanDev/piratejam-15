@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=9 format=3 uid="uid://b0k5wm1ewn1b3"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_ewmr4"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_bnjaj"]
+[ext_resource type="Resource" uid="uid://cyysi1il2ed53" path="res://Resources/Ingredients/Alembic/ChromaticTincture.tres" id="3_ps0g5"]
+[ext_resource type="Resource" uid="uid://bmvgrxcluuj8b" path="res://Resources/Ingredients/Alembic/MoonlightEssence.tres" id="4_621ao"]
+[ext_resource type="Resource" uid="uid://bnr2gq37y62l6" path="res://Resources/Ingredients/MortarPestle/MandrakePowder.tres" id="5_7wdwt"]
+[ext_resource type="Resource" uid="uid://ypg7sev501n8" path="res://Resources/Ingredients/MortarPestle/DragonPaste.tres" id="6_me6dk"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="7_ajw3w"]
+[ext_resource type="Resource" uid="uid://bwdtbwsjbl22e" path="res://Resources/Potions/PhilosophersPotion.tres" id="7_m3lbr"]
+
+[resource]
+script = ExtResource("7_ajw3w")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_ewmr4"), ExtResource("2_bnjaj"), ExtResource("3_ps0g5"), ExtResource("4_621ao"), ExtResource("5_7wdwt"), ExtResource("6_me6dk")])
+output = ExtResource("7_m3lbr")

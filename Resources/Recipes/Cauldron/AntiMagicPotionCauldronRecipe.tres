@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=7 format=3 uid="uid://c06v3c0jjgpm3"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_vu1ts"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_in8l5"]
+[ext_resource type="Resource" uid="uid://cwdxhloqh2s5r" path="res://Resources/Ingredients/MortarPestle/WolfPowder.tres" id="3_i373p"]
+[ext_resource type="Resource" uid="uid://b3g0wnfbmynse" path="res://Resources/Ingredients/Alembic/SaltCrystals.tres" id="4_m6ae6"]
+[ext_resource type="Resource" uid="uid://bihbn25ec0d6" path="res://Resources/Potions/AntiMagicPotion.tres" id="5_2pj8p"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="5_ghxo5"]
+
+[resource]
+script = ExtResource("5_ghxo5")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_vu1ts"), ExtResource("2_in8l5"), ExtResource("3_i373p"), ExtResource("4_m6ae6")])
+output = ExtResource("5_2pj8p")

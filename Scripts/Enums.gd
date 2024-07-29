@@ -50,5 +50,17 @@ enum Potions {
 	ManicVapor,
 	DragonBreath,
 	NightshadeVapor,
-	BombPotion
+	BombPotion,
+	
+	LiquidLuck,
+	DraughtOfStamina,
+	Antivenom,
+	LycanthropyPotion,
+	AntiMagicPotion,
+	SilvertonguePotion,
+	DraughtOfIllusion,
+	ElixirOfMagic,
+	DeadlyPoison,
+	DraughtOfHealing,
+	PhilosophersPotion
 }

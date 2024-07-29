@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://dy5cr3p41lhrm"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_nxvqq"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_bx7ri"]
+[ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="3_w4cvh"]
+[ext_resource type="Texture2D" uid="uid://ba8lm2yokooe6" path="res://Assets/Sprites/potions/orange-potion.png" id="4_ojmvb"]
+
+[resource]
+script = ExtResource("3_w4cvh")
+potion = 16
+value = 9
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_nxvqq"), ExtResource("2_bx7ri")])
+name = "Draught of Illusion"
+description = "Strange things may befall the poor soul who drinks this potion."
+texture = ExtResource("4_ojmvb")

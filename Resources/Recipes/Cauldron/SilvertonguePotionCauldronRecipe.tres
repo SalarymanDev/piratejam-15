@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=7 format=3 uid="uid://bajbi6cktij01"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_ormtk"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_l8rlj"]
+[ext_resource type="Resource" uid="uid://dq8qeas4dmy1c" path="res://Resources/Ingredients/MortarPestle/FineSalt.tres" id="3_30tv6"]
+[ext_resource type="Resource" uid="uid://dms03lwd1oid7" path="res://Resources/Ingredients/MortarPestle/BatPowder.tres" id="4_y0ueq"]
+[ext_resource type="Resource" uid="uid://c06t1usvpmeei" path="res://Resources/Potions/SilvertonguePotion.tres" id="5_fnti6"]
+[ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="6_yx3qm"]
+
+[resource]
+script = ExtResource("6_yx3qm")
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_ormtk"), ExtResource("2_l8rlj"), ExtResource("3_30tv6"), ExtResource("4_y0ueq")])
+output = ExtResource("5_fnti6")

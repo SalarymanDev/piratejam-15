@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://c06t1usvpmeei"]
+
+[ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_4qlmm"]
+[ext_resource type="Texture2D" uid="uid://dfi7thxe44xe3" path="res://Assets/Sprites/phials/white-phial.png" id="2_6nm6n"]
+
+[resource]
+script = ExtResource("1_4qlmm")
+potion = 15
+value = 8
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+name = "Silvertongue Potion"
+description = "If no one wants to buy it perhaps they can be persuaded"
+texture = ExtResource("2_6nm6n")

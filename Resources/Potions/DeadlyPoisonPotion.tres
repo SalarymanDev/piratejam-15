@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://mo3ampv14xo3"]
+
+[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_vmdnb"]
+[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_ribut"]
+[ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="3_nl6aj"]
+[ext_resource type="Texture2D" uid="uid://cumdpsqpq76v3" path="res://Assets/Sprites/potions/green-potion.png" id="4_k34yc"]
+
+[resource]
+script = ExtResource("3_nl6aj")
+potion = 18
+value = 12
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_vmdnb"), ExtResource("2_ribut")])
+name = "Deadly Poison"
+description = "Effective and imperceptible. Your most devious creation yet."
+texture = ExtResource("4_k34yc")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://1x8u3wedwc2w"]
+
+[ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="2_6rwun"]
+[ext_resource type="Texture2D" uid="uid://dpuvshrs1j026" path="res://Assets/Sprites/potions/red-potion.png" id="2_l4diw"]
+
+[resource]
+script = ExtResource("2_6rwun")
+potion = 19
+value = 14
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+name = "Draught of Healing"
+description = "A source of healing for the wounded adventurer or exhausted laborer."
+texture = ExtResource("2_l4diw")
