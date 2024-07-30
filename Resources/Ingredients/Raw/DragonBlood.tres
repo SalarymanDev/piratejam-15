@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://byt0w0v3varip"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_0vte1"]
-[ext_resource type="Texture2D" uid="uid://sb7f4wvbhax3" path="res://Assets/Sprites/DragonBlood.png" id="2_t53k3"]
+[ext_resource type="Texture2D" uid="uid://1c8m31r54bji" path="res://Assets/Sprites/crystals/red-crystal.png" id="2_15uue"]
 
 [resource]
 script = ExtResource("1_0vte1")
 ingredient = 6
 name = "Dragon's Blood"
-description = "Dark crimson flakes used for protection, projection, and power."
-texture = ExtResource("2_t53k3")
+description = "Crimson flakes used for protection, projection, and power."
+texture = ExtResource("2_15uue")

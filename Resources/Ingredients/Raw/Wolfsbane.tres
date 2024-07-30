@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://csovk45m2l8k4"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_atk4s"]
-[ext_resource type="Texture2D" uid="uid://b5s3lhpwwbmai" path="res://Assets/Sprites/Wolfsbane.png" id="2_xrwty"]
+[ext_resource type="Texture2D" uid="uid://b07v4ctle7p42" path="res://Assets/Sprites/plants/purple-plant.png" id="2_pj75k"]
 
 [resource]
 script = ExtResource("1_atk4s")
 ingredient = 3
 name = "Wolfsbane"
-description = "Crushed flower petals used for transmutation."
-texture = ExtResource("2_xrwty")
+description = "Flower petals used for transmutation."
+texture = ExtResource("2_pj75k")
