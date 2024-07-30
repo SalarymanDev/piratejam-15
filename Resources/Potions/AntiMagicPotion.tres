@@ -11,5 +11,5 @@ potion = 14
 value = 80
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_xaur0"), ExtResource("2_hqxno")])
 name = "Anti-Magic Potion"
-description = "A powerful defense against magic, perhaps"
+description = "Magic isn't real idiot."
 texture = ExtResource("2_7t5wr")

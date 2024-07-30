@@ -10,5 +10,5 @@ potion = 3
 value = 40
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("3_yyatb")])
 name = "Bubbly Tonic"
-description = "A useful tonic for soothing indigestion."
+description = "What's the Gin recipe?"
 texture = ExtResource("6_sgs8q")

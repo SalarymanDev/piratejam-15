@@ -11,5 +11,5 @@ potion = 4
 value = 100
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("2_7uy5x"), ExtResource("4_3qohk")])
 name = "Elixir of Flight"
-description = "The potion itself floats a few centimeters off the ground."
+description = "Elixir of landing sold separate."
 texture = ExtResource("7_thh3i")

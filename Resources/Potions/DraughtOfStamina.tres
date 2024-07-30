@@ -11,5 +11,5 @@ potion = 11
 value = 60
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_ny0jl"), ExtResource("2_1exqe")])
 name = "Draught of Stamina"
-description = "Drinking this potion invigorates the mind and body"
+description = "It keeps going and going..."
 texture = ExtResource("2_ija55")

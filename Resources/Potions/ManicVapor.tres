@@ -10,5 +10,5 @@ potion = 6
 value = 40
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_xm867")])
 name = "Manic Vapor"
-description = "Smelling this vapor makes you dizzy."
+description = "Sheogorath sends his regards."
 texture = ExtResource("3_mh2hy")

@@ -10,5 +10,5 @@ potion = 12
 value = 65
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_8cb5a")])
 name = "Antivenom"
-description = "This potion eliminates the effects of toxins in the body"
+description = "Now 100% less toxic."
 texture = ExtResource("2_8jy5d")

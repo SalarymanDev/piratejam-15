@@ -11,5 +11,5 @@ potion = 13
 value = 40
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_o7lss"), ExtResource("2_r8ik8")])
 name = "Lycanthropy Potion"
-description = "A potion for transfiguring into a wearwolf"
+description = "Teenagers and London."
 texture = ExtResource("2_c67q0")

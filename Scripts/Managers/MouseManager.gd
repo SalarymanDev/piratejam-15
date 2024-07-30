@@ -7,7 +7,7 @@ func _ready() -> void:
 	tooltip_label.visible = false
 	tooltip_label.z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 	tooltip_label.theme = preload("res://Assets/main.tres")
-	tooltip_label.add_theme_font_size_override("font_size", 24)
+	tooltip_label.add_theme_font_size_override("font_size", 40)
 	get_tree().root.add_child.call_deferred(tooltip_label)
 
 func set_target(new_target: Node2D) -> void:

@@ -12,5 +12,5 @@ potion = 20
 value = 150
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_a6w6t"), ExtResource("2_ukw6h"), ExtResource("4_0t74w")])
 name = "Philosopher's Potion"
-description = "This one is laborious, but it ought to be useful to someone..."
+description = "But what IS a potion?"
 texture = ExtResource("2_nj46y")

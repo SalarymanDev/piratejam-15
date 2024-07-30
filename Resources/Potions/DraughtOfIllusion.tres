@@ -12,5 +12,5 @@ potion = 16
 value = 90
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("3_01jt3"), ExtResource("4_lfbs5"), ExtResource("5_w07lw")])
 name = "Draught of Illusion"
-description = "Strange things may befall the poor soul who drinks this potion."
+description = "Strange things mMind freak."
 texture = ExtResource("4_ojmvb")

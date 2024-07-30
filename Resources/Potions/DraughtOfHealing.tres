@@ -12,5 +12,5 @@ potion = 19
 value = 140
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_474aa"), ExtResource("2_cvkcp"), ExtResource("4_irtmk")])
 name = "Draught of Healing"
-description = "A source of healing for the wounded adventurer or exhausted laborer."
+description = "I got better."
 texture = ExtResource("2_l4diw")

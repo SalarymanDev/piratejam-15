@@ -10,5 +10,5 @@ potion = 2
 value = 20
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_op5gs")])
 name = "Invisibility Potion"
-description = "An invisibility potion that is... visible."
+description = "Then why can I see it?"
 texture = ExtResource("2_qgy7g")

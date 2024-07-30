@@ -11,5 +11,5 @@ potion = 15
 value = 80
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_mtdlh"), ExtResource("2_bi3xi")])
 name = "Silvertongue Potion"
-description = "If no one wants to buy it perhaps they can be persuaded"
+description = "Goes down smooth."
 texture = ExtResource("2_6nm6n")

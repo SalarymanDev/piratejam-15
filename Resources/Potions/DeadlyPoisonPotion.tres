@@ -11,5 +11,5 @@ potion = 18
 value = 120
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_murwb"), ExtResource("2_0v8kk")])
 name = "Deadly Poison"
-description = "Effective and imperceptible. Your most devious creation yet."
+description = "SaSaftey labels have been removed."
 texture = ExtResource("4_k34yc")

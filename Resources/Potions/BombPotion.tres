@@ -11,5 +11,5 @@ potion = 9
 value = 50
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_5lw6t"), ExtResource("2_qd6nq")])
 name = "Bomb Potion"
-description = "Highly volatile potion DO NOT DROP"
+description = "1..2..5!"
 texture = ExtResource("2_lhdqc")

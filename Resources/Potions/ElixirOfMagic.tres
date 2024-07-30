@@ -11,5 +11,5 @@ potion = 17
 value = 75
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("2_c2tqh"), ExtResource("3_fxwxc")])
 name = "Elixir of Magic"
-description = "Wizards, witches, and warlocks. All likely candidates for this new recipe."
+description = "Is it a hard or soft magic?"
 texture = ExtResource("2_0bavo")

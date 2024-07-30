@@ -11,5 +11,5 @@ potion = 10
 value = 120
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_7d6ad"), ExtResource("2_t1ww3")])
 name = "Liquid Luck"
-description = "The exact effects of the potion are unkown, but users report greatly improved odds of success"
+description = "Whatever that means."
 texture = ExtResource("2_1totp")

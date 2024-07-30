@@ -9,5 +9,5 @@ potion = 0
 value = 0
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
 name = "Trash Potion"
-description = "I wonder what went wrong"
+description = "Where did I go wrong?"
 texture = ExtResource("2_eqhgv")

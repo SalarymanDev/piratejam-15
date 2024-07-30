@@ -10,5 +10,5 @@ potion = 7
 value = 30
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_i66ii")])
 name = "Dragon's Breath"
-description = "A gaseous mixture smelling of... brimstone?"
+description = "He really needs to brush."
 texture = ExtResource("3_iu4pw")

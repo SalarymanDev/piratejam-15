@@ -10,5 +10,5 @@ potion = 23
 value = 30
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_4i2w4")])
 name = "Lesser Magic Pot"
-description = "Dabbling in the art of magic may be easier with this in hand"
+description = "Just like Vegas."
 texture = ExtResource("2_fv8h7")

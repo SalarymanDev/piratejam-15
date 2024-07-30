@@ -10,5 +10,5 @@ potion = 22
 value = 30
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_10y4c")])
 name = "Lesser Stamina Pot"
-description = "Vitality and strength, but not too much"
+description = "250% DV Caffeine"
 texture = ExtResource("2_xj5ky")

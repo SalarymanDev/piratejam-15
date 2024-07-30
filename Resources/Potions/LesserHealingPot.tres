@@ -10,5 +10,5 @@ potion = 21
 value = 50
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_at8wb")])
 name = "Lesser Healing Pot"
-description = "A little healing never hurt anybody"
+description = "Now over the counter."
 texture = ExtResource("2_f3c6e")
