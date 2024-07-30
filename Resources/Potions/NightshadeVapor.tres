@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("3_hmpn3")
 potion = 8
-value = 1
+value = 10
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_5ctsd")])
 name = "Nightshade Vapor"
 description = "This potent gas makes your eyelids heavy."

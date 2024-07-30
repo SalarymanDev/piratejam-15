@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://6gnmnnrpxp8s"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://6gnmnnrpxp8s"]
 
+[ext_resource type="Resource" uid="uid://pcjmrbaqnsb0" path="res://Resources/Ingredients/MortarPestle/FeatherPowder.tres" id="1_8cb5a"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_mmgc8"]
 [ext_resource type="Texture2D" uid="uid://cumdpsqpq76v3" path="res://Assets/Sprites/potions/green-potion.png" id="2_8jy5d"]
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="2_ofdck"]
+[ext_resource type="Resource" uid="uid://d3685v0sinoy1" path="res://Resources/Ingredients/Alembic/PurpleTincture.tres" id="3_w10rm"]
 
 [resource]
 script = ExtResource("1_mmgc8")
 potion = 12
-value = 6
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+value = 60
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_8cb5a"), ExtResource("2_ofdck"), ExtResource("3_w10rm")])
 name = "Antivenom"
 description = "This potion eliminates the effects of toxins in the body"
 texture = ExtResource("2_8jy5d")

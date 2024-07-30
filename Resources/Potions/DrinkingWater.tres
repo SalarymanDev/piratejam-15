@@ -8,7 +8,7 @@
 [resource]
 script = ExtResource("1_q6e1u")
 potion = 1
-value = 1
+value = 10
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_srlyv"), ExtResource("2_eeu0r")])
 name = "Drinking Water"
 description = "Boiled water, impressive potion making skills."

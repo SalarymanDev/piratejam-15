@@ -1,7 +1,5 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=8 format=3 uid="uid://dy5cr3p41lhrm"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://dy5cr3p41lhrm"]
 
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_nxvqq"]
-[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_bx7ri"]
 [ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="3_01jt3"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="3_w4cvh"]
 [ext_resource type="Resource" uid="uid://bnr2gq37y62l6" path="res://Resources/Ingredients/MortarPestle/MandrakePowder.tres" id="4_lfbs5"]
@@ -11,8 +9,8 @@
 [resource]
 script = ExtResource("3_w4cvh")
 potion = 16
-value = 9
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_nxvqq"), ExtResource("2_bx7ri"), ExtResource("3_01jt3"), ExtResource("4_lfbs5"), ExtResource("5_w07lw")])
+value = 90
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("3_01jt3"), ExtResource("4_lfbs5"), ExtResource("5_w07lw")])
 name = "Draught of Illusion"
 description = "Strange things may befall the poor soul who drinks this potion."
 texture = ExtResource("4_ojmvb")

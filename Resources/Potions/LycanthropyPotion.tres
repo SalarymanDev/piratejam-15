@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://dr2bg6vhdvn3f"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://dr2bg6vhdvn3f"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_mhrfv"]
+[ext_resource type="Resource" uid="uid://csovk45m2l8k4" path="res://Resources/Ingredients/Raw/Wolfsbane.tres" id="1_o7lss"]
 [ext_resource type="Texture2D" uid="uid://bj7lhqb3mfkgp" path="res://Assets/Sprites/phials/green-phial.png" id="2_c67q0"]
+[ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="2_r8ik8"]
 
 [resource]
 script = ExtResource("1_mhrfv")
 potion = 13
-value = 4
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+value = 40
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_o7lss"), ExtResource("2_r8ik8")])
 name = "Lycanthropy Potion"
 description = "A potion for transfiguring into a wearwolf"
 texture = ExtResource("2_c67q0")

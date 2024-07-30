@@ -1,16 +1,14 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://cp5fojqkt7qvq"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=4 format=3 uid="uid://cp5fojqkt7qvq"]
 
 [ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="1_op5gs"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_p5hx4"]
 [ext_resource type="Texture2D" uid="uid://dbdl25mk20m16" path="res://Assets/Sprites/potions/purple-potion.png" id="2_qgy7g"]
-[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_vp360"]
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="3_jypxj"]
 
 [resource]
 script = ExtResource("1_p5hx4")
 potion = 2
-value = 2
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_op5gs"), ExtResource("2_vp360"), ExtResource("3_jypxj")])
+value = 20
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_op5gs")])
 name = "Invisibility Potion"
 description = "An invisibility potion that is... visible."
 texture = ExtResource("2_qgy7g")

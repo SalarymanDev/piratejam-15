@@ -1,13 +1,17 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://bwdtbwsjbl22e"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=7 format=3 uid="uid://bwdtbwsjbl22e"]
 
+[ext_resource type="Resource" uid="uid://cyysi1il2ed53" path="res://Resources/Ingredients/Alembic/ChromaticTincture.tres" id="1_a6w6t"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="2_il4on"]
 [ext_resource type="Texture2D" uid="uid://cwqowow8ft4gi" path="res://Assets/Sprites/potions/base-potion.png" id="2_nj46y"]
+[ext_resource type="Resource" uid="uid://bmvgrxcluuj8b" path="res://Resources/Ingredients/Alembic/MoonlightEssence.tres" id="2_ukw6h"]
+[ext_resource type="Resource" uid="uid://bnr2gq37y62l6" path="res://Resources/Ingredients/MortarPestle/MandrakePowder.tres" id="3_d5a3f"]
+[ext_resource type="Resource" uid="uid://ypg7sev501n8" path="res://Resources/Ingredients/MortarPestle/DragonPaste.tres" id="4_0t74w"]
 
 [resource]
 script = ExtResource("2_il4on")
 potion = 20
-value = 15
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+value = 150
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_a6w6t"), ExtResource("2_ukw6h"), ExtResource("3_d5a3f"), ExtResource("4_0t74w")])
 name = "Philosopher's Potion"
 description = "This one is laborious, but it ought to be useful to someone..."
 texture = ExtResource("2_nj46y")

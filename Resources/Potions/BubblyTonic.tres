@@ -1,16 +1,14 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://dyyfncejukx4i"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=4 format=3 uid="uid://dyyfncejukx4i"]
 
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_d58jo"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_lkecn"]
 [ext_resource type="Resource" uid="uid://bc2kd7qk6e57v" path="res://Resources/Ingredients/Raw/MandrakeRoot.tres" id="3_yyatb"]
-[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="4_3nsl2"]
 [ext_resource type="Texture2D" uid="uid://cwqowow8ft4gi" path="res://Assets/Sprites/potions/base-potion.png" id="6_sgs8q"]
 
 [resource]
 script = ExtResource("1_lkecn")
 potion = 3
-value = 4
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_d58jo"), ExtResource("3_yyatb"), ExtResource("4_3nsl2")])
+value = 40
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("3_yyatb")])
 name = "Bubbly Tonic"
 description = "A useful tonic for soothing indigestion."
 texture = ExtResource("6_sgs8q")

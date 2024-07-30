@@ -59,7 +59,7 @@ func _end_day() -> void:
 	_potions_sold_per_day[_current_day] = _potions_sold_today
 	_potions_sold_today = []
 	_current_day += 1
-	_current_rent += 100
+	_current_rent += 50
 	emit_signal(rent_changed_event.get_name(), _current_rent)
 
 func sell_potion(potion: PotionResource) -> void:

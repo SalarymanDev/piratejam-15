@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://bqscw7qjbegvt"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://bqscw7qjbegvt"]
 
+[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="1_7d6ad"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_q0h2i"]
 [ext_resource type="Texture2D" uid="uid://dwl20vdljs8k7" path="res://Assets/Sprites/phials/orange-phial.png" id="2_1totp"]
+[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="2_t1ww3"]
 
 [resource]
 script = ExtResource("1_q0h2i")
 potion = 10
-value = 12
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+value = 120
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_7d6ad"), ExtResource("2_t1ww3")])
 name = "Liquid Luck"
 description = "The exact effects of the potion are unkown, but users report greatly improved odds of success"
 texture = ExtResource("2_1totp")

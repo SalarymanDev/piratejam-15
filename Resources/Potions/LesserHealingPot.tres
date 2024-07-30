@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://8oiw4gwhpr5x"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=4 format=3 uid="uid://8oiw4gwhpr5x"]
 
+[ext_resource type="Resource" uid="uid://c10pijyxfrgyi" path="res://Resources/Ingredients/Raw/UnicornBlood.tres" id="1_at8wb"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_d8awy"]
 [ext_resource type="Texture2D" uid="uid://d1cri5uwecdtg" path="res://Assets/Sprites/orbs/red-orb.png" id="2_f3c6e"]
 
 [resource]
 script = ExtResource("1_d8awy")
 potion = 21
-value = 5
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+value = 50
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_at8wb")])
 name = "Lesser Healing Pot"
 description = "A little healing never hurt anybody"
 texture = ExtResource("2_f3c6e")

@@ -1,18 +1,16 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=8 format=3 uid="uid://tq04rde14ejh"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://tq04rde14ejh"]
 
-[ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_osm3t"]
 [ext_resource type="Resource" uid="uid://dms03lwd1oid7" path="res://Resources/Ingredients/MortarPestle/BatPowder.tres" id="2_reqpr"]
 [ext_resource type="Resource" uid="uid://cla24laloek6e" path="res://Resources/Ingredients/Alembic/WolfsbaneExtract.tres" id="3_b7ulq"]
 [ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="4_f23bi"]
-[ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="5_5bdpw"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="6_7h13h"]
 [ext_resource type="Texture2D" uid="uid://bx2nwid72vqou" path="res://Assets/Sprites/phials/yellow-phial.png" id="7_jwu5p"]
 
 [resource]
 script = ExtResource("6_7h13h")
 potion = 5
-value = 10
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_osm3t"), ExtResource("2_reqpr"), ExtResource("3_b7ulq"), ExtResource("4_f23bi"), ExtResource("5_5bdpw")])
+value = 100
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("2_reqpr"), ExtResource("3_b7ulq"), ExtResource("4_f23bi")])
 name = "Elixir Of Speed"
 description = "The potion gives great haste to the user."
 texture = ExtResource("7_jwu5p")

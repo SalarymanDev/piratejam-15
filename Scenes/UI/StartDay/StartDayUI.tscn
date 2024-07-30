@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmw8pi86flogu"]
+[gd_scene load_steps=8 format=3 uid="uid://dmw8pi86flogu"]
 
 [ext_resource type="Script" path="res://Scenes/UI/StartDay/StartDayUI.gd" id="1_04wkk"]
 [ext_resource type="Theme" path="res://Assets/main.tres" id="1_g1txj"]
 [ext_resource type="Texture2D" uid="uid://b3aaqqb0efncq" path="res://Assets/Sprites/UI/upgrades.png" id="2_mx83h"]
+[ext_resource type="Texture2D" uid="uid://bpyag4gbw4xqw" path="res://Assets/Sprites/UI/dialogue.png" id="3_8texm"]
+[ext_resource type="Texture2D" uid="uid://boyin2sdgisvx" path="res://Assets/Sprites/UI/header.png" id="3_l6kww"]
 [ext_resource type="Texture2D" uid="uid://hha2k0im5e7g" path="res://Assets/Sprites/UI/Button/button.png" id="3_o2w6a"]
 [ext_resource type="Texture2D" uid="uid://daeylj4cuw133" path="res://Assets/Sprites/UI/Button/button_pressed.png" id="4_iidsr"]
 
@@ -18,6 +20,102 @@ theme = ExtResource("1_g1txj")
 script = ExtResource("1_04wkk")
 notes = Array[String](["Moon Dust and Mercury seem to work well together... but with what?", "Wolfsbane has magic warding properties...", "How did I make Dragon's Breath before?", "Cockatrice poison found in feathers...", "Mandrake may induce hallucinations... or transumations?", "Bat wings and salt may make something but I'll need break them down first.", "If I want an elixir I should put mercury in it", "The Bomb Potion may require some fire and smoke...", "Bat Wings seem to have invigorating properties", "I believe Unicorn Blood is a good source of life essence..."])
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = 8.0
+offset_right = 1720.0
+offset_bottom = 232.0
+texture = ExtResource("3_l6kww")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect2"]
+modulate = Color(0.258824, 0.258824, 0.258824, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 105.0
+offset_top = 87.0
+offset_right = -76.0
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="TextureRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Recent Potions"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -312.0
+offset_right = 900.0
+offset_bottom = 488.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_g1txj")
+theme_override_constants/h_separation = 250
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_8texm")
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/TextureRect"]
+layout_mode = 1
+offset_left = 70.0
+offset_top = 75.0
+offset_right = 620.0
+offset_bottom = 143.0
+
+[node name="Label" type="Label" parent="GridContainer/TextureRect/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_g1txj")
+theme_override_colors/font_color = Color(0.301961, 0.301961, 0.301961, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_8texm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/TextureRect2"]
+layout_mode = 1
+offset_left = 70.0
+offset_top = 75.0
+offset_right = 620.0
+offset_bottom = 143.0
+
+[node name="Label" type="Label" parent="GridContainer/TextureRect2/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_g1txj")
+theme_override_colors/font_color = Color(0.301961, 0.301961, 0.301961, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="TextureRect3" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_8texm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/TextureRect3"]
+layout_mode = 1
+offset_left = 70.0
+offset_top = 75.0
+offset_right = 620.0
+offset_bottom = 143.0
+
+[node name="Label" type="Label" parent="GridContainer/TextureRect3/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_g1txj")
+theme_override_colors/font_color = Color(0.301961, 0.301961, 0.301961, 1)
+theme_override_font_sizes/font_size = 20
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -25,10 +123,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -314.5
-offset_top = -338.5
-offset_right = 314.5
-offset_bottom = 338.5
+offset_left = -848.0
+offset_top = -382.0
+offset_right = -219.0
+offset_bottom = 295.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_mx83h")

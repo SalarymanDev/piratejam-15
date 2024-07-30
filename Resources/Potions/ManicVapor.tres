@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("2_0wxvf")
 potion = 6
-value = 4
+value = 40
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_xm867")])
 name = "Manic Vapor"
 description = "Smelling this vapor makes you dizzy."

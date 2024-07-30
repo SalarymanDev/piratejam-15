@@ -183,3 +183,5 @@ scale = Vector2(0.5, 0.5)
 
 [node name="MainUi" parent="CanvasLayer" instance=ExtResource("21_p262u")]
 metadata/_edit_use_anchors_ = true
+
+[connection signal="potion_crafted" from="NavigationRegion2D/Cauldron" to="CanvasLayer/MainUi" method="_on_cauldron_potion_crafted"]

@@ -11,6 +11,12 @@ extends Control
 @onready var end_day_ui: Control = $EndDayUi
 @onready var potion_use_audio: AudioComponent = $AudioComponent
 
+@onready var first_potion: Label = start_day_ui.get_node("GridContainer/TextureRect/HBoxContainer/Label")
+@onready var second_potion: Label = start_day_ui.get_node("GridContainer/TextureRect2/HBoxContainer/Label")
+@onready var third_potion: Label = start_day_ui.get_node("GridContainer/TextureRect3/HBoxContainer/Label")
+
+var current_recent_potion: int = 0
+
 func _ready() -> void:
 	GameStateManager.time_changed_event.connect(_update_time)
 	GameStateManager.money_changed_event.connect(_update_money)
@@ -51,3 +57,27 @@ func _on_start_day_pressed() -> void:
 
 func _on_next_day_pressed() -> void:
 	start_day_ui.visible = true
+
+
+func _on_cauldron_potion_crafted(item: PotionResource) -> void:
+	
+	if(item.potion == Enums.Potions.Trash || item.ingredients.is_empty()):
+		return
+
+	var note: String = item.ingredients[0].name
+	for i: int in range(1, item.ingredients.size()):
+		note = note + " + " + item.ingredients[i].name
+	
+	note = note + " = " + item.name
+	
+	if current_recent_potion == 0:
+		first_potion.text = note
+	elif current_recent_potion == 1:
+		second_potion.text = note
+	elif current_recent_potion == 2:
+		third_potion.text = note
+	else:
+		current_recent_potion = 0
+		first_potion.text = note
+	
+	current_recent_potion += 1

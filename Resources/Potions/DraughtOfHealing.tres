@@ -1,13 +1,17 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=3 format=3 uid="uid://1x8u3wedwc2w"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=7 format=3 uid="uid://1x8u3wedwc2w"]
 
+[ext_resource type="Resource" uid="uid://cyysi1il2ed53" path="res://Resources/Ingredients/Alembic/ChromaticTincture.tres" id="1_474aa"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="2_6rwun"]
+[ext_resource type="Resource" uid="uid://ypg7sev501n8" path="res://Resources/Ingredients/MortarPestle/DragonPaste.tres" id="2_cvkcp"]
 [ext_resource type="Texture2D" uid="uid://dpuvshrs1j026" path="res://Assets/Sprites/potions/red-potion.png" id="2_l4diw"]
+[ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="3_rvqvj"]
+[ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="4_irtmk"]
 
 [resource]
 script = ExtResource("2_6rwun")
 potion = 19
-value = 14
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([])
+value = 140
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_474aa"), ExtResource("2_cvkcp"), ExtResource("3_rvqvj"), ExtResource("4_irtmk")])
 name = "Draught of Healing"
 description = "A source of healing for the wounded adventurer or exhausted laborer."
 texture = ExtResource("2_l4diw")

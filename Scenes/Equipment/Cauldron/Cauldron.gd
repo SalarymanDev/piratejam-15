@@ -22,6 +22,8 @@ extends StaticBody2D
 var _has_water: bool = false
 var _has_wood: bool = false
 
+signal potion_crafted
+
 func _on_drop_off_ingredient_event(ingredient: IngredientResource) -> void:
 	match ingredient.ingredient:
 		Enums.Ingredients.Water:
@@ -56,6 +58,9 @@ func _on_timer_timeout() -> void:
 	dropoff_component.disabled = true
 	var inputs := Array(takes_ingredients_component.get_ingredients(), TYPE_OBJECT, &"Resource", ItemResource)
 	item_component.item = recipe_table_component.process_inputs(inputs)
+	
+	emit_signal(potion_crafted.get_name(), item_component.item)
+	
 	clickable_component.update_tooltip(item_component.item.name)
 	takes_ingredients_component.clear()
 
