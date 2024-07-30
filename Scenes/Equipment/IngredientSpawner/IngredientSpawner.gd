@@ -30,7 +30,7 @@ func _ready() -> void:
 	if audio_clips:
 		audio_component.audio_clips = audio_clips
 	if clickable_component:
-		clickable_component.update_tooltip(tooltip)
+		clickable_component.update_tooltip("%s\n%s" % [item_component.item.name, item_component.item.description])
 	sprite.apply_scale(Vector2(instance_scale, instance_scale))
 
 func _process(_delta: float) -> void:

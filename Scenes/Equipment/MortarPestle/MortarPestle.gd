@@ -30,7 +30,7 @@ func _on_timer_timeout() -> void:
 	if item_component.item != null:
 		pickup_component.disabled = false
 		harvest_sprite.show()
-		clickable_component.update_tooltip(output.name)
+		clickable_component.update_tooltip("%s\n%s" % [output.name, output.description])
 	else:
 		dropoff_component.disabled = false
 		takes_ingredients_component.disabled = false
