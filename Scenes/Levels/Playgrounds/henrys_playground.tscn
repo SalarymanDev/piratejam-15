@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://k3ekgyuiqs1s" path="res://Scenes/Equipment/Table/Table.tscn" id="21_u4urn"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="22_xglq1"]
 [ext_resource type="Resource" uid="uid://ki0igx0pi4c6" path="res://Resources/Ingredients/Raw/Nightshade.tres" id="23_0iowq"]
-[ext_resource type="Resource" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="23_aptjq"]
+[ext_resource type="Resource" uid="uid://rw7y4402l4le" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="23_aptjq"]
 [ext_resource type="Resource" uid="uid://cuew4t7n5rpk1" path="res://Resources/Ingredients/Raw/CockatriceFeather.tres" id="24_l28jq"]
 [ext_resource type="Resource" uid="uid://byt0w0v3varip" path="res://Resources/Ingredients/Raw/DragonBlood.tres" id="24_neu71"]
 [ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="25_ah8xk"]

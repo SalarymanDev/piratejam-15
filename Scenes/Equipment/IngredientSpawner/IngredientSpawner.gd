@@ -18,14 +18,14 @@ func _ready() -> void:
 	assert(texture)
 	if Engine.is_editor_hint():
 		sprite.texture = texture
-		if shouldDisplayEmblem:
+		if shouldDisplayEmblem and item_component.item != null:
 			emblem.texture = item_component.item.texture
 		sprite.apply_scale(Vector2(instance_scale, instance_scale))
 		return
 	assert(ingredient)
 	item_component.item = ingredient
 	sprite.texture = texture
-	if shouldDisplayEmblem:
+	if shouldDisplayEmblem and item_component.item != null:
 		emblem.texture = item_component.item.texture
 	if audio_clips:
 		audio_component.audio_clips = audio_clips
@@ -38,7 +38,7 @@ func _process(_delta: float) -> void:
 		return
 	if sprite.texture != texture:
 		sprite.texture = texture
-	if emblem.texture != item_component.item.texture and shouldDisplayEmblem:
+	if shouldDisplayEmblem and item_component.item != null and emblem.texture != item_component.item.texture:
 		emblem.texture = item_component.item.texture
 
 func _on_picked_up_event() -> void:

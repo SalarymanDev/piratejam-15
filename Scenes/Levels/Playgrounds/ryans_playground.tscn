@@ -174,3 +174,5 @@ offset_left = 6.0
 offset_top = 16.0
 offset_right = -15.0
 offset_bottom = -1.0
+
+[connection signal="potion_crafted" from="NavigationRegion2D/Cauldron" to="CanvasLayer/MainUi" method="_on_cauldron_potion_crafted"]

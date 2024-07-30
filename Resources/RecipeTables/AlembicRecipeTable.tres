@@ -10,9 +10,9 @@
 [ext_resource type="Resource" uid="uid://bvgy3mt4mwfdv" path="res://Resources/Recipes/Alembic/SaltCrystalsAlembicRecipe.tres" id="7_8mnjf"]
 [ext_resource type="Resource" uid="uid://dafn42peccumm" path="res://Resources/Recipes/Alembic/WolfsbaneOilAlembicRecipe.tres" id="8_5ywer"]
 [ext_resource type="Resource" uid="uid://fmbobpn8iwco" path="res://Resources/Recipes/Alembic/LiquidBlazeAlembicRecipe.tres" id="9_huiu2"]
-[ext_resource type="Resource" uid="uid://c7kvgnvs2b1d1" path="res://Resources/Recipes/Alembic/DragonBreathAlembicRecipe.tres" id="10_n3xdj"]
-[ext_resource type="Resource" uid="uid://c6ad88fwmluq3" path="res://Resources/Recipes/Alembic/ManicVaporAlembicRecipe.tres" id="11_y1u5p"]
-[ext_resource type="Resource" uid="uid://ddeqsgajdft3j" path="res://Resources/Recipes/Alembic/NightshadeVaporAlembicRecipe.tres" id="12_nux3g"]
+[ext_resource type="Resource" path="res://Resources/Recipes/Alembic/DragonBreathAlembicRecipe.tres" id="10_n3xdj"]
+[ext_resource type="Resource" path="res://Resources/Recipes/Alembic/ManicVaporAlembicRecipe.tres" id="11_y1u5p"]
+[ext_resource type="Resource" path="res://Resources/Recipes/Alembic/NightshadeVaporAlembicRecipe.tres" id="12_nux3g"]
 
 [resource]
 script = ExtResource("1_wk8q2")
