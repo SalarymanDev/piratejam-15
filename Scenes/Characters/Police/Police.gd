@@ -38,9 +38,9 @@ func _physics_process(_delta: float) -> void:
 	if velocity.x == 0:
 		return
 	if velocity.x > 0:
-		sprite.flip_h = true
-	else:
 		sprite.flip_h = false
+	else:
+		sprite.flip_h = true
 
 func _on_leave_timeout() -> void:
 	_leaving = true
