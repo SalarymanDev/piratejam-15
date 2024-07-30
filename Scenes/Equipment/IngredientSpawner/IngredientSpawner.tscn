@@ -25,9 +25,13 @@ radius = 20.0
 script = ExtResource("1_kx42m")
 texture = ExtResource("2_ib2s4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="SpawnerSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("2_ib2s4")
+
+[node name="ItemEmblemSprite" type="Sprite2D" parent="."]
+position = Vector2(1, 16)
+scale = Vector2(0.04, 0.04)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
