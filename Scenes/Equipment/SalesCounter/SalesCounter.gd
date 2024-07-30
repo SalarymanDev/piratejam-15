@@ -24,7 +24,7 @@ func _ready() -> void:
 	clickable_component.apply_scale(scalar)
 	dropoff_component.apply_scale(scalar)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 
