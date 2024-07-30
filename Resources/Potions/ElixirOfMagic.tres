@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://3shexcpaccdd"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://3shexcpaccdd"]
 
-[ext_resource type="Resource" uid="uid://d3685v0sinoy1" path="res://Resources/Ingredients/Alembic/PurpleTincture.tres" id="1_7shxd"]
 [ext_resource type="Texture2D" uid="uid://bb8eof85t6abi" path="res://Assets/Sprites/potions/blue-potion.png" id="2_0bavo"]
 [ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="2_c2tqh"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="2_k04cq"]
@@ -9,8 +8,8 @@
 [resource]
 script = ExtResource("2_k04cq")
 potion = 17
-value = 90
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_7shxd"), ExtResource("2_c2tqh"), ExtResource("3_fxwxc")])
+value = 75
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("2_c2tqh"), ExtResource("3_fxwxc")])
 name = "Elixir of Magic"
 description = "Wizards, witches, and warlocks. All likely candidates for this new recipe."
 texture = ExtResource("2_0bavo")

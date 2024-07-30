@@ -1,16 +1,15 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://bldm5h3tp6cam"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://bldm5h3tp6cam"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_3xyfb"]
 [ext_resource type="Resource" uid="uid://byt0w0v3varip" path="res://Resources/Ingredients/Raw/DragonBlood.tres" id="1_5lw6t"]
 [ext_resource type="Texture2D" uid="uid://dq0shhq48boik" path="res://Assets/Sprites/potions/black-potion.png" id="2_lhdqc"]
 [ext_resource type="Resource" uid="uid://b6bhpmkvl44cd" path="res://Resources/Ingredients/Alembic/LiquidBlaze.tres" id="2_qd6nq"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="3_t0ma1"]
 
 [resource]
 script = ExtResource("1_3xyfb")
 potion = 9
 value = 50
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_5lw6t"), ExtResource("2_qd6nq"), ExtResource("3_t0ma1")])
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_5lw6t"), ExtResource("2_qd6nq")])
 name = "Bomb Potion"
 description = "Highly volatile potion DO NOT DROP"
 texture = ExtResource("2_lhdqc")

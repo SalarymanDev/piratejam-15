@@ -1,16 +1,15 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://d26four8wprnh"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://d26four8wprnh"]
 
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="1_dbb2y"]
 [ext_resource type="Resource" uid="uid://ki0igx0pi4c6" path="res://Resources/Ingredients/Raw/Nightshade.tres" id="1_ny0jl"]
 [ext_resource type="Resource" uid="uid://dms03lwd1oid7" path="res://Resources/Ingredients/MortarPestle/BatPowder.tres" id="2_1exqe"]
 [ext_resource type="Texture2D" uid="uid://cumdpsqpq76v3" path="res://Assets/Sprites/potions/green-potion.png" id="2_ija55"]
-[ext_resource type="Resource" uid="uid://c10pijyxfrgyi" path="res://Resources/Ingredients/Raw/UnicornBlood.tres" id="3_3c8gj"]
 
 [resource]
 script = ExtResource("1_dbb2y")
 potion = 11
 value = 60
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_ny0jl"), ExtResource("2_1exqe"), ExtResource("3_3c8gj")])
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_ny0jl"), ExtResource("2_1exqe")])
 name = "Draught of Stamina"
 description = "Drinking this potion invigorates the mind and body"
 texture = ExtResource("2_ija55")

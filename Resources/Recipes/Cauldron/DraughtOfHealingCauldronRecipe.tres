@@ -1,15 +1,14 @@
-[gd_resource type="Resource" script_class="RecipeResource" load_steps=9 format=3 uid="uid://myfpkwcyorl7"]
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=8 format=3 uid="uid://myfpkwcyorl7"]
 
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_u1buc"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="2_vin3o"]
 [ext_resource type="Resource" uid="uid://cyysi1il2ed53" path="res://Resources/Ingredients/Alembic/ChromaticTincture.tres" id="3_m33q4"]
 [ext_resource type="Resource" uid="uid://ypg7sev501n8" path="res://Resources/Ingredients/MortarPestle/DragonPaste.tres" id="4_oqqi5"]
-[ext_resource type="Resource" uid="uid://ccqyinlitbdr6" path="res://Resources/Ingredients/Raw/MoonDust.tres" id="5_g6ebn"]
 [ext_resource type="Resource" uid="uid://dpbwch4soo213" path="res://Resources/Ingredients/Raw/Mercury.tres" id="6_r3psg"]
 [ext_resource type="Resource" uid="uid://1x8u3wedwc2w" path="res://Resources/Potions/DraughtOfHealing.tres" id="7_np71p"]
 [ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="8_12xxb"]
 
 [resource]
 script = ExtResource("8_12xxb")
-inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_u1buc"), ExtResource("2_vin3o"), ExtResource("3_m33q4"), ExtResource("4_oqqi5"), ExtResource("5_g6ebn"), ExtResource("6_r3psg")])
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_u1buc"), ExtResource("2_vin3o"), ExtResource("3_m33q4"), ExtResource("4_oqqi5"), ExtResource("6_r3psg")])
 output = ExtResource("7_np71p")

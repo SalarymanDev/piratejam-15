@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="PotionResource" load_steps=6 format=3 uid="uid://mo3ampv14xo3"]
+[gd_resource type="Resource" script_class="PotionResource" load_steps=5 format=3 uid="uid://mo3ampv14xo3"]
 
 [ext_resource type="Resource" uid="uid://d4l41emscd3ft" path="res://Resources/Ingredients/MortarPestle/EssenceOfNightshade.tres" id="1_murwb"]
 [ext_resource type="Resource" uid="uid://dpkjhtqxsui88" path="res://Resources/Ingredients/Alembic/PoisonOil.tres" id="2_0v8kk"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="3_gm54v"]
 [ext_resource type="Script" path="res://Scripts/PotionResource.gd" id="3_nl6aj"]
 [ext_resource type="Texture2D" uid="uid://cumdpsqpq76v3" path="res://Assets/Sprites/potions/green-potion.png" id="4_k34yc"]
 
@@ -10,7 +9,7 @@
 script = ExtResource("3_nl6aj")
 potion = 18
 value = 120
-ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_murwb"), ExtResource("2_0v8kk"), ExtResource("3_gm54v")])
+ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_murwb"), ExtResource("2_0v8kk")])
 name = "Deadly Poison"
 description = "Effective and imperceptible. Your most devious creation yet."
 texture = ExtResource("4_k34yc")

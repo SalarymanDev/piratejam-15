@@ -1,14 +1,13 @@
-[gd_resource type="Resource" script_class="RecipeResource" load_steps=8 format=3 uid="uid://hnqi1olq1a7n"]
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=7 format=3 uid="uid://hnqi1olq1a7n"]
 
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="1_yxbjg"]
 [ext_resource type="Resource" uid="uid://d4l41emscd3ft" path="res://Resources/Ingredients/MortarPestle/EssenceOfNightshade.tres" id="3_nu3ly"]
 [ext_resource type="Resource" uid="uid://dpkjhtqxsui88" path="res://Resources/Ingredients/Alembic/PoisonOil.tres" id="4_idtep"]
-[ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="5_0rnfr"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="5_xkd2e"]
 [ext_resource type="Resource" uid="uid://mo3ampv14xo3" path="res://Resources/Potions/DeadlyPoisonPotion.tres" id="6_8ouio"]
 [ext_resource type="Script" path="res://Scripts/RecipeResource.gd" id="7_p7hyh"]
 
 [resource]
 script = ExtResource("7_p7hyh")
-inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_yxbjg"), ExtResource("5_xkd2e"), ExtResource("3_nu3ly"), ExtResource("4_idtep"), ExtResource("5_0rnfr")])
+inputs = Array[Resource("res://Scripts/ItemResource.gd")]([ExtResource("1_yxbjg"), ExtResource("5_xkd2e"), ExtResource("3_nu3ly"), ExtResource("4_idtep")])
 output = ExtResource("6_8ouio")
