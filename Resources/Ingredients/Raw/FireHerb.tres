@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://rw7y4402l4le"]
+[gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://b0vbt7yw3bojb"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_inyee"]
 [ext_resource type="Texture2D" uid="uid://b64wk0sudt63d" path="res://Assets/Sprites/plants/red-plant.png" id="2_ual17"]
@@ -7,5 +7,5 @@
 script = ExtResource("1_inyee")
 ingredient = 12
 name = "Fire Herb"
-description = "It burns when I pee"
+description = "Flame and fury"
 texture = ExtResource("2_ual17")

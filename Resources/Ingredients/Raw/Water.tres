@@ -7,5 +7,5 @@
 script = ExtResource("1_cx3ol")
 ingredient = 0
 name = "Water"
-description = "The fist ingredient in any potion is a cauldron full of water"
+description = "Always the first ingredient"
 texture = ExtResource("2_ttftx")

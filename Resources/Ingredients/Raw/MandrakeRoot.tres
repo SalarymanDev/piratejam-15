@@ -7,5 +7,5 @@
 script = ExtResource("1_o0c2e")
 ingredient = 2
 name = "Mandrake Root"
-description = "An unseemly root known for its hallucinogenic properties."
+description = "Known for its maddening effects"
 texture = ExtResource("2_t173t")

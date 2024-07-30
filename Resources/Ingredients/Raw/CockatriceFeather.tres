@@ -7,5 +7,5 @@
 script = ExtResource("1_b61kr")
 ingredient = 7
 name = "Cockatrice Feather"
-description = "The dried feather of a cockatrice, used in poisons and antidotes."
+description = "Used in poisons and antidotes."
 texture = ExtResource("2_2tccy")

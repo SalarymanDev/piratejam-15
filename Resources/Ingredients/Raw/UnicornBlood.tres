@@ -7,5 +7,5 @@
 script = ExtResource("1_2u6fw")
 ingredient = 10
 name = "Unicorn Blood"
-description = "Polychromatic and known to be a controversial source of youth and vitality."
+description = "A controversial source of youth and vitality."
 texture = ExtResource("2_0slgn")

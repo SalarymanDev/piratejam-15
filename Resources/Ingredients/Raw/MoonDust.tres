@@ -7,5 +7,5 @@
 script = ExtResource("1_rb2k8")
 ingredient = 11
 name = "Moon Dust"
-description = "A glowing dust said to be most enchanting."
+description = "A glowing dust for enchantments and magic."
 texture = ExtResource("2_nd04t")

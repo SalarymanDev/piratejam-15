@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dmw8pi86flogu"]
 
 [ext_resource type="Script" path="res://Scenes/UI/StartDay/StartDayUI.gd" id="1_04wkk"]
-[ext_resource type="Theme" uid="uid://weq3a2i0088l" path="res://Assets/main.tres" id="1_g1txj"]
+[ext_resource type="Theme" path="res://Assets/main.tres" id="1_g1txj"]
 [ext_resource type="Texture2D" uid="uid://b3aaqqb0efncq" path="res://Assets/Sprites/UI/upgrades.png" id="2_mx83h"]
 [ext_resource type="Texture2D" uid="uid://bpyag4gbw4xqw" path="res://Assets/Sprites/UI/dialogue.png" id="3_8texm"]
 [ext_resource type="Texture2D" uid="uid://boyin2sdgisvx" path="res://Assets/Sprites/UI/header.png" id="3_l6kww"]

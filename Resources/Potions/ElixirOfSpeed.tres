@@ -12,5 +12,5 @@ potion = 5
 value = 100
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("2_reqpr"), ExtResource("3_b7ulq"), ExtResource("4_f23bi")])
 name = "Elixir Of Speed"
-description = "Kachow."
+description = "Kachow"
 texture = ExtResource("7_jwu5p")

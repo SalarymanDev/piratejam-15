@@ -7,5 +7,5 @@
 script = ExtResource("1_f0877")
 ingredient = 8
 name = "Bat Wings"
-description = "Preserved wings of the common cave bat, representing flight over fury."
+description = "These wings represent flight over fury."
 texture = ExtResource("2_7uora")

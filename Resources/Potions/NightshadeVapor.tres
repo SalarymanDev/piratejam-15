@@ -10,5 +10,5 @@ potion = 8
 value = 10
 ingredients = Array[Resource("res://Scripts/IngredientResource.gd")]([ExtResource("1_5ctsd")])
 name = "Nightshade Vapor"
-description = "Toxic and smells like farts."
+description = "Toxic and stinking."
 texture = ExtResource("3_iu57y")
