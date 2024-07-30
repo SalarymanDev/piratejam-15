@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bqt68tspugd2i" path="res://Assets/Sprites/firewood.png" id="8_le5ea"]
 [ext_resource type="Resource" uid="uid://cuew4t7n5rpk1" path="res://Resources/Ingredients/Raw/CockatriceFeather.tres" id="9_c54uq"]
 [ext_resource type="Resource" uid="uid://c7eflg5t1nlmg" path="res://Resources/Ingredients/Raw/Water.tres" id="9_yscs3"]
-[ext_resource type="Resource" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="10_fy2v4"]
+[ext_resource type="Resource" uid="uid://rw7y4402l4le" path="res://Resources/Ingredients/Raw/FireHerb.tres" id="10_fy2v4"]
 [ext_resource type="Texture2D" uid="uid://d1p0nxkbd7qhi" path="res://Assets/Sprites/well.png" id="10_mc7wo"]
 [ext_resource type="PackedScene" uid="uid://cllo3pfqarwug" path="res://Scenes/Equipment/Alembic/Alembic.tscn" id="11_38d5h"]
 [ext_resource type="PackedScene" uid="uid://b0a1s4bo3krrq" path="res://Scenes/UI/MainUI/MainUI.tscn" id="11_gwuuu"]
