@@ -19,8 +19,8 @@ func get_target() -> Node2D:
 func has_target() -> bool:
 	return !!_current_target
 
-func show_tooltip(show: bool) -> void:
-	tooltip_label.visible = show
+func show_tooltip(should_show: bool) -> void:
+	tooltip_label.visible = should_show
 
 func update_tooltip(text: String) -> void:
 	tooltip_label.text = text

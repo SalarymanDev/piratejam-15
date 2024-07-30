@@ -61,7 +61,7 @@ func _on_timer_timeout() -> void:
 	
 	emit_signal(potion_crafted.get_name(), item_component.item)
 	
-	clickable_component.update_tooltip(item_component.item.name)
+	clickable_component.update_tooltip("%s\n%s" % [item_component.item.name, item_component.item.description])
 	takes_ingredients_component.clear()
 
 func _on_picked_up_event() -> void:
