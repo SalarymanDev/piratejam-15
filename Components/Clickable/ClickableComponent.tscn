@@ -6,23 +6,5 @@
 monitorable = false
 script = ExtResource("1_odpxt")
 
-[node name="Label" type="Label" parent="."]
-visible = false
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -55.0
-offset_right = 20.0
-offset_bottom = -32.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 4
-size_flags_vertical = 0
-text = "Test"
-horizontal_alignment = 1
-
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
