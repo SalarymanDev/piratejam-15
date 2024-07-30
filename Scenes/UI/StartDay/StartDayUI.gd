@@ -1,10 +1,12 @@
 extends Control
+class_name StartDayUI
 
 @export var notes: Array[String]
 
 @onready var money_label: Label = $TextureRect/VBoxContainer/HBoxContainer/MoneyLabel
 @onready var rent_label: Label = $TextureRect/VBoxContainer/HBoxContainer2/RentLabel
 @onready var note_label: Label = $TextureRect/VBoxContainer2/HBoxContainer4/NoteLabel
+@onready var day_label: Label = $TextureRect/VBoxContainer/DayLabel
 
 signal start_day_pressed
 
@@ -26,3 +28,6 @@ func _update_money(amount: int) -> void:
 
 func _update_rent(amount: int) -> void:
 	rent_label.text = str(amount)
+
+func update_day(day: int) -> void:
+	day_label.text = "Day %d" % day

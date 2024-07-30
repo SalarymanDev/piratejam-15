@@ -7,7 +7,7 @@ extends Control
 @onready var day_label: Label = $DayPaper/DayLabel
 @onready var invisbility_potion_texture: TextureRect = $InvisibilityButton/InvisibilityPotionTexture
 @onready var invsibility_potion_button: TextureButton = $InvisibilityButton
-@onready var start_day_ui: Control = $StartDayUi
+@onready var start_day_ui: StartDayUI = $StartDayUi
 @onready var end_day_ui: Control = $EndDayUi
 @onready var potion_use_audio: AudioComponent = $AudioComponent
 
@@ -57,6 +57,7 @@ func _on_start_day_pressed() -> void:
 
 func _on_next_day_pressed() -> void:
 	start_day_ui.visible = true
+	start_day_ui.update_day(GameStateManager.get_day())
 
 
 func _on_cauldron_potion_crafted(item: PotionResource) -> void:

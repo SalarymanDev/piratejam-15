@@ -11,7 +11,7 @@ signal police_inbound_event
 signal invisibility_potion_changed(has_potion: bool)
 
 var _current_rent: int = 0
-var _current_day: int = 0
+var _current_day: int = 1
 var _current_money: int = 0
 var _potions_sold_per_day: Dictionary = {}
 var _potions_sold_today: Array[PotionResource] = []
