@@ -34,7 +34,10 @@ func _physics_process(_delta: float) -> void:
 	if !_has_fined and !GameStateManager.get_invisible():
 		GameStateManager.fine()
 		_has_fined = true
-		audio_component.play()
+		
+		if !SceneManager._sfx_muted:
+			audio_component.play()
+			
 	if velocity.x == 0:
 		return
 	if velocity.x > 0:
