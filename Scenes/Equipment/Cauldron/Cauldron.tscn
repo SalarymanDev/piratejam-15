@@ -53,13 +53,13 @@ texture = ExtResource("2_8v285")
 
 [node name="SteamSprite2D" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(2.08165e-12, -30)
+position = Vector2(5, -44)
 scale = Vector2(0.04, 0.0268359)
 texture = ExtResource("4_d7uq5")
 
 [node name="StarSprite2D" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(2.08165e-12, -30)
+position = Vector2(2, -45)
 scale = Vector2(0.04, 0.0268359)
 texture = ExtResource("5_5ui5l")
 
