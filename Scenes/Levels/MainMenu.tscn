@@ -52,7 +52,7 @@ offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 35
-text = "Illegal Potion Shop"
+text = "Potion Underground"
 
 [node name="StartButton" type="TextureButton" parent="VBoxContainer"]
 custom_minimum_size = Vector2(2.08165e-12, 80)
