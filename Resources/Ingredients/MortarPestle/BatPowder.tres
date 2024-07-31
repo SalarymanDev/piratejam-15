@@ -7,5 +7,5 @@
 script = ExtResource("1_mg7f5")
 ingredient = 18
 name = "Bat Powder"
-description = "Black and brown dust with clumps of hair mixed in."
+description = "More potent and invigorating."
 texture = ExtResource("2_lvjhl")

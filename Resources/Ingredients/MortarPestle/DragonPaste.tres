@@ -7,5 +7,5 @@
 script = ExtResource("1_lym1x")
 ingredient = 16
 name = "Dragon Paste"
-description = "A bloody, clotting mixture of red and brown."
+description = "Strong healing properties"
 texture = ExtResource("2_enjgm")

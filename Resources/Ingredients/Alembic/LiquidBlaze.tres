@@ -7,5 +7,5 @@
 script = ExtResource("1_qsquo")
 ingredient = 28
 name = "Liquid Blaze"
-description = "This hot liquid clears the sinuses. It might also go well on eggs."
+description = "Too hot even to touch"
 texture = ExtResource("2_rywbn")

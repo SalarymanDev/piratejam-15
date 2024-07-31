@@ -7,5 +7,5 @@
 script = ExtResource("1_4ibfx")
 ingredient = 20
 name = "Wolfsbane Extract"
-description = "The extract is viscous and muddy."
+description = "The extract is muddy and brown."
 texture = ExtResource("2_xc1et")

@@ -7,5 +7,5 @@
 script = ExtResource("1_t6gng")
 ingredient = 17
 name = "Feather Powder"
-description = "A fine green powder that stings the eyes."
+description = "A powder that could be refined..."
 texture = ExtResource("2_y5mtg")

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" load_steps=3 format=3 uid="uid://dpm4aeen2vw2l"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientResource.gd" id="1_w1m7w"]
-[ext_resource type="Texture2D" uid="uid://dbff6l4k40kql" path="res://Assets/icon.svg" id="2_kjmds"]
+[ext_resource type="Texture2D" uid="uid://cyeiqrijdg34t" path="res://Assets/Sprites/beakers/base-beaker.png" id="2_iky3r"]
 
 [resource]
 script = ExtResource("1_w1m7w")
 ingredient = 21
 name = "Wolfsbane Oil"
 description = "Fluid so clear it is nearly impossible to see."
-texture = ExtResource("2_kjmds")
+texture = ExtResource("2_iky3r")

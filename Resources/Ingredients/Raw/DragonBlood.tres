@@ -7,5 +7,5 @@
 script = ExtResource("1_0vte1")
 ingredient = 6
 name = "Dragon's Blood"
-description = "Crimson flaHeat, health, and heroism."
+description = "Heat, health, and heroism."
 texture = ExtResource("2_15uue")

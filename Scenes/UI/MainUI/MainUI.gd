@@ -82,3 +82,7 @@ func _on_cauldron_potion_crafted(item: PotionResource) -> void:
 		first_potion.text = note
 	
 	current_recent_potion += 1
+
+
+func _on_sound_button_toggled(toggled_on: bool) -> void:
+	SceneManager._mute_music(toggled_on)

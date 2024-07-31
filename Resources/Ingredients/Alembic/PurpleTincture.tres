@@ -7,5 +7,5 @@
 script = ExtResource("1_0qcvc")
 ingredient = 23
 name = "Purple Tincture"
-description = "A clear liquid that's barely purple at all."
+description = "A liquid that's barely purple at all."
 texture = ExtResource("2_0qdal")

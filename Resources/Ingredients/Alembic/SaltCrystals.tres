@@ -7,5 +7,5 @@
 script = ExtResource("1_7t4po")
 ingredient = 22
 name = "Salt Crystals"
-description = "Crystals of salt left behind from evaporation."
+description = "Crystals of salt left behind."
 texture = ExtResource("2_v2tjo")

@@ -49,6 +49,14 @@ func _set_music_volume(_value: float) -> void:
 	#var busIndex = AudioServer.get_bus_index("Music")
 	#AudioServer.set_bus_volume_db(busIndex, value)
 
+func _mute_music(muted: bool) -> void:
+	if !muted:
+		_music_player.volume_db = 0.0
+	else:
+		_music_player.volume_db = -1000.0
+	
+
+
 func _load_new_scene() -> void:
 	_deferred_transition_to_scene.call_deferred(_current_scene_path)
 
