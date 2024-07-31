@@ -8,7 +8,7 @@ extends StaticBody2D
 func _on_drop_off_ingredient_event(_ingredient: IngredientResource) -> void:
 	audio_component.play()
 	stored_item_sprite.texture = _ingredient.texture
-	click_component.update_tooltip(_ingredient.name)
+	click_component.update_tooltip("%s\n%s" % [_ingredient.name, _ingredient.description])
 	store_item_component.store(_ingredient as IngredientResource)
 	
 
@@ -30,5 +30,5 @@ func _on_picked_up_event() -> void:
 func _item_swapped_event(new_item: ItemResource) -> void:
 	audio_component.play()
 	stored_item_sprite.texture = new_item.texture
-	click_component.update_tooltip(new_item.name)
+	click_component.update_tooltip("%s\n%s" % [new_item.name, new_item.description])
 	store_item_component.store(new_item)
