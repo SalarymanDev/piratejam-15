@@ -14,7 +14,7 @@ func _on_drop_off_ingredient_event(_ingredient: IngredientResource) -> void:
 
 func _on_drop_off_potion_event(_potion: PotionResource) -> void:
 	audio_component.play()
-	click_component.update_tooltip(_potion.name)
+	click_component.update_tooltip("%s\n%s" % [_potion.name, _potion.description])
 	stored_item_sprite.texture = _potion.texture
 	store_item_component.store(_potion as PotionResource)
 
