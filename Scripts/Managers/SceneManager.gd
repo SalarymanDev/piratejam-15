@@ -58,6 +58,7 @@ func _mute_music(muted: bool) -> void:
 		_music_player.volume_db = -1000.0
 	
 func _mute_sfx(muted: bool) -> void:
+	print("muted set to " + str(muted))
 	if !muted:
 		_sfx_muted = false
 	else:

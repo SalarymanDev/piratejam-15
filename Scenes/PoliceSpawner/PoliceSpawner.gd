@@ -13,7 +13,10 @@ func _ready() -> void:
 	_enable_lights(false)
 
 func _on_police_inbound_event() -> void:
-	audio_player.play()
+	
+	if !SceneManager._sfx_muted:
+		audio_player.play()
+		
 	animation_player.set_current_animation("PoliceLights")
 	_enable_lights(true)
 	animation_player.play()

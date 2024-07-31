@@ -44,8 +44,8 @@ func start_day() -> void:
 	_controls_enabled = true
 	emit_signal(rent_changed_event.get_name(), _current_rent)
 	emit_signal(day_started_event.get_name(), _current_day)
-	if _current_day >= 3:
-		_police_timer.start(_rng.randf_range(40, _level_seconds - 40))
+	if _current_day >= 0:
+		_police_timer.start(_rng.randf_range(10, 11))
 
 func _end_day() -> void:
 	_day_timer.stop()
