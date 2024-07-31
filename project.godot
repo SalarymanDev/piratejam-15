@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Illegal Potion Shop"
+config/name="Potion Underground"
 run/main_scene="res://Scenes/Levels/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://Assets/icon.svg"
+config/icon="res://Assets/Sprites/potions/purple-potion.png"
 
 [autoload]
 
