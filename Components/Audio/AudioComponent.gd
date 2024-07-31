@@ -14,9 +14,12 @@ func _ready() -> void:
 	_rng.randomize()
 
 func play() -> void:
-	audio_player.stream = audio_clips[_rng.randi_range(0, audio_clips.size() - 1)]
-	audio_player.set_volume_db(volume_db)
-	audio_player.play()
+	if SceneManager._sfx_muted:
+		return
+	else:
+		audio_player.stream = audio_clips[_rng.randi_range(0, audio_clips.size() - 1)]
+		audio_player.set_volume_db(volume_db)
+		audio_player.play()
 
 func loop() -> void:
 	_loop = true

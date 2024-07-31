@@ -7,6 +7,8 @@ var _current_scene_path: String = ""
 var _music_clip: AudioStream = preload("res://Assets/Audio/Music/Funky Chill 2 loop.wav")
 var _music_player: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 
+var _sfx_muted: bool = false
+
 func _ready() -> void:
 	var root := get_tree().root
 	_current_scene = root.get_child(root.get_child_count() - 1)
@@ -55,7 +57,11 @@ func _mute_music(muted: bool) -> void:
 	else:
 		_music_player.volume_db = -1000.0
 	
-
+func _mute_sfx(muted: bool) -> void:
+	if !muted:
+		_sfx_muted = false
+	else:
+		_sfx_muted = true
 
 func _load_new_scene() -> void:
 	_deferred_transition_to_scene.call_deferred(_current_scene_path)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b0a1s4bo3krrq"]
+[gd_scene load_steps=25 format=3 uid="uid://b0a1s4bo3krrq"]
 
 [ext_resource type="Script" path="res://Scenes/UI/MainUI/MainUI.gd" id="1_ceh7a"]
 [ext_resource type="Theme" path="res://Assets/main.tres" id="1_jpkjh"]
@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://dtgl2io8g0la" path="res://Assets/Sprites/UI/hud.png" id="20_utsif"]
 [ext_resource type="Texture2D" uid="uid://dbcfgywyxc1gn" path="res://Assets/Sprites/music-icon.png" id="21_g7dvc"]
 [ext_resource type="Texture2D" uid="uid://mcs3vmt5myyd" path="res://Assets/Sprites/music-mute-icon.png" id="22_hx2v1"]
+[ext_resource type="Texture2D" uid="uid://yd0p63getw86" path="res://Assets/Sprites/speaker-icon.png" id="23_peyem"]
+[ext_resource type="Texture2D" uid="uid://cyul2eiki2mhv" path="res://Assets/Sprites/speaker-mute-icon.png" id="24_76vd1"]
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -181,7 +183,45 @@ texture_normal = ExtResource("21_g7dvc")
 texture_pressed = ExtResource("22_hx2v1")
 stretch_mode = 0
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = -11.0
+offset_top = 68.0
+offset_right = 133.0
+offset_bottom = 148.0
+texture = ExtResource("20_utsif")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect2"]
+layout_mode = 1
+offset_left = 31.0
+offset_top = 19.0
+offset_right = 2083.0
+offset_bottom = 1043.0
+scale = Vector2(0.04, 0.04)
+alignment = 1
+
+[node name="MusicMuteButton" type="TextureButton" parent="TextureRect2/HBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("21_g7dvc")
+texture_pressed = ExtResource("22_hx2v1")
+stretch_mode = 0
+
+[node name="SFXMuteButton" type="TextureButton" parent="TextureRect2/HBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("23_peyem")
+texture_pressed = ExtResource("24_76vd1")
+stretch_mode = 0
+
 [connection signal="pressed" from="InvisibilityButton" to="." method="_on_invisibility_button_pressed"]
 [connection signal="start_day_pressed" from="StartDayUi" to="." method="_on_start_day_pressed"]
 [connection signal="next_day_pressed" from="EndDayUi" to="." method="_on_next_day_pressed"]
 [connection signal="toggled" from="TextureRect/HBoxContainer/StartButton" to="." method="_on_sound_button_toggled"]
+[connection signal="toggled" from="TextureRect2/HBoxContainer/MusicMuteButton" to="." method="_on_music_mute_button_toggled"]
+[connection signal="toggled" from="TextureRect2/HBoxContainer/SFXMuteButton" to="." method="_on_sfx_mute_button_toggled"]

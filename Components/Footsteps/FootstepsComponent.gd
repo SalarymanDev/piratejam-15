@@ -14,8 +14,11 @@ func _ready() -> void:
 	_rng.randomize()
 
 func _play() -> void:
-	audio_player.stream = audio_clips[_rng.randi_range(0, audio_clips.size() - 1)]
-	audio_player.play()
+	if SceneManager._sfx_muted:
+		return
+	else:
+		audio_player.stream = audio_clips[_rng.randi_range(0, audio_clips.size() - 1)]
+		audio_player.play()
 
 func _physics_process(_delta: float) -> void:
 	var previous_is_moving := _is_moving

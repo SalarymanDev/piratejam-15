@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c08nbi5fc2wjt"]
+
+[ext_resource type="PackedScene" uid="uid://wemfyrhm5f7f" path="res://Scenes/Levels/Playgrounds/ryans_playground.tscn" id="1_b2jlj"]
+[ext_resource type="PackedScene" uid="uid://bf71xxkinc70b" path="res://Scenes/PoliceSpawner/PoliceSpawner.tscn" id="2_di4kr"]
+
+[node name="Main" type="Node2D"]
+
+[node name="RyansPlayground" parent="." instance=ExtResource("1_b2jlj")]
+
+[node name="PoliceSpawner" parent="." instance=ExtResource("2_di4kr")]
+position = Vector2(1263, 57)

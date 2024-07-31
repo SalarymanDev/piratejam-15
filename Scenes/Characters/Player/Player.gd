@@ -54,7 +54,12 @@ func _handle_action(event: InputEventMouseButton) -> void:
 			navigation_component.target_position = pickup_component.global_position
 			return
 	
+	# Avoid invisibility potion click
 	if event.global_position.y > 990 and event.global_position.x > 1800:
+		return
+	
+	# Avoid mute buttons... god save us
+	if(event.global_position.y < 150 and event.global_position.x < 120):
 		return
 	
 	current_action = Actions.Move
