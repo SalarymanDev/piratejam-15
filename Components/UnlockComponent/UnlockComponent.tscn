@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bhnrqdmm8i6au"]
+[gd_scene load_steps=2 format=3 uid="uid://bhnrqdmm8i6au"]
+
+[ext_resource type="Script" path="res://Components/UnlockComponent/UnlockComponent.gd" id="1_xt5np"]
 
 [node name="UnlockComponent" type="Node2D"]
+script = ExtResource("1_xt5np")

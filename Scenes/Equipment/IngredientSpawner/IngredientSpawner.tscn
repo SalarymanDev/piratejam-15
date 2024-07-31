@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://i8qelg4ew3me"]
+[gd_scene load_steps=18 format=3 uid="uid://i8qelg4ew3me"]
 
 [ext_resource type="Script" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.gd" id="1_kx42m"]
 [ext_resource type="Texture2D" uid="uid://cd5euro3cw6tt" path="res://Assets/Sprites/crate.png" id="2_ib2s4"]
@@ -11,6 +11,9 @@
 [ext_resource type="AudioStream" uid="uid://c18ej5t3j318i" path="res://Assets/Audio/Pickup/Voice Approve 2.mp3" id="8_3qu16"]
 [ext_resource type="AudioStream" uid="uid://csjpnggyaespi" path="res://Assets/Audio/Pickup/Voice Approve 4.mp3" id="9_luoah"]
 [ext_resource type="AudioStream" uid="uid://olyvpg6sd8ji" path="res://Assets/Audio/Pickup/Voice Approve 5.mp3" id="10_ds5oq"]
+[ext_resource type="PackedScene" uid="uid://bxqdllqah4k3u" path="res://Components/DropOff/DropOffComponent.tscn" id="12_x1y6v"]
+[ext_resource type="PackedScene" uid="uid://bhnrqdmm8i6au" path="res://Components/UnlockComponent/UnlockComponent.tscn" id="13_f34yd"]
+[ext_resource type="PackedScene" uid="uid://0q4lt3ou3oig" path="res://Components/TakesPotion/TakesPotionComponent.tscn" id="14_s428s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flrha"]
 size = Vector2(65, 13)
@@ -58,4 +61,19 @@ shape = SubResource("CircleShape2D_0mwnx")
 [node name="AudioComponent" parent="." instance=ExtResource("6_6w6ge")]
 audio_clips = Array[AudioStream]([ExtResource("7_e6anw"), ExtResource("8_3qu16"), ExtResource("9_luoah"), ExtResource("10_ds5oq")])
 
+[node name="UnlockComponent" parent="." node_paths=PackedStringArray("dropoff_component") instance=ExtResource("13_f34yd")]
+dropoff_component = NodePath("../DropOffComponent")
+
+[node name="TakesPotionComponent" parent="." instance=ExtResource("14_s428s")]
+destroy = true
+
+[node name="DropOffComponent" parent="." node_paths=PackedStringArray("takes_potion_component") instance=ExtResource("12_x1y6v")]
+takes_potion_component = NodePath("../TakesPotionComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropOffComponent"]
+position = Vector2(2.08165e-12, 45)
+shape = SubResource("CircleShape2D_0mwnx")
+
 [connection signal="picked_up_event" from="PickUpComponent" to="." method="_on_picked_up_event"]
+[connection signal="unlocked" from="UnlockComponent" to="." method="_on_unlock_component_unlocked"]
+[connection signal="drop_off_potion_event" from="DropOffComponent" to="UnlockComponent" method="_on_drop_off_component_drop_off_potion_event"]
