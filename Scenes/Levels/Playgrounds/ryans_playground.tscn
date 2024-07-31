@@ -75,7 +75,6 @@ ingredient = ExtResource("5_4kfl7")
 locked_texture = ExtResource("7_1j6y6")
 unlocked_tooltip = "Salt"
 locked_tooltip = "It's encrusted shut with salt."
-shouldDisplayEmblem = false
 starts_unlocked = false
 key_item = ExtResource("5_cyj71")
 
