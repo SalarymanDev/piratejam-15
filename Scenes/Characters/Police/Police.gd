@@ -32,7 +32,6 @@ func _on_idle_timeout() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if !_has_fined and !GameStateManager.get_invisible():
-		GameStateManager.fine()
 		_has_fined = true
 		
 		if !SceneManager._sfx_muted:
@@ -47,4 +46,5 @@ func _physics_process(_delta: float) -> void:
 
 func _on_leave_timeout() -> void:
 	_leaving = true
+	GameStateManager.fine()
 	navigation_component.target_position = _original_position

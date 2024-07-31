@@ -77,4 +77,9 @@ libraries = {
 }
 speed_scale = 3.0
 
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 12.3
+one_shot = true
+
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_finished"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
