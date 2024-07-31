@@ -28,8 +28,8 @@
 [ext_resource type="Resource" uid="uid://csovk45m2l8k4" path="res://Resources/Ingredients/Raw/Wolfsbane.tres" id="25_mei2s"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ww3gs"]
-vertices = PackedVector2Array(648, 892, 864, 626, 911, 622, 1104, 622, 1712, 647, 1718, 757, 965, 996, 648, 995, 1254, 609, 1119, 609, 1104, 539, 1119, 526, 864, 543, 911, 539, 1712, 464, 1254, 526, 1762, 170, 1762, 464, 1053, 170, 1053, 192, 1718, 647, 1762, 757, 1762, 996, 496, 892, 496, 995, 487, 995, 487, 895, 335, 895, 335, 995, 331, 995, 331, 895, 179, 895, 179, 995, 168, 995, 168, 718, 275, 718, 729, 626, 275, 638, 168, 638, 168, 497, 278, 497, 729, 543, 278, 417, 168, 417, 168, 190, 245, 190, 245, 189, 267, 189, 267, 190, 347, 190, 347, 191, 428, 191, 428, 192, 509, 192, 509, 194, 644, 194, 644, 192)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(8, 4, 3, 9), PackedInt32Array(9, 3, 10, 11), PackedInt32Array(2, 1, 12, 13), PackedInt32Array(14, 4, 8, 15), PackedInt32Array(16, 17, 14, 18), PackedInt32Array(19, 18, 14, 15, 11), PackedInt32Array(4, 20, 5), PackedInt32Array(5, 21, 22, 6), PackedInt32Array(23, 24, 25, 26), PackedInt32Array(27, 28, 29, 30), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(31, 34, 35, 30), PackedInt32Array(36, 37, 38, 39, 40, 41), PackedInt32Array(42, 43, 44, 45), PackedInt32Array(45, 46, 47, 48), PackedInt32Array(42, 45, 48), PackedInt32Array(42, 48, 49, 50), PackedInt32Array(50, 51, 52, 42), PackedInt32Array(42, 52, 53, 54, 40), PackedInt32Array(55, 56, 19, 11, 10, 13), PackedInt32Array(36, 1, 0, 23, 35, 37), PackedInt32Array(54, 55, 13, 12, 41, 40), PackedInt32Array(27, 30, 35), PackedInt32Array(26, 27, 35, 23)])
+vertices = PackedVector2Array(648, 892, 864, 626, 937, 622, 1072, 622, 1712, 647, 1718, 757, 965, 996, 648, 995, 1254, 609, 1119, 609, 1072, 539, 1119, 526, 1712, 464, 1254, 526, 864, 543, 937, 539, 1762, 170, 1762, 464, 1110, 170, 1110, 198, 1718, 647, 1762, 757, 1762, 996, 496, 892, 496, 995, 487, 995, 487, 895, 335, 895, 335, 995, 331, 995, 331, 895, 179, 895, 179, 995, 168, 995, 168, 718, 275, 718, 275, 638, 168, 638, 168, 497, 278, 497, 729, 543, 729, 626, 278, 417, 168, 417, 168, 196, 302, 196, 302, 195, 324, 195, 324, 196, 404, 196, 404, 197, 485, 197, 485, 198, 566, 198, 566, 200, 701, 200, 701, 198)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(8, 4, 3, 9), PackedInt32Array(9, 3, 10, 11), PackedInt32Array(12, 4, 8, 13), PackedInt32Array(2, 1, 14, 15), PackedInt32Array(16, 17, 12, 18), PackedInt32Array(19, 18, 12, 13, 11), PackedInt32Array(4, 20, 5), PackedInt32Array(5, 21, 22, 6), PackedInt32Array(23, 24, 25, 26), PackedInt32Array(27, 28, 29, 30), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(31, 34, 35, 30), PackedInt32Array(36, 37, 38, 39, 40, 41), PackedInt32Array(42, 43, 44, 45), PackedInt32Array(45, 46, 47, 48), PackedInt32Array(48, 49, 50, 42), PackedInt32Array(50, 51, 52, 42), PackedInt32Array(52, 53, 54), PackedInt32Array(55, 56, 19, 11, 10, 15), PackedInt32Array(55, 15, 14, 40, 54), PackedInt32Array(36, 41, 1, 0, 23, 35), PackedInt32Array(42, 45, 48), PackedInt32Array(27, 30, 35), PackedInt32Array(26, 27, 35, 23), PackedInt32Array(42, 52, 54, 40, 39)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(133, 135, 131, 1030, 1799, 1032, 1797, 131)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 35.0
@@ -68,57 +68,57 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-1, 2, 0, 65535, 2, 0, 131071, 2, 0, 196607, 2, 0, 262143, 2, 0, 327679, 2, 0, 393215, 2, 0, 458751, 2, 0, 524287, 2, 0, 589823, 2, 0, -65535, 2, 0, 65537, 1, 0, 131073, 1, 0, 196609, 1, 0, 262145, 1, 0, 327681, 1, 0, 393217, 1, 0, 458753, 1, 0, 524289, 2, 0, -65534, 2, 0, 65538, 1, 0, 131074, 1, 0, 196610, 1, 0, 262146, 1, 0, 327682, 1, 0, 393218, 1, 0, 458754, 1, 0, 524290, 2, 0, -65533, 2, 0, 65539, 1, 0, 131075, 1, 0, 196611, 1, 0, 262147, 1, 0, 327683, 1, 0, 393219, 1, 0, 458755, 1, 0, 524291, 2, 0, -65532, 2, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, 262148, 1, 0, 327684, 1, 0, 393220, 1, 0, 458756, 1, 0, 524292, 2, 0, -65531, 2, 0, 65541, 1, 0, 131077, 1, 0, 196613, 1, 0, 262149, 1, 0, 327685, 1, 0, 393221, 1, 0, 458757, 1, 0, 524293, 2, 0, -65530, 2, 0, 65542, 1, 0, 131078, 1, 0, 196614, 1, 0, 262150, 1, 0, 327686, 1, 0, 393222, 1, 0, 458758, 1, 0, 524294, 2, 0, -65529, 2, 0, 65543, 1, 0, 131079, 1, 0, 196615, 1, 0, 262151, 1, 0, 327687, 1, 0, 393223, 1, 0, 458759, 1, 0, 524295, 2, 0, -65528, 2, 0, 65544, 1, 0, 131080, 1, 0, 196616, 1, 0, 262152, 1, 0, 327688, 1, 0, 393224, 1, 0, 458760, 1, 0, 524296, 2, 0, -65527, 2, 0, 65545, 1, 0, 131081, 1, 0, 196617, 1, 0, 262153, 1, 0, 327689, 1, 0, 393225, 1, 0, 458761, 1, 0, 524297, 2, 0, -65526, 2, 0, 65546, 1, 0, 131082, 1, 0, 196618, 1, 0, 262154, 1, 0, 327690, 1, 0, 393226, 1, 0, 458762, 1, 0, 524298, 2, 0, -65525, 2, 0, 65547, 1, 0, 131083, 1, 0, 196619, 1, 0, 262155, 1, 0, 327691, 1, 0, 393227, 1, 0, 458763, 1, 0, 524299, 2, 0, -65524, 2, 0, 65548, 1, 0, 131084, 1, 0, 196620, 1, 0, 262156, 1, 0, 327692, 1, 0, 393228, 1, 0, 458764, 1, 0, 524300, 2, 0, -65523, 2, 0, 65549, 1, 0, 131085, 1, 0, 196621, 1, 0, 262157, 1, 0, 327693, 1, 0, 393229, 1, 0, 458765, 1, 0, 524301, 2, 0, -65521, 2, 0, 65551, 2, 0, 131087, 2, 0, 196623, 2, 0, 262159, 2, 0, 327695, 2, 0, 393231, 2, 0, 458767, 2, 0, 524303, 2, 0, -65536, 2, 0, 0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 262144, 2, 0, 327680, 2, 0, 393216, 2, 0, 458752, 2, 0, 524288, 2, 0, -65522, 2, 0, 14, 2, 0, 65550, 2, 0, 131086, 2, 0, 196622, 2, 0, 262158, 2, 0, 327694, 2, 0, 393230, 2, 0, 458766, 2, 0, 524302, 2, 0, 15, 2, 0, 13, 2, 0, 12, 2, 0, 11, 2, 0, 10, 2, 0, 9, 2, 0, 8, 2, 0, 7, 2, 0, 6, 2, 0, 5, 2, 0, 4, 2, 0, 3, 2, 0, 2, 2, 0, 1, 2, 0)
 
 [node name="SaltSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(334, 148)
+position = Vector2(391, 154)
 ingredient = ExtResource("5_4kfl7")
 tooltip = "Salt"
 
 [node name="FireHerbSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(253, 147)
+position = Vector2(310, 153)
 ingredient = ExtResource("10_fy2v4")
 tooltip = "Fire Herb"
 
 [node name="DragonBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(177, 148)
+position = Vector2(222, 155)
 ingredient = ExtResource("16_uev22")
 tooltip = "Dragon's Blood"
 
 [node name="BatwingSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(414, 149)
+position = Vector2(471, 155)
 ingredient = ExtResource("8_hrksf")
 tooltip = "Bat Wings"
 
 [node name="CockatriceFeatherSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(495, 150)
+position = Vector2(552, 156)
 ingredient = ExtResource("9_c54uq")
 tooltip = "Cockatrice Feathers"
 
 [node name="MandrakeRootSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(576, 152)
+position = Vector2(633, 158)
 ingredient = ExtResource("20_v7nrg")
 tooltip = "Mandrake Root"
 
 [node name="Mercury Spawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(657, 150)
+position = Vector2(714, 156)
 ingredient = ExtResource("21_4soo5")
 tooltip = "Mercury"
 
 [node name="MoonDustSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(739, 150)
+position = Vector2(796, 156)
 ingredient = ExtResource("22_sd3hk")
 tooltip = "Moon Dust"
 
 [node name="NightShadeSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(823, 150)
+position = Vector2(880, 156)
 ingredient = ExtResource("23_wdrsm")
 tooltip = "Night Shade"
 
 [node name="UnicornBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(906, 150)
+position = Vector2(963, 156)
 ingredient = ExtResource("24_btn7o")
 tooltip = "Unicorn Blood"
 
 [node name="WolfsBaneSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
-position = Vector2(985, 150)
+position = Vector2(1048, 157)
 ingredient = ExtResource("25_mei2s")
 tooltip = "Wolf's Bane"
 
@@ -164,7 +164,7 @@ position = Vector2(406, 951)
 position = Vector2(567, 948)
 
 [node name="Player" parent="." instance=ExtResource("1_cijhs")]
-position = Vector2(459, 267)
+position = Vector2(295, 220)
 scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
