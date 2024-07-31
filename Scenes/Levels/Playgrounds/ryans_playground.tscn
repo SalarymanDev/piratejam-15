@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://wemfyrhm5f7f"]
+[gd_scene load_steps=33 format=3 uid="uid://wemfyrhm5f7f"]
 
 [ext_resource type="PackedScene" uid="uid://vax5lodmmg32" path="res://Scenes/Characters/Player/Player.tscn" id="1_cijhs"]
 [ext_resource type="Texture2D" uid="uid://c1y17lmpg1xw3" path="res://Assets/Sprites/cobblestone.png" id="1_dj4wp"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://i8qelg4ew3me" path="res://Scenes/Equipment/IngredientSpawner/IngredientSpawner.tscn" id="4_hbuti"]
 [ext_resource type="Resource" uid="uid://drq72ptn3p5qi" path="res://Resources/Ingredients/Raw/Salt.tres" id="5_4kfl7"]
 [ext_resource type="Resource" uid="uid://dyyfncejukx4i" path="res://Resources/Potions/BubblyTonic.tres" id="5_cyj71"]
+[ext_resource type="Texture2D" uid="uid://by5vcvs6b1aoa" path="res://Assets/Sprites/salty-crate.png" id="7_1j6y6"]
 [ext_resource type="Resource" uid="uid://jxfx54rchjc2" path="res://Resources/Ingredients/Raw/Wood.tres" id="7_ax3ak"]
 [ext_resource type="Resource" uid="uid://camfg8jp47103" path="res://Resources/Ingredients/Raw/BatWings.tres" id="8_hrksf"]
 [ext_resource type="Texture2D" uid="uid://bqt68tspugd2i" path="res://Assets/Sprites/firewood.png" id="8_le5ea"]
@@ -71,58 +72,52 @@ layer_0/tile_data = PackedInt32Array(-1, 2, 0, 65535, 2, 0, 131071, 2, 0, 196607
 [node name="SaltSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(334, 148)
 ingredient = ExtResource("5_4kfl7")
-tooltip = "Salt"
+locked_texture = ExtResource("7_1j6y6")
+unlocked_tooltip = "Salt"
+locked_tooltip = "It's encrusted shut with salt."
+shouldDisplayEmblem = false
+starts_unlocked = false
 key_item = ExtResource("5_cyj71")
 
 [node name="FireHerbSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(253, 147)
 ingredient = ExtResource("10_fy2v4")
-tooltip = "Fire Herb"
 
 [node name="DragonBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(177, 148)
 ingredient = ExtResource("16_uev22")
-tooltip = "Dragon's Blood"
 
 [node name="BatwingSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(414, 149)
 ingredient = ExtResource("8_hrksf")
-tooltip = "Bat Wings"
 
 [node name="CockatriceFeatherSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(495, 150)
 ingredient = ExtResource("9_c54uq")
-tooltip = "Cockatrice Feathers"
 
 [node name="MandrakeRootSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(576, 152)
 ingredient = ExtResource("20_v7nrg")
-tooltip = "Mandrake Root"
 
 [node name="Mercury Spawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(657, 150)
 ingredient = ExtResource("21_4soo5")
-tooltip = "Mercury"
 
 [node name="MoonDustSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(739, 150)
 ingredient = ExtResource("22_sd3hk")
-tooltip = "Moon Dust"
 
 [node name="NightShadeSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(823, 150)
 ingredient = ExtResource("23_wdrsm")
-tooltip = "Night Shade"
 
 [node name="UnicornBloodSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(906, 150)
 ingredient = ExtResource("24_btn7o")
-tooltip = "Unicorn Blood"
 
 [node name="WolfsBaneSpawner" parent="NavigationRegion2D" instance=ExtResource("4_hbuti")]
 position = Vector2(985, 150)
 ingredient = ExtResource("25_mei2s")
-tooltip = "Wolf's Bane"
 
 [node name="Cauldron" parent="NavigationRegion2D" instance=ExtResource("2_b3thu")]
 position = Vector2(1004, 580)
@@ -132,7 +127,6 @@ cook_seconds = 3
 position = Vector2(796, 584)
 ingredient = ExtResource("7_ax3ak")
 texture = ExtResource("8_le5ea")
-tooltip = "Wood"
 shouldDisplayEmblem = false
 instance_scale = 2.0
 
@@ -140,7 +134,6 @@ instance_scale = 2.0
 position = Vector2(1186, 567)
 ingredient = ExtResource("9_yscs3")
 texture = ExtResource("10_mc7wo")
-tooltip = "Water"
 shouldDisplayEmblem = false
 
 [node name="Alembic" parent="NavigationRegion2D" instance=ExtResource("11_38d5h")]

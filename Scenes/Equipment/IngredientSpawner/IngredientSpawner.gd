@@ -1,10 +1,14 @@
 @tool
 extends StaticBody2D
 
+var tooltip: String
+
 @export var ingredient: IngredientResource
 @export var texture: Texture2D
+@export var locked_texture: Texture2D
 @export var audio_clips: Array[AudioStream]
-@export var tooltip: String
+@export var unlocked_tooltip: String
+@export var locked_tooltip: String
 @export var shouldDisplayEmblem: bool = true
 @export var instance_scale: float = 1.0
 @export var starts_unlocked: bool = true
@@ -38,8 +42,11 @@ func _ready() -> void:
 		clickable_component.update_tooltip("%s\n%s" % [item_component.item.name, item_component.item.description])
 	sprite.apply_scale(Vector2(instance_scale, instance_scale))
 	dropoff_component.disabled = true
+	tooltip = unlocked_tooltip
 	if not starts_unlocked:
-		print("locked")
+		tooltip = locked_tooltip
+		sprite.texture = locked_texture
+		emblem.hide()
 		unlock_component._unlocked = false
 		unlock_component._key_item = key_item
 		pickup_component.disabled = true
@@ -58,6 +65,9 @@ func _on_picked_up_event() -> void:
 
 
 func _on_unlock_component_unlocked() ->  void:
-	print("unlocked")
+	tooltip = unlocked_tooltip
+	sprite.texture = texture
+	if shouldDisplayEmblem:
+		emblem.show()
 	pickup_component.disabled = false
 	dropoff_component.disabled = true
