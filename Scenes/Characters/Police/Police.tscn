@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bflv5p5pyq64p"]
+[gd_scene load_steps=12 format=3 uid="uid://bflv5p5pyq64p"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/Police/Police.gd" id="1_mekxe"]
 [ext_resource type="Texture2D" uid="uid://c02kiorvsdpqf" path="res://Assets/Sprites/police.png" id="2_fwtjj"]
@@ -9,13 +9,13 @@
 [ext_resource type="AudioStream" uid="uid://bxmpp70smxlqm" path="res://Assets/Audio/Sell/Coins Bag 3.mp3" id="7_uqgcp"]
 [ext_resource type="AudioStream" uid="uid://fhw0l4ibhtcf" path="res://Assets/Audio/Sell/Coins Bag 4.mp3" id="8_2nv3m"]
 [ext_resource type="PackedScene" uid="uid://bke6kyhmr22p2" path="res://Components/Footsteps/FootstepsComponent.tscn" id="9_xbnb2"]
+[ext_resource type="PackedScene" uid="uid://c8u7rgo3wcuap" path="res://Components/ZIndex/ZIndexComponent.tscn" id="10_6ypct"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjeai"]
 radius = 35.0
 
 [node name="Police" type="CharacterBody2D" groups=["Police"]]
 process_mode = 1
-y_sort_enabled = true
 script = ExtResource("1_mekxe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -40,6 +40,9 @@ audio_clips = Array[AudioStream]([ExtResource("5_rkmjl"), ExtResource("6_4426s")
 
 [node name="FootstepsComponent" parent="." node_paths=PackedStringArray("character") instance=ExtResource("9_xbnb2")]
 character = NodePath("..")
+
+[node name="ZIndexComponent" parent="." instance=ExtResource("10_6ypct")]
+is_static = false
 
 [connection signal="navigation_completed" from="NavigationComponent" to="." method="_on_navigation_completed"]
 [connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timeout"]
